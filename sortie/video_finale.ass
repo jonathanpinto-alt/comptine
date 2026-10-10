@@ -1,0 +1,48 @@
+[Script Info]
+Title: Bonjour la ferme !
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Karaoke,Fredoka,86,&H003B3BFF,&H00FFFFFF,&H005C1C3A,&H80461428,-1,0,0,0,100,100,0,0,1,9,5,2,80,80,60,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.85,0:00:08.03,Karaoke,,0,0,0,,{\k70}{\1c&H003B3BFF&\kf109}Cocorico !
+Dialogue: 0,0:00:08.03,0:00:12.55,Karaoke,,0,0,0,,{\k70}{\1c&H001E91FF&\kf55}Le {\1c&H0000D6FF&\kf55}soleil {\1c&H0046C83C&\kf55}se {\1c&H00FF8C28&\kf55}lève, {\1c&H00E650A0&\kf164}cocorico !
+Dialogue: 0,0:00:12.70,0:00:16.91,Karaoke,,0,0,0,,{\k40}{\1c&H00B45AFF&\kf55}Le {\1c&H003B3BFF&\kf55}coq {\1c&H001E91FF&\kf55}chante {\1c&H0000D6FF&\kf55}tout {\1c&H0046C83C&\kf164}là-haut.
+Dialogue: 0,0:00:17.06,0:00:21.27,Karaoke,,0,0,0,,{\k40}{\1c&H00FF8C28&\kf55}La {\1c&H00E650A0&\kf55}vache {\1c&H00B45AFF&\kf55}dit {\1c&H003B3BFF&\kf27}« meuh » {\1c&H001E91FF&\kf55}dans {\1c&H0000D6FF&\kf55}le {\1c&H0046C83C&\kf82}pré,
+Dialogue: 0,0:00:21.42,0:00:25.64,Karaoke,,0,0,0,,{\k40}{\1c&H00FF8C28&\kf55}Elle {\1c&H00E650A0&\kf27}a {\1c&H00B45AFF&\kf55}du {\1c&H003B3BFF&\kf55}bon {\1c&H001E91FF&\kf27}lait {\1c&H0000D6FF&\kf55}à {\1c&H0046C83C&\kf109}donner !
+Dialogue: 0,0:00:25.79,0:00:30.00,Karaoke,,0,0,0,,{\k40}{\1c&H00FF8C28&\kf82}Bonjour {\1c&H00E650A0&\kf55}la {\1c&H00B45AFF&\kf55}ferme, {\1c&H003B3BFF&\kf82}bonjour, {\1c&H001E91FF&\kf109}bonjour !
+Dialogue: 0,0:00:30.15,0:00:34.36,Karaoke,,0,0,0,,{\k40}{\1c&H0000D6FF&\kf55}Les {\1c&H0046C83C&\kf109}animaux {\1c&H00FF8C28&\kf55}chantent {\1c&H00E650A0&\kf55}tout {\1c&H00B45AFF&\kf109}autour !
+Dialogue: 0,0:00:34.51,0:00:38.73,Karaoke,,0,0,0,,{\k40}{\1c&H003B3BFF&\kf55}Meuh, {\1c&H001E91FF&\kf82}coin-coin, {\1c&H0000D6FF&\kf82}groin-groin, {\1c&H0046C83C&\kf164}bê-bê,
+Dialogue: 0,0:00:38.88,0:00:43.09,Karaoke,,0,0,0,,{\k40}{\1c&H00FF8C28&\kf55}On {\1c&H00E650A0&\kf27}tape {\1c&H00B45AFF&\kf55}des {\1c&H003B3BFF&\kf27}mains, {\1c&H001E91FF&\kf55}on {\1c&H0000D6FF&\kf27}tape {\1c&H0046C83C&\kf55}des {\1c&H00FF8C28&\kf82}pieds !
+Dialogue: 0,0:00:43.24,0:00:47.45,Karaoke,,0,0,0,,{\k40}{\1c&H00E650A0&\kf55}Le {\1c&H00B45AFF&\kf82}petit {\1c&H003B3BFF&\kf82}canard {\1c&H001E91FF&\kf55}fait {\1c&H0000D6FF&\kf109}coin-coin,
+Dialogue: 0,0:00:47.60,0:00:51.82,Karaoke,,0,0,0,,{\k40}{\1c&H0046C83C&\kf55}Il {\1c&H00FF8C28&\kf27}nage, {\1c&H00E650A0&\kf55}il {\1c&H00B45AFF&\kf55}nage {\1c&H003B3BFF&\kf27}dans {\1c&H001E91FF&\kf55}le {\1c&H0000D6FF&\kf109}bassin.
+Dialogue: 0,0:00:51.97,0:00:56.18,Karaoke,,0,0,0,,{\k40}{\1c&H0046C83C&\kf55}Le {\1c&H00FF8C28&\kf82}cochon {\1c&H00E650A0&\kf55}rose {\1c&H00B45AFF&\kf55}fait {\1c&H003B3BFF&\kf136}groin-groin,
+Dialogue: 0,0:00:56.33,0:01:00.55,Karaoke,,0,0,0,,{\k40}{\1c&H001E91FF&\kf55}Il {\1c&H0000D6FF&\kf27}se {\1c&H0046C83C&\kf55}roule {\1c&H00FF8C28&\kf27}dans {\1c&H00E650A0&\kf55}la {\1c&H00B45AFF&\kf27}boue, {\1c&H003B3BFF&\kf55}c'est {\1c&H001E91FF&\kf82}bien !
+Dialogue: 0,0:01:00.70,0:01:04.91,Karaoke,,0,0,0,,{\k40}{\1c&H0000D6FF&\kf82}Bonjour {\1c&H0046C83C&\kf55}la {\1c&H00FF8C28&\kf55}ferme, {\1c&H00E650A0&\kf82}bonjour, {\1c&H00B45AFF&\kf109}bonjour !
+Dialogue: 0,0:01:05.06,0:01:09.27,Karaoke,,0,0,0,,{\k40}{\1c&H003B3BFF&\kf55}Les {\1c&H001E91FF&\kf109}animaux {\1c&H0000D6FF&\kf55}chantent {\1c&H0046C83C&\kf55}tout {\1c&H00FF8C28&\kf109}autour !
+Dialogue: 0,0:01:09.42,0:01:13.64,Karaoke,,0,0,0,,{\k40}{\1c&H00E650A0&\kf55}Meuh, {\1c&H00B45AFF&\kf82}coin-coin, {\1c&H003B3BFF&\kf82}groin-groin, {\1c&H001E91FF&\kf164}bê-bê,
+Dialogue: 0,0:01:13.79,0:01:18.00,Karaoke,,0,0,0,,{\k40}{\1c&H0000D6FF&\kf55}On {\1c&H0046C83C&\kf27}tape {\1c&H00FF8C28&\kf55}des {\1c&H00E650A0&\kf27}mains, {\1c&H00B45AFF&\kf55}on {\1c&H003B3BFF&\kf27}tape {\1c&H001E91FF&\kf55}des {\1c&H0000D6FF&\kf82}pieds !
+Dialogue: 0,0:01:18.15,0:01:20.73,Karaoke,,0,0,0,,{\k40}{\1c&H0046C83C&\kf27}La {\1c&H00FF8C28&\kf27}lune {\1c&H00E650A0&\kf27}brille, {\1c&H00B45AFF&\kf27}il {\1c&H003B3BFF&\kf27}fait {\1c&H001E91FF&\kf27}tout {\1c&H0000D6FF&\kf55}noir,
+Dialogue: 0,0:01:20.88,0:01:22.91,Karaoke,,0,0,0,,{\1c&H0046C83C&\kf27}Les {\1c&H00FF8C28&\kf82}animaux {\1c&H00E650A0&\kf27}disent {\1c&H00B45AFF&\kf82}bonsoir.
+Dialogue: 0,0:01:23.06,0:01:25.09,Karaoke,,0,0,0,,{\1c&H003B3BFF&\kf27}Le {\1c&H001E91FF&\kf55}mouton {\1c&H0000D6FF&\kf27}fait {\1c&H0046C83C&\kf27}un {\1c&H00FF8C28&\kf27}doux {\1c&H00E650A0&\kf55}bê-bê,
+Dialogue: 0,0:01:25.24,0:01:28.07,Karaoke,,0,0,0,,{\1c&H00B45AFF&\kf27}Chut… {\1c&H003B3BFF&\kf27}tout {\1c&H001E91FF&\kf27}le {\1c&H0000D6FF&\kf27}monde {\1c&H0046C83C&\kf27}va {\1c&H00FF8C28&\kf82}rêver.
+Dialogue: 0,0:01:28.75,0:01:33.27,Karaoke,,0,0,0,,{\k70}{\1c&H00E650A0&\kf136}Cocorico, {\1c&H00B45AFF&\kf55}le {\1c&H003B3BFF&\kf55}jour {\1c&H001E91FF&\kf55}est {\1c&H0000D6FF&\kf82}là !
+Dialogue: 0,0:01:33.42,0:01:37.64,Karaoke,,0,0,0,,{\k40}{\1c&H0046C83C&\kf55}Le {\1c&H00FF8C28&\kf55}cheval {\1c&H00E650A0&\kf82}galope, {\1c&H00B45AFF&\kf27}hop {\1c&H003B3BFF&\kf27}là, {\1c&H001E91FF&\kf55}hop {\1c&H0000D6FF&\kf82}là !
+Dialogue: 0,0:01:37.79,0:01:42.00,Karaoke,,0,0,0,,{\k40}{\1c&H0046C83C&\kf55}Les {\1c&H00FF8C28&\kf82}poussins {\1c&H00E650A0&\kf55}font {\1c&H00B45AFF&\kf191}piou-piou-piou,
+Dialogue: 0,0:01:42.15,0:01:46.36,Karaoke,,0,0,0,,{\k40}{\1c&H003B3BFF&\kf55}Tout {\1c&H001E91FF&\kf27}le {\1c&H0000D6FF&\kf55}monde {\1c&H0046C83C&\kf27}se {\1c&H00FF8C28&\kf27}lève, {\1c&H00E650A0&\kf82}debout, {\1c&H00B45AFF&\kf109}debout !
+Dialogue: 0,0:01:46.51,0:01:50.73,Karaoke,,0,0,0,,{\k40}{\1c&H003B3BFF&\kf82}Bonjour {\1c&H001E91FF&\kf55}la {\1c&H0000D6FF&\kf55}ferme, {\1c&H0046C83C&\kf82}bonjour, {\1c&H00FF8C28&\kf109}bonjour !
+Dialogue: 0,0:01:50.88,0:01:55.09,Karaoke,,0,0,0,,{\k40}{\1c&H00E650A0&\kf55}Les {\1c&H00B45AFF&\kf109}animaux {\1c&H003B3BFF&\kf55}chantent {\1c&H001E91FF&\kf55}tout {\1c&H0000D6FF&\kf109}autour !
+Dialogue: 0,0:01:55.24,0:01:59.45,Karaoke,,0,0,0,,{\k40}{\1c&H0046C83C&\kf55}Meuh, {\1c&H00FF8C28&\kf82}coin-coin, {\1c&H00E650A0&\kf82}groin-groin, {\1c&H00B45AFF&\kf164}bê-bê,
+Dialogue: 0,0:01:59.60,0:02:03.27,Karaoke,,0,0,0,,{\k40}{\1c&H003B3BFF&\kf55}On {\1c&H001E91FF&\kf27}tape {\1c&H0000D6FF&\kf27}des {\1c&H0046C83C&\kf27}mains, {\1c&H00FF8C28&\kf27}on {\1c&H00E650A0&\kf27}tape {\1c&H00B45AFF&\kf55}des {\1c&H003B3BFF&\kf82}pieds !
+Dialogue: 0,0:02:03.42,0:02:04.36,Karaoke,,0,0,0,,{\1c&H001E91FF&\kf55}Encore {\1c&H0000D6FF&\kf27}une {\1c&H0046C83C&\kf27}fois !
+Dialogue: 0,0:02:04.51,0:02:08.18,Karaoke,,0,0,0,,{\1c&H00FF8C28&\kf82}Bonjour {\1c&H00E650A0&\kf55}la {\1c&H00B45AFF&\kf55}ferme, {\1c&H003B3BFF&\kf82}bonjour, {\1c&H001E91FF&\kf109}bonjour !
+Dialogue: 0,0:02:08.33,0:02:12.55,Karaoke,,0,0,0,,{\k40}{\1c&H0000D6FF&\kf55}Les {\1c&H0046C83C&\kf109}animaux {\1c&H00FF8C28&\kf55}chantent {\1c&H00E650A0&\kf55}tout {\1c&H00B45AFF&\kf109}autour !
+Dialogue: 0,0:02:12.70,0:02:16.91,Karaoke,,0,0,0,,{\k40}{\1c&H003B3BFF&\kf55}Meuh, {\1c&H001E91FF&\kf82}coin-coin, {\1c&H0000D6FF&\kf82}groin-groin, {\1c&H0046C83C&\kf164}bê-bê,
+Dialogue: 0,0:02:17.06,0:02:22.07,Karaoke,,0,0,0,,{\k40}{\1c&H00FF8C28&\kf55}On {\1c&H00E650A0&\kf27}tape {\1c&H00B45AFF&\kf55}des {\1c&H003B3BFF&\kf27}mains, {\1c&H001E91FF&\kf55}on {\1c&H0000D6FF&\kf27}tape {\1c&H0046C83C&\kf55}des {\1c&H00FF8C28&\kf82}pieds !
+Dialogue: 0,0:02:23.30,0:02:28.07,Karaoke,,0,0,0,,{\k70}{\1c&H00E650A0&\kf55}Au {\1c&H00B45AFF&\kf82}revoir {\1c&H003B3BFF&\kf55}les {\1c&H001E91FF&\kf136}amis !

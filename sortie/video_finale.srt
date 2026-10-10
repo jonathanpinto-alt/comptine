@@ -1,0 +1,139 @@
+1
+00:00:05,845 --> 00:00:08,027
+Cocorico !
+
+2
+00:00:08,027 --> 00:00:12,545
+Le soleil se lève, cocorico !
+
+3
+00:00:12,695 --> 00:00:16,909
+Le coq chante tout là-haut.
+
+4
+00:00:17,059 --> 00:00:21,273
+La vache dit « meuh » dans le pré,
+
+5
+00:00:21,423 --> 00:00:25,636
+Elle a du bon lait à donner !
+
+6
+00:00:25,786 --> 00:00:30,000
+Bonjour la ferme, bonjour, bonjour !
+
+7
+00:00:30,150 --> 00:00:34,364
+Les animaux chantent tout autour !
+
+8
+00:00:34,514 --> 00:00:38,727
+Meuh, coin-coin, groin-groin, bê-bê,
+
+9
+00:00:38,877 --> 00:00:43,091
+On tape des mains, on tape des pieds !
+
+10
+00:00:43,241 --> 00:00:47,454
+Le petit canard fait coin-coin,
+
+11
+00:00:47,604 --> 00:00:51,818
+Il nage, il nage dans le bassin.
+
+12
+00:00:51,968 --> 00:00:56,182
+Le cochon rose fait groin-groin,
+
+13
+00:00:56,332 --> 00:01:00,545
+Il se roule dans la boue, c'est bien !
+
+14
+00:01:00,695 --> 00:01:04,909
+Bonjour la ferme, bonjour, bonjour !
+
+15
+00:01:05,059 --> 00:01:09,273
+Les animaux chantent tout autour !
+
+16
+00:01:09,423 --> 00:01:13,636
+Meuh, coin-coin, groin-groin, bê-bê,
+
+17
+00:01:13,786 --> 00:01:18,000
+On tape des mains, on tape des pieds !
+
+18
+00:01:18,150 --> 00:01:20,727
+La lune brille, il fait tout noir,
+
+19
+00:01:20,877 --> 00:01:22,909
+Les animaux disent bonsoir.
+
+20
+00:01:23,059 --> 00:01:25,091
+Le mouton fait un doux bê-bê,
+
+21
+00:01:25,241 --> 00:01:28,072
+Chut… tout le monde va rêver.
+
+22
+00:01:28,754 --> 00:01:33,272
+Cocorico, le jour est là !
+
+23
+00:01:33,422 --> 00:01:37,636
+Le cheval galope, hop là, hop là !
+
+24
+00:01:37,786 --> 00:01:42,000
+Les poussins font piou-piou-piou,
+
+25
+00:01:42,150 --> 00:01:46,363
+Tout le monde se lève, debout, debout !
+
+26
+00:01:46,513 --> 00:01:50,727
+Bonjour la ferme, bonjour, bonjour !
+
+27
+00:01:50,877 --> 00:01:55,091
+Les animaux chantent tout autour !
+
+28
+00:01:55,241 --> 00:01:59,454
+Meuh, coin-coin, groin-groin, bê-bê,
+
+29
+00:01:59,604 --> 00:02:03,272
+On tape des mains, on tape des pieds !
+
+30
+00:02:03,422 --> 00:02:04,363
+Encore une fois !
+
+31
+00:02:04,513 --> 00:02:08,181
+Bonjour la ferme, bonjour, bonjour !
+
+32
+00:02:08,331 --> 00:02:12,545
+Les animaux chantent tout autour !
+
+33
+00:02:12,695 --> 00:02:16,909
+Meuh, coin-coin, groin-groin, bê-bê,
+
+34
+00:02:17,059 --> 00:02:22,072
+On tape des mains, on tape des pieds !
+
+35
+00:02:23,300 --> 00:02:28,072
+Au revoir les amis !

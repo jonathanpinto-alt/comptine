@@ -1,0 +1,1517 @@
+{
+  "titre": "Bonjour la ferme !",
+  "bpm": 110,
+  "mesures": 69,
+  "duree_audio": 150.545,
+  "ratio_recalage": 0.999997,
+  "sections": [
+    {
+      "nom": "intro",
+      "type": "intro",
+      "debut": 0.0,
+      "fin": 8.727,
+      "mesures": 4,
+      "decor": "aube"
+    },
+    {
+      "nom": "couplet 1",
+      "type": "couplet",
+      "debut": 8.727,
+      "fin": 26.182,
+      "mesures": 8,
+      "decor": "pre"
+    },
+    {
+      "nom": "refrain",
+      "type": "refrain",
+      "debut": 26.182,
+      "fin": 43.636,
+      "mesures": 8,
+      "decor": "grange"
+    },
+    {
+      "nom": "couplet 2",
+      "type": "couplet",
+      "debut": 43.636,
+      "fin": 61.091,
+      "mesures": 8,
+      "decor": "mare"
+    },
+    {
+      "nom": "refrain",
+      "type": "refrain",
+      "debut": 61.091,
+      "fin": 78.545,
+      "mesures": 8,
+      "decor": "grange"
+    },
+    {
+      "nom": "pont",
+      "type": "pont",
+      "debut": 78.545,
+      "fin": 89.455,
+      "mesures": 5,
+      "decor": "nuit"
+    },
+    {
+      "nom": "couplet 3",
+      "type": "couplet",
+      "debut": 89.455,
+      "fin": 106.909,
+      "mesures": 8,
+      "decor": "foret"
+    },
+    {
+      "nom": "refrain final",
+      "type": "final",
+      "debut": 106.909,
+      "fin": 124.364,
+      "mesures": 8,
+      "decor": "fete"
+    },
+    {
+      "nom": "refrain final",
+      "type": "final",
+      "debut": 124.364,
+      "fin": 141.818,
+      "mesures": 8,
+      "decor": "fete"
+    },
+    {
+      "nom": "outro",
+      "type": "outro",
+      "debut": 141.818,
+      "fin": 150.545,
+      "mesures": 4,
+      "decor": "couchant"
+    }
+  ],
+  "lignes": [
+    {
+      "section": "intro",
+      "texte": "Cocorico !",
+      "debut": 6.545,
+      "fin": 7.636,
+      "mots": [
+        {
+          "mot": "Cocorico !",
+          "debut": 6.545,
+          "fin": 7.636,
+          "couleur": "#ff3b3b"
+        }
+      ]
+    },
+    {
+      "section": "couplet 1",
+      "texte": "Le soleil se lève, cocorico !",
+      "debut": 8.727,
+      "fin": 12.545,
+      "mots": [
+        {
+          "mot": "Le",
+          "debut": 8.727,
+          "fin": 9.273,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "soleil",
+          "debut": 9.273,
+          "fin": 9.818,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "se",
+          "debut": 9.818,
+          "fin": 10.364,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "lève,",
+          "debut": 10.364,
+          "fin": 10.909,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "cocorico !",
+          "debut": 10.909,
+          "fin": 12.545,
+          "couleur": "#a050e6"
+        }
+      ]
+    },
+    {
+      "section": "couplet 1",
+      "texte": "Le coq chante tout là-haut.",
+      "debut": 13.091,
+      "fin": 16.909,
+      "mots": [
+        {
+          "mot": "Le",
+          "debut": 13.091,
+          "fin": 13.636,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "coq",
+          "debut": 13.636,
+          "fin": 14.182,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "chante",
+          "debut": 14.182,
+          "fin": 14.727,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "tout",
+          "debut": 14.727,
+          "fin": 15.273,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "là-haut.",
+          "debut": 15.273,
+          "fin": 16.909,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "couplet 1",
+      "texte": "La vache dit « meuh » dans le pré,",
+      "debut": 17.454,
+      "fin": 21.273,
+      "mots": [
+        {
+          "mot": "La",
+          "debut": 17.454,
+          "fin": 18.0,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "vache",
+          "debut": 18.0,
+          "fin": 18.545,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "dit",
+          "debut": 18.545,
+          "fin": 19.091,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "« meuh »",
+          "debut": 19.091,
+          "fin": 19.364,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "dans",
+          "debut": 19.364,
+          "fin": 19.909,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "le",
+          "debut": 19.909,
+          "fin": 20.454,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "pré,",
+          "debut": 20.454,
+          "fin": 21.273,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "couplet 1",
+      "texte": "Elle a du bon lait à donner !",
+      "debut": 21.818,
+      "fin": 25.636,
+      "mots": [
+        {
+          "mot": "Elle",
+          "debut": 21.818,
+          "fin": 22.364,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "a",
+          "debut": 22.364,
+          "fin": 22.636,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "du",
+          "debut": 22.636,
+          "fin": 23.182,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "bon",
+          "debut": 23.182,
+          "fin": 23.727,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "lait",
+          "debut": 23.727,
+          "fin": 24.0,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "à",
+          "debut": 24.0,
+          "fin": 24.545,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "donner !",
+          "debut": 24.545,
+          "fin": 25.636,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "Bonjour la ferme, bonjour, bonjour !",
+      "debut": 26.182,
+      "fin": 30.0,
+      "mots": [
+        {
+          "mot": "Bonjour",
+          "debut": 26.182,
+          "fin": 27.0,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "la",
+          "debut": 27.0,
+          "fin": 27.545,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "ferme,",
+          "debut": 27.545,
+          "fin": 28.091,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "bonjour,",
+          "debut": 28.091,
+          "fin": 28.909,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "bonjour !",
+          "debut": 28.909,
+          "fin": 30.0,
+          "couleur": "#ff911e"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "Les animaux chantent tout autour !",
+      "debut": 30.545,
+      "fin": 34.364,
+      "mots": [
+        {
+          "mot": "Les",
+          "debut": 30.545,
+          "fin": 31.091,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "animaux",
+          "debut": 31.091,
+          "fin": 32.182,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "chantent",
+          "debut": 32.182,
+          "fin": 32.727,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "tout",
+          "debut": 32.727,
+          "fin": 33.273,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "autour !",
+          "debut": 33.273,
+          "fin": 34.364,
+          "couleur": "#ff5ab4"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "Meuh, coin-coin, groin-groin, bê-bê,",
+      "debut": 34.909,
+      "fin": 38.727,
+      "mots": [
+        {
+          "mot": "Meuh,",
+          "debut": 34.909,
+          "fin": 35.454,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "coin-coin,",
+          "debut": 35.454,
+          "fin": 36.273,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "groin-groin,",
+          "debut": 36.273,
+          "fin": 37.091,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "bê-bê,",
+          "debut": 37.091,
+          "fin": 38.727,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "On tape des mains, on tape des pieds !",
+      "debut": 39.273,
+      "fin": 43.091,
+      "mots": [
+        {
+          "mot": "On",
+          "debut": 39.273,
+          "fin": 39.818,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "tape",
+          "debut": 39.818,
+          "fin": 40.091,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "des",
+          "debut": 40.091,
+          "fin": 40.636,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "mains,",
+          "debut": 40.636,
+          "fin": 40.909,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "on",
+          "debut": 40.909,
+          "fin": 41.454,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "tape",
+          "debut": 41.454,
+          "fin": 41.727,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "des",
+          "debut": 41.727,
+          "fin": 42.273,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "pieds !",
+          "debut": 42.273,
+          "fin": 43.091,
+          "couleur": "#288cff"
+        }
+      ]
+    },
+    {
+      "section": "couplet 2",
+      "texte": "Le petit canard fait coin-coin,",
+      "debut": 43.636,
+      "fin": 47.454,
+      "mots": [
+        {
+          "mot": "Le",
+          "debut": 43.636,
+          "fin": 44.182,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "petit",
+          "debut": 44.182,
+          "fin": 45.0,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "canard",
+          "debut": 45.0,
+          "fin": 45.818,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "fait",
+          "debut": 45.818,
+          "fin": 46.363,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "coin-coin,",
+          "debut": 46.363,
+          "fin": 47.454,
+          "couleur": "#ffd600"
+        }
+      ]
+    },
+    {
+      "section": "couplet 2",
+      "texte": "Il nage, il nage dans le bassin.",
+      "debut": 48.0,
+      "fin": 51.818,
+      "mots": [
+        {
+          "mot": "Il",
+          "debut": 48.0,
+          "fin": 48.545,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "nage,",
+          "debut": 48.545,
+          "fin": 48.818,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "il",
+          "debut": 48.818,
+          "fin": 49.363,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "nage",
+          "debut": 49.363,
+          "fin": 49.909,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "dans",
+          "debut": 49.909,
+          "fin": 50.182,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "le",
+          "debut": 50.182,
+          "fin": 50.727,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "bassin.",
+          "debut": 50.727,
+          "fin": 51.818,
+          "couleur": "#ffd600"
+        }
+      ]
+    },
+    {
+      "section": "couplet 2",
+      "texte": "Le cochon rose fait groin-groin,",
+      "debut": 52.363,
+      "fin": 56.182,
+      "mots": [
+        {
+          "mot": "Le",
+          "debut": 52.363,
+          "fin": 52.909,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "cochon",
+          "debut": 52.909,
+          "fin": 53.727,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "rose",
+          "debut": 53.727,
+          "fin": 54.273,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "fait",
+          "debut": 54.273,
+          "fin": 54.818,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "groin-groin,",
+          "debut": 54.818,
+          "fin": 56.182,
+          "couleur": "#ff3b3b"
+        }
+      ]
+    },
+    {
+      "section": "couplet 2",
+      "texte": "Il se roule dans la boue, c'est bien !",
+      "debut": 56.727,
+      "fin": 60.545,
+      "mots": [
+        {
+          "mot": "Il",
+          "debut": 56.727,
+          "fin": 57.273,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "se",
+          "debut": 57.273,
+          "fin": 57.545,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "roule",
+          "debut": 57.545,
+          "fin": 58.091,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "dans",
+          "debut": 58.091,
+          "fin": 58.363,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "la",
+          "debut": 58.363,
+          "fin": 58.909,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "boue,",
+          "debut": 58.909,
+          "fin": 59.182,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "c'est",
+          "debut": 59.182,
+          "fin": 59.727,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "bien !",
+          "debut": 59.727,
+          "fin": 60.545,
+          "couleur": "#ff911e"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "Bonjour la ferme, bonjour, bonjour !",
+      "debut": 61.091,
+      "fin": 64.909,
+      "mots": [
+        {
+          "mot": "Bonjour",
+          "debut": 61.091,
+          "fin": 61.909,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "la",
+          "debut": 61.909,
+          "fin": 62.454,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "ferme,",
+          "debut": 62.454,
+          "fin": 63.0,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "bonjour,",
+          "debut": 63.0,
+          "fin": 63.818,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "bonjour !",
+          "debut": 63.818,
+          "fin": 64.909,
+          "couleur": "#ff5ab4"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "Les animaux chantent tout autour !",
+      "debut": 65.454,
+      "fin": 69.273,
+      "mots": [
+        {
+          "mot": "Les",
+          "debut": 65.454,
+          "fin": 66.0,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "animaux",
+          "debut": 66.0,
+          "fin": 67.091,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "chantent",
+          "debut": 67.091,
+          "fin": 67.636,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "tout",
+          "debut": 67.636,
+          "fin": 68.182,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "autour !",
+          "debut": 68.182,
+          "fin": 69.273,
+          "couleur": "#288cff"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "Meuh, coin-coin, groin-groin, bê-bê,",
+      "debut": 69.818,
+      "fin": 73.636,
+      "mots": [
+        {
+          "mot": "Meuh,",
+          "debut": 69.818,
+          "fin": 70.363,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "coin-coin,",
+          "debut": 70.363,
+          "fin": 71.182,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "groin-groin,",
+          "debut": 71.182,
+          "fin": 72.0,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "bê-bê,",
+          "debut": 72.0,
+          "fin": 73.636,
+          "couleur": "#ff911e"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "On tape des mains, on tape des pieds !",
+      "debut": 74.182,
+      "fin": 78.0,
+      "mots": [
+        {
+          "mot": "On",
+          "debut": 74.182,
+          "fin": 74.727,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "tape",
+          "debut": 74.727,
+          "fin": 75.0,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "des",
+          "debut": 75.0,
+          "fin": 75.545,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "mains,",
+          "debut": 75.545,
+          "fin": 75.818,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "on",
+          "debut": 75.818,
+          "fin": 76.363,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "tape",
+          "debut": 76.363,
+          "fin": 76.636,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "des",
+          "debut": 76.636,
+          "fin": 77.182,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "pieds !",
+          "debut": 77.182,
+          "fin": 78.0,
+          "couleur": "#ffd600"
+        }
+      ]
+    },
+    {
+      "section": "pont",
+      "texte": "La lune brille, il fait tout noir,",
+      "debut": 78.545,
+      "fin": 80.727,
+      "mots": [
+        {
+          "mot": "La",
+          "debut": 78.545,
+          "fin": 78.818,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "lune",
+          "debut": 78.818,
+          "fin": 79.091,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "brille,",
+          "debut": 79.091,
+          "fin": 79.363,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "il",
+          "debut": 79.363,
+          "fin": 79.636,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "fait",
+          "debut": 79.636,
+          "fin": 79.909,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "tout",
+          "debut": 79.909,
+          "fin": 80.182,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "noir,",
+          "debut": 80.182,
+          "fin": 80.727,
+          "couleur": "#ffd600"
+        }
+      ]
+    },
+    {
+      "section": "pont",
+      "texte": "Les animaux disent bonsoir.",
+      "debut": 80.727,
+      "fin": 82.909,
+      "mots": [
+        {
+          "mot": "Les",
+          "debut": 80.727,
+          "fin": 81.0,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "animaux",
+          "debut": 81.0,
+          "fin": 81.818,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "disent",
+          "debut": 81.818,
+          "fin": 82.091,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "bonsoir.",
+          "debut": 82.091,
+          "fin": 82.909,
+          "couleur": "#ff5ab4"
+        }
+      ]
+    },
+    {
+      "section": "pont",
+      "texte": "Le mouton fait un doux bê-bê,",
+      "debut": 82.909,
+      "fin": 85.091,
+      "mots": [
+        {
+          "mot": "Le",
+          "debut": 82.909,
+          "fin": 83.182,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "mouton",
+          "debut": 83.182,
+          "fin": 83.727,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "fait",
+          "debut": 83.727,
+          "fin": 84.0,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "un",
+          "debut": 84.0,
+          "fin": 84.272,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "doux",
+          "debut": 84.272,
+          "fin": 84.545,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "bê-bê,",
+          "debut": 84.545,
+          "fin": 85.091,
+          "couleur": "#a050e6"
+        }
+      ]
+    },
+    {
+      "section": "pont",
+      "texte": "Chut… tout le monde va rêver.",
+      "debut": 85.091,
+      "fin": 87.272,
+      "mots": [
+        {
+          "mot": "Chut…",
+          "debut": 85.091,
+          "fin": 85.363,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "tout",
+          "debut": 85.363,
+          "fin": 85.636,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "le",
+          "debut": 85.636,
+          "fin": 85.909,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "monde",
+          "debut": 85.909,
+          "fin": 86.182,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "va",
+          "debut": 86.182,
+          "fin": 86.454,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "rêver.",
+          "debut": 86.454,
+          "fin": 87.272,
+          "couleur": "#288cff"
+        }
+      ]
+    },
+    {
+      "section": "couplet 3",
+      "texte": "Cocorico, le jour est là !",
+      "debut": 89.454,
+      "fin": 93.272,
+      "mots": [
+        {
+          "mot": "Cocorico,",
+          "debut": 89.454,
+          "fin": 90.818,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "le",
+          "debut": 90.818,
+          "fin": 91.363,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "jour",
+          "debut": 91.363,
+          "fin": 91.909,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "est",
+          "debut": 91.909,
+          "fin": 92.454,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "là !",
+          "debut": 92.454,
+          "fin": 93.272,
+          "couleur": "#ffd600"
+        }
+      ]
+    },
+    {
+      "section": "couplet 3",
+      "texte": "Le cheval galope, hop là, hop là !",
+      "debut": 93.818,
+      "fin": 97.636,
+      "mots": [
+        {
+          "mot": "Le",
+          "debut": 93.818,
+          "fin": 94.363,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "cheval",
+          "debut": 94.363,
+          "fin": 94.909,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "galope,",
+          "debut": 94.909,
+          "fin": 95.727,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "hop",
+          "debut": 95.727,
+          "fin": 96.0,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "là,",
+          "debut": 96.0,
+          "fin": 96.272,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "hop",
+          "debut": 96.272,
+          "fin": 96.818,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "là !",
+          "debut": 96.818,
+          "fin": 97.636,
+          "couleur": "#ffd600"
+        }
+      ]
+    },
+    {
+      "section": "couplet 3",
+      "texte": "Les poussins font piou-piou-piou,",
+      "debut": 98.182,
+      "fin": 102.0,
+      "mots": [
+        {
+          "mot": "Les",
+          "debut": 98.182,
+          "fin": 98.727,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "poussins",
+          "debut": 98.727,
+          "fin": 99.545,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "font",
+          "debut": 99.545,
+          "fin": 100.091,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "piou-piou-piou,",
+          "debut": 100.091,
+          "fin": 102.0,
+          "couleur": "#ff5ab4"
+        }
+      ]
+    },
+    {
+      "section": "couplet 3",
+      "texte": "Tout le monde se lève, debout, debout !",
+      "debut": 102.545,
+      "fin": 106.363,
+      "mots": [
+        {
+          "mot": "Tout",
+          "debut": 102.545,
+          "fin": 103.091,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "le",
+          "debut": 103.091,
+          "fin": 103.363,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "monde",
+          "debut": 103.363,
+          "fin": 103.909,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "se",
+          "debut": 103.909,
+          "fin": 104.181,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "lève,",
+          "debut": 104.181,
+          "fin": 104.454,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "debout,",
+          "debut": 104.454,
+          "fin": 105.272,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "debout !",
+          "debut": 105.272,
+          "fin": 106.363,
+          "couleur": "#ff5ab4"
+        }
+      ]
+    },
+    {
+      "section": "refrain final",
+      "texte": "Bonjour la ferme, bonjour, bonjour !",
+      "debut": 106.909,
+      "fin": 110.727,
+      "mots": [
+        {
+          "mot": "Bonjour",
+          "debut": 106.909,
+          "fin": 107.727,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "la",
+          "debut": 107.727,
+          "fin": 108.272,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "ferme,",
+          "debut": 108.272,
+          "fin": 108.818,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "bonjour,",
+          "debut": 108.818,
+          "fin": 109.636,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "bonjour !",
+          "debut": 109.636,
+          "fin": 110.727,
+          "couleur": "#288cff"
+        }
+      ]
+    },
+    {
+      "section": "refrain final",
+      "texte": "Les animaux chantent tout autour !",
+      "debut": 111.272,
+      "fin": 115.091,
+      "mots": [
+        {
+          "mot": "Les",
+          "debut": 111.272,
+          "fin": 111.818,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "animaux",
+          "debut": 111.818,
+          "fin": 112.909,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "chantent",
+          "debut": 112.909,
+          "fin": 113.454,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "tout",
+          "debut": 113.454,
+          "fin": 114.0,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "autour !",
+          "debut": 114.0,
+          "fin": 115.091,
+          "couleur": "#ffd600"
+        }
+      ]
+    },
+    {
+      "section": "refrain final",
+      "texte": "Meuh, coin-coin, groin-groin, bê-bê,",
+      "debut": 115.636,
+      "fin": 119.454,
+      "mots": [
+        {
+          "mot": "Meuh,",
+          "debut": 115.636,
+          "fin": 116.181,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "coin-coin,",
+          "debut": 116.181,
+          "fin": 117.0,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "groin-groin,",
+          "debut": 117.0,
+          "fin": 117.818,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "bê-bê,",
+          "debut": 117.818,
+          "fin": 119.454,
+          "couleur": "#ff5ab4"
+        }
+      ]
+    },
+    {
+      "section": "refrain final",
+      "texte": "On tape des mains, on tape des pieds !",
+      "debut": 120.0,
+      "fin": 123.272,
+      "mots": [
+        {
+          "mot": "On",
+          "debut": 120.0,
+          "fin": 120.545,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "tape",
+          "debut": 120.545,
+          "fin": 120.818,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "des",
+          "debut": 120.818,
+          "fin": 121.091,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "mains,",
+          "debut": 121.091,
+          "fin": 121.363,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "on",
+          "debut": 121.363,
+          "fin": 121.636,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "tape",
+          "debut": 121.636,
+          "fin": 121.909,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "des",
+          "debut": 121.909,
+          "fin": 122.454,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "pieds !",
+          "debut": 122.454,
+          "fin": 123.272,
+          "couleur": "#ff3b3b"
+        }
+      ]
+    },
+    {
+      "section": "refrain final",
+      "texte": "Encore une fois !",
+      "debut": 123.272,
+      "fin": 124.363,
+      "mots": [
+        {
+          "mot": "Encore",
+          "debut": 123.272,
+          "fin": 123.818,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "une",
+          "debut": 123.818,
+          "fin": 124.091,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "fois !",
+          "debut": 124.091,
+          "fin": 124.363,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "refrain final",
+      "texte": "Bonjour la ferme, bonjour, bonjour !",
+      "debut": 124.363,
+      "fin": 128.181,
+      "mots": [
+        {
+          "mot": "Bonjour",
+          "debut": 124.363,
+          "fin": 125.181,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "la",
+          "debut": 125.181,
+          "fin": 125.727,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "ferme,",
+          "debut": 125.727,
+          "fin": 126.272,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "bonjour,",
+          "debut": 126.272,
+          "fin": 127.091,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "bonjour !",
+          "debut": 127.091,
+          "fin": 128.181,
+          "couleur": "#ff911e"
+        }
+      ]
+    },
+    {
+      "section": "refrain final",
+      "texte": "Les animaux chantent tout autour !",
+      "debut": 128.727,
+      "fin": 132.545,
+      "mots": [
+        {
+          "mot": "Les",
+          "debut": 128.727,
+          "fin": 129.272,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "animaux",
+          "debut": 129.272,
+          "fin": 130.363,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "chantent",
+          "debut": 130.363,
+          "fin": 130.909,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "tout",
+          "debut": 130.909,
+          "fin": 131.454,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "autour !",
+          "debut": 131.454,
+          "fin": 132.545,
+          "couleur": "#ff5ab4"
+        }
+      ]
+    },
+    {
+      "section": "refrain final",
+      "texte": "Meuh, coin-coin, groin-groin, bê-bê,",
+      "debut": 133.09,
+      "fin": 136.909,
+      "mots": [
+        {
+          "mot": "Meuh,",
+          "debut": 133.09,
+          "fin": 133.636,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "coin-coin,",
+          "debut": 133.636,
+          "fin": 134.454,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "groin-groin,",
+          "debut": 134.454,
+          "fin": 135.272,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "bê-bê,",
+          "debut": 135.272,
+          "fin": 136.909,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "refrain final",
+      "texte": "On tape des mains, on tape des pieds !",
+      "debut": 137.454,
+      "fin": 141.272,
+      "mots": [
+        {
+          "mot": "On",
+          "debut": 137.454,
+          "fin": 138.0,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "tape",
+          "debut": 138.0,
+          "fin": 138.272,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "des",
+          "debut": 138.272,
+          "fin": 138.818,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "mains,",
+          "debut": 138.818,
+          "fin": 139.09,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "on",
+          "debut": 139.09,
+          "fin": 139.636,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "tape",
+          "debut": 139.636,
+          "fin": 139.909,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "des",
+          "debut": 139.909,
+          "fin": 140.454,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "pieds !",
+          "debut": 140.454,
+          "fin": 141.272,
+          "couleur": "#288cff"
+        }
+      ]
+    },
+    {
+      "section": "outro",
+      "texte": "Au revoir les amis !",
+      "debut": 144.0,
+      "fin": 147.272,
+      "mots": [
+        {
+          "mot": "Au",
+          "debut": 144.0,
+          "fin": 144.545,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "revoir",
+          "debut": 144.545,
+          "fin": 145.363,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "les",
+          "debut": 145.363,
+          "fin": 145.909,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "amis !",
+          "debut": 145.909,
+          "fin": 147.272,
+          "couleur": "#ff911e"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+numpy
+scipy
+soundfile
+pretty_midi
+pydub
+audioop-lts; python_version >= "3.13"
+pycairo
+cairosvg
+Pillow
