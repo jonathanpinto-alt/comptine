@@ -1,7 +1,7 @@
 # 🐮 « Bonjour la ferme ! » — comptine vidéo 100 % générée par code
 
-Une comptine originale en français pour les 2-5 ans, dans un style à la Cocomelon : couleurs vives, personnages ronds qui rebondissent en rythme, karaoké coloré mot par mot.
-Tout est produit par `python main.py` : paroles, mélodie, accompagnement, voix chantée, sous-titres, animation et montage final.
+Une comptine originale en français pour les 2-5 ans, dans un style de dessin animé 3D pour enfants : couleurs vives, animaux ronds aux gros yeux brillants qui rebondissent en rythme, voix chantée enfantine avec petit chœur, karaoké coloré mot par mot.
+Tout est produit par `python main.py` : paroles, mélodie, accompagnement, voix chantée, modèles 3D, sous-titres, animation et montage final.
 
 | | |
 |---|---|
@@ -25,22 +25,26 @@ Tout est produit par `python main.py` : paroles, mélodie, accompagnement, voix 
 Testé sous Ubuntu 24.04 avec Python 3.13.
 
 ```bash
-# outils système : ffmpeg, synthèse MIDI, voix chantée
-sudo apt install ffmpeg fluidsynth fluid-soundfont-gm espeak-ng mbrola mbrola-fr4 libcairo2-dev
+# outils système : ffmpeg, synthèse MIDI, phonétisation, 3D
+sudo apt install ffmpeg fluidsynth fluid-soundfont-gm espeak-ng mbrola mbrola-fr4 libcairo2-dev blender
 
 # bibliothèques Python
 pip install -r requirements.txt
 ```
+
+Au premier lancement, le modèle de voix Kokoro (environ 350 Mo, licence Apache 2.0) est téléchargé depuis GitHub dans `modeles/`. Blender tourne en arrière-plan, sans écran : le moteur Eevee fonctionne en rendu logiciel. Les rendus 3D (personnages, décors, accessoires) sont mis en cache dans `assets/rendus3d/`.
 
 macOS (Homebrew) : `brew install ffmpeg fluid-synth espeak-ng cairo`. La voix MBROLA `fr4` se télécharge à part, et il faut une soundfont General MIDI. Les chemins sont réglables dans `comptine/config.py` et `comptine/voix.py`.
 
 ## Lancement
 
 ```bash
-python main.py                    # tout générer (environ 3-4 min sur 4 cœurs)
+python main.py                    # tout générer (environ 5 min sur 4 cœurs, rendus 3D en cache)
 python main.py --rapide           # vidéo d'essai en 960×540 → sortie/video_essai.mp4
 python main.py --audio-seulement  # audio et sous-titres uniquement
 python main.py --apercu 30        # une image PNG à t = 30 s
+python main.py --refaire-3d       # refaire les modèles 3D dans Blender (environ 10 min)
+python main.py --voix mbrola      # ancienne voix de synthèse, sans modèle neuronal
 ```
 
 Le script vérifie que la durée audio est comprise entre 2 min 25 et 2 min 35. Il vérifie aussi la durée de la vidéo finale.
@@ -51,21 +55,36 @@ Le script vérifie que la durée audio est comprise entre 2 min 25 et 2 min 35. 
 main.py
 comptine/
   chanson.py      paroles, structure (mesures), accords, gabarits mélodiques
-  voix.py         phonétisation (espeak-ng), syllabes, rythme, voix chantée (MBROLA)
+  voix.py         phonétisation (espeak-ng), syllabes, rythme ; voix MBROLA de secours
+  voix_kokoro.py  voix neuronale Kokoro qui chante, WORLD, timbre enfantin, chœur
   musique.py      arrangement MIDI (pretty_midi) → FluidSynth
   mixage.py       mixage pydub, musique à -8 dB sous la voix, export WAV
   soustitres.py   paroles.json, .srt, .ass
-  personnages.py  7 animaux en SVG (normal / clignement / chante) → sprites (cairosvg)
-  decors.py       8 décors animés en cairo
+  blender3d.py    modélisation 3D par code (bpy) et rendu Eevee
+  rendu3d.py      lance Blender et met les rendus en cache
+  fonds3d.py      composition : ciel animé, astres et nuages 3D, décor, effets
+  decors.py       primitives 2D (dégradés, confettis, fanions, lucioles…)
   rendu.py        animation, karaoké, transitions, rendu parallèle + ffmpeg
 assets/
   fonts/Fredoka.ttf (licence OFL)
-  personnages/*.svg (générés)
+  rendus3d/       sprites 3D pré-rendus (générés par Blender)
 ```
 
-**Voix chantée.** Chaque mot est phonétisé par espeak-ng et découpé en syllabes. Chaque syllabe reçoit une durée sur une grille de doubles croches, et une note tirée d'un gabarit mélodique. On écrit ensuite un fichier `.pho` MBROLA qui précise, pour chaque phonème, sa durée exacte et sa hauteur : la voix suit réellement la mélodie, avec un léger vibrato sur les notes longues. Les consonnes sont placées avant le temps pour que la voyelle tombe sur la note. Comme les durées sont imposées, le calage du karaoké est exact. Les timings sont ensuite recalés sur la durée réelle du WAV, avec un ratio d'environ 1,000.
+### Voix « dessin animé »
 
-> Pourquoi pas edge-tts ? edge-tts produit une voix *parlée*, et il a besoin d'un accès WebSocket aux serveurs de Microsoft, qui n'était pas disponible dans l'environnement de génération. MBROLA fonctionne hors ligne et permet de *chanter* (hauteur et durée imposées).
+Le modèle de synthèse vocale neuronal [Kokoro](https://github.com/thewh1teagle/kokoro-onnx) (voix française `ff_siwis`) prédit normalement lui-même la durée de chaque phonème et la courbe de hauteur. `voix_kokoro.py` modifie son graphe ONNX pour que ces deux grandeurs deviennent des **entrées**. On lui impose ainsi le rythme de la chanson et la mélodie, et il **chante**.
+
+Les étapes sont les suivantes :
+1. Chaque mot est phonétisé (espeak-ng), découpé en syllabes, et chaque syllabe reçoit une note et une durée sur la grille rythmique (110 BPM).
+2. Kokoro chante la ligne 9 demi-tons plus bas, dans sa zone de confort. Les voyelles sont plafonnées à environ 150 ms, au-delà de quoi il articule mal.
+3. Le vocodeur WORLD tient le cœur des voyelles jusqu'à la durée de la note, remonte la voix à la bonne hauteur (avec portamento et vibrato) et décale les formants vers l'aigu pour un **timbre enfantin**.
+4. Dans les refrains, l'intro et l'outro, deux voix d'enfants supplémentaires, légèrement désaccordées, décalées et réparties à gauche et à droite, forment un **petit chœur**.
+
+La voix tombe exactement sur la mélodie (écart inférieur à 0,1 demi-ton) et sur le rythme, ce qui rend le karaoké précis.
+
+> Pourquoi pas edge-tts ? edge-tts produit une voix *parlée*, et il a besoin d'un accès WebSocket aux serveurs de Microsoft, qui n'était pas disponible dans l'environnement de génération. Kokoro fonctionne hors ligne et peut être piloté finement.
+
+### Musique
 
 **Arrangement par section.**
 - Intro : le xylophone annonce le refrain.
@@ -75,19 +94,32 @@ assets/
 - Refrain final : cuivres, charleston, xylophone et modulation d'un ton au 2ᵉ passage.
 - Outro : le glockenspiel, puis l'accord final et une cymbale.
 
-**Décors.**
-- Intro : lever de soleil sur la ferme.
-- Couplet 1 : le pré, avec le coq et la vache.
-- Refrain : la grange et tous les animaux.
-- Couplet 2 : la mare, avec le canard et le cochon.
-- Pont : ciel étoilé, lune qui chante et mouton qui dort.
-- Couplet 3 : la forêt, avec le cheval qui galope suivi des poussins.
-- Refrain final : la fête avec arc-en-ciel, fanions, ballons et confettis.
-- Outro : coucher de soleil.
+### Animation 3D
 
-On passe d'un décor à l'autre par une transition « bulle ». Les animaux rebondissent sur le temps, avec écrasement à l'atterrissage. Ils ouvrent la bouche quand ils chantent et clignent des yeux. Ils sautent quand on chante leur cri (« meuh », « coin-coin », « groin-groin », « bê-bê », « hop »…).
+`blender3d.py` construit tout par code avec Blender : ellipsoïdes, cylindres biseautés, prismes et courbes, matériaux doux légèrement translucides (subsurface), yeux brillants avec reflets.
+- **Éclairage** : style studio, avec lumière principale douce, contre-jour et ambiance de ciel.
+- **Rendu** : moteur Eevee, avec ombres douces, occlusion ambiante et bloom.
+- **7 animaux**, chacun en 3 états (normal, yeux fermés, bouche ouverte).
+- **8 décors**, un par section :
+  - intro : lever de soleil ;
+  - couplet 1 : le pré ;
+  - refrains : la grange ;
+  - couplet 2 : la mare ;
+  - pont : la nuit étoilée ;
+  - couplet 3 : la forêt ;
+  - refrain final : la fête avec arc-en-ciel ;
+  - outro : le coucher de soleil.
+- **Accessoires** : soleil et lune avec un visage, étoiles, nuages, ballons.
 
-**Karaoké.** Chaque mot passe du blanc à une couleur de la palette tournante (rouge, orange, jaune, vert, bleu, violet, rose) quand il est chanté, avec un petit rebond. Le texte est en police Fredoka Bold, avec un contour épais et une ombre.
+`rendu.py` et `fonds3d.py` assemblent ces rendus image par image :
+- **Fond** : ciel en dégradé pastel animé, soleil et lune qui se lèvent ou se couchent, nuages qui défilent, étoiles qui scintillent.
+- **Caméra** : léger travelling avant pour la profondeur.
+- **Personnages** : ils rebondissent sur le temps (avec écrasement à l'atterrissage), ouvrent la bouche quand ils chantent, clignent des yeux et sautent quand on chante leur cri (« meuh », « coin-coin »…).
+- **Transitions** : en forme de bulle entre les sections.
+
+### Karaoké
+
+Chaque mot passe du blanc à une couleur de la palette tournante (rouge, orange, jaune, vert, bleu, violet, rose) au moment où il est chanté, avec un petit rebond. Le texte est en police Fredoka Bold, avec un contour épais et une ombre.
 
 ## Paroles
 

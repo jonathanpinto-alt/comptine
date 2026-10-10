@@ -19,6 +19,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 from . import config as C
 from . import decors as D
+from . import fonds3d as F3
 from .chanson import SECTIONS, TITRE
 
 W, H = C.LARGEUR, C.HAUTEUR
@@ -69,10 +70,9 @@ def preparer_donnees(lignes):
 
 
 def init_worker(donnees, echelle):
-    from .personnages import charger_sprites
     G["d"] = donnees
     G["echelle"] = echelle
-    G["sprites"] = charger_sprites()
+    G["3d"] = F3.charger()
 
 
 @lru_cache(maxsize=256)
@@ -134,22 +134,26 @@ def cligne(animal, t):
 # ======================================================================= personnages
 def dessiner_perso(ctx, nom, x, y, taille, t, phase=0.0, ampl=20.0, chante=False,
                    dort=False, rot=0.0, flip=False, saut=0.0, freq=1.0):
-    sprite = G["sprites"]
+    """Personnage 3D (sprite Blender). `taille` = nombre de pixels pour 3 m."""
+    g3 = G["3d"]
     ph = ((t / C.NOIRE) * freq + phase) % 1.0
     h = ampl * math.sin(math.pi * ph) + saut * 90
-    ecrase = (0.11 * math.exp(-ph * 9) if ampl > 2 else 0.0)
-    sx = 1 + ecrase + 0.12 * saut
-    sy = 1 - ecrase + 0.05 * math.sin(math.pi * ph) * min(1, ampl / 40) + 0.12 * saut
+    ecrase = (0.10 * math.exp(-ph * 9) if ampl > 2 else 0.0)
+    sx = 1 + ecrase + 0.10 * saut
+    sy = 1 - ecrase + 0.05 * math.sin(math.pi * ph) * min(1, ampl / 40) + 0.10 * saut
     if dort:
-        sy = 1 + 0.03 * math.sin(t * 1.6)
-        sx = 1 + 0.02 * math.sin(t * 1.6 + 1)
-    # ombre
-    ombre = max(0.35, 1 - h / 250)
+        sy = 1 + 0.025 * math.sin(t * 1.6)
+        sx = 1 + 0.015 * math.sin(t * 1.6 + 1)
+    # ombre douce au sol
+    ombre = max(0.35, 1 - h / 260)
+    g = cairo.RadialGradient(0, 0, 0, 0, 0, 1)
+    g.add_color_stop_rgba(0, 0.1, 0.12, 0.2, 0.32)
+    g.add_color_stop_rgba(1, 0.1, 0.12, 0.2, 0.0)
     ctx.save()
-    ctx.translate(x, y + 4)
-    ctx.scale(taille * 0.42 * ombre, taille * 0.07 * ombre)
+    ctx.translate(x, y + 2)
+    ctx.scale(taille * 0.3 * ombre, taille * 0.055 * ombre)
     ctx.arc(0, 0, 1, 0, 2 * math.pi)
-    ctx.set_source_rgba(0.1, 0.1, 0.2, 0.22)
+    ctx.set_source(g)
     ctx.fill()
     ctx.restore()
 
@@ -159,14 +163,15 @@ def dessiner_perso(ctx, nom, x, y, taille, t, phase=0.0, ampl=20.0, chante=False
         etat = "chante"
     else:
         etat = "normal"
-    surf = sprite[(nom, etat)]
-    k = taille / surf.get_width()
+    surf = g3["persos"][(nom, etat)]
+    meta = g3["meta"][nom]
+    k = taille / 3.0 / meta["px_par_m"]
+    ax, ay = meta["ancre"]
     ctx.save()
     ctx.translate(x, y - h)
     ctx.rotate(rot)
     ctx.scale(k * sx * (-1 if flip else 1), k * sy)
-    ancre_y = surf.get_height() * 392 / 400
-    ctx.set_source_surface(surf, -surf.get_width() / 2, -ancre_y)
+    ctx.set_source_surface(surf, -surf.get_width() * ax, -surf.get_height() * ay)
     ctx.get_source().set_filter(cairo.FILTER_GOOD)
     ctx.paint()
     ctx.restore()
@@ -183,39 +188,39 @@ def zzz(ctx, x, y, t):
 
 
 def distribution(decor, t, tl, typ):
-    """Liste des personnages à dessiner pour un décor : dicts de paramètres."""
+    """Liste des personnages à dessiner pour un décor : dicts de paramètres.
+    `taille` = pixels pour 3 m (la vache mesure ~2,9 m, le poussin ~1,5 m)."""
     if decor == "aube":
-        return [dict(nom="poussin", x=1560, y=900, taille=200, phase=0.5, ampl=14),
-                dict(nom="coq", x=1290, y=880, taille=380, ampl=16)], ["coq"]
+        return [dict(nom="poussin", x=1580, y=855, taille=400, phase=0.5, ampl=14),
+                dict(nom="coq", x=1250, y=840, taille=520, ampl=16)], ["coq"]
     if decor == "pre":
-        return [dict(nom="coq", x=520, y=880, taille=360, ampl=18),
-                dict(nom="vache", x=1260, y=890, taille=470, phase=0.5, ampl=14)], ["coq", "vache"]
+        return [dict(nom="coq", x=560, y=840, taille=520, ampl=18),
+                dict(nom="vache", x=1280, y=850, taille=560, phase=0.5, ampl=14)], ["coq", "vache"]
     if decor == "mare":
-        bob = 10 * math.sin(t * 2.2)
-        return [dict(nom="canard", x=600 + 120 * math.sin(tl * 0.35), y=850 + bob, taille=330, ampl=6,
+        bob = 8 * math.sin(t * 2.2)
+        return [dict(nom="canard", x=680 + 110 * math.sin(tl * 0.35), y=812 + bob, taille=460, ampl=5,
                      rot=0.05 * math.sin(t * 2.2), flip=math.cos(tl * 0.35) < 0),
-                dict(nom="cochon", x=1440, y=880, taille=400, phase=0.5, ampl=18)], ["canard", "cochon"]
+                dict(nom="cochon", x=1470, y=795, taille=520, phase=0.5, ampl=18)], ["canard", "cochon"]
     if decor == "nuit":
-        return [dict(nom="mouton", x=980, y=880, taille=400, ampl=0, dort=True)], []
+        return [dict(nom="mouton", x=980, y=845, taille=540, ampl=0, dort=True)], []
     if decor == "foret":
         duree = 8 * C.MESURE
         u = 0.5 - 0.5 * math.cos(2 * math.pi * tl / duree)
         vit = math.sin(2 * math.pi * tl / duree)
-        res = [dict(nom="coq", x=230, y=900, taille=280, ampl=16),
-               dict(nom="cheval", x=500 + 950 * u, y=890, taille=430, ampl=26, freq=2.0, flip=vit < 0)]
+        res = [dict(nom="coq", x=230, y=855, taille=430, ampl=16),
+               dict(nom="cheval", x=560 + 900 * u, y=840, taille=520, ampl=24, freq=2.0, flip=vit < 0)]
         for k in range(3):
             tk = max(0.0, tl - 0.9 * (k + 1))
             uk = 0.5 - 0.5 * math.cos(2 * math.pi * tk / duree)
-            res.append(dict(nom="poussin", x=500 + 950 * uk - (170 + 120 * k) * (1 if vit >= 0 else -1),
-                            y=905, taille=170, ampl=22, phase=0.25 * k, freq=2.0))
+            res.append(dict(nom="poussin", x=560 + 900 * uk - (210 + 130 * k) * (1 if vit >= 0 else -1),
+                            y=860, taille=360, ampl=22, phase=0.25 * k, freq=2.0))
         return res, ["coq", "cheval", "poussin"]
     # rangée de tous les animaux : grange, fête, couchant
-    tailles = {"coq": 280, "vache": 330, "canard": 260, "cochon": 300, "mouton": 290, "cheval": 320, "poussin": 200}
     res = []
     n = len(RANGEE)
     for k, nom in enumerate(RANGEE):
         x = 170 + k * (W - 340) / (n - 1)
-        p = dict(nom=nom, x=x, y=890 - 10 * (k % 2), taille=tailles[nom] * (0.95 if decor == "couchant" else 1.0),
+        p = dict(nom=nom, x=x, y=840 - 12 * (k % 2), taille=400 if nom != "poussin" else 380,
                  phase=0.5 * (k % 2))
         if decor == "grange":
             p.update(ampl=32)
@@ -230,26 +235,19 @@ def distribution(decor, t, tl, typ):
 def dessiner_scene(ctx, idx, t):
     nom, typ, m0, nb, decor, tr = SECTIONS[idx]
     tl = t - m0 * C.MESURE
-    if decor == "fete":
-        D.decor_fete(ctx, t, tl, tr)
-    else:
-        D.DECORS[decor](ctx, t, tl)
-    if decor == "nuit":
-        sa = syllabe_active(t)
-        ouv = 0.0
-        if sa:
-            deb, fin, _ = sa
-            ouv = 1.0 if (t - deb) < 0.78 * (fin - deb) else 0.0
-        D.lune(ctx, 1500, 230, 105, t, ouv)
+    F3.arriere_plan(ctx, decor, t, tl, tr)
+    ctx.save()
+    F3.camera(ctx, decor, tl, nb * C.MESURE)
+    F3.decor(ctx, decor)
     persos, chanteurs = distribution(decor, t, tl, typ)
-    for p in persos:
+    for p in sorted(persos, key=lambda p: p["y"]):
         chante = bouche_ouverte(p["nom"], t, chanteurs)
         saut = pop_animal(p["nom"], t)
         dessiner_perso(ctx, t=t, chante=chante, saut=saut, **p)
     if decor == "nuit":
-        zzz(ctx, 1080, 640, t)
-    if decor == "fete":
-        D.confettis(ctx, t, intensite=1.3 if tr else 1.0)
+        zzz(ctx, 1110, 520, t)
+    ctx.restore()
+    F3.premier_plan(ctx, decor, t, tl, tr)
 
 
 def dessiner_monde(ctx, t):
@@ -321,8 +319,8 @@ def dessiner_karaoke(draw, t):
             u = (t - m["debut"]) / 0.32
             pop = math.sin(math.pi * min(1.0, u)) if u < 1 else 0.0
             actif = t < m["fin"]
-            echelle = 1 + 0.16 * pop + (0.04 if actif else 0.0)
-            dy = -20 * pop - (6 if actif else 0)
+            echelle = 1 + 0.11 * pop + (0.03 if actif else 0.0)
+            dy = -16 * pop - (5 if actif else 0)
         texte_contour(draw, (cx, y + dy), m["texte"].replace(" ", " "), taille * echelle, couleur)
         x += wm + espace
 

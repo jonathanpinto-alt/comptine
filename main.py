@@ -5,6 +5,8 @@
     python main.py --rapide        # vidéo d'essai en 960x540
     python main.py --audio-seulement
     python main.py --apercu 30     # une image PNG à t = 30 s
+    python main.py --voix mbrola   # ancienne voix de synthèse (sans modèle neuronal)
+    python main.py --refaire-3d    # refait les rendus Blender (sinon mis en cache)
 """
 import argparse
 import json
@@ -19,7 +21,8 @@ from comptine import config as C
 
 
 def verifier_programmes():
-    manquants = [p for p in ("ffmpeg", "ffprobe", "fluidsynth", "espeak-ng", "mbrola") if not shutil.which(p)]
+    manquants = [p for p in ("ffmpeg", "ffprobe", "fluidsynth", "espeak-ng", "mbrola", "blender")
+                 if not shutil.which(p)]
     if manquants:
         sys.exit("Programmes manquants : " + ", ".join(manquants) + "\n→ voir README.md (apt install …)")
 
@@ -51,10 +54,14 @@ def main():
     ap.add_argument("--audio-seulement", action="store_true")
     ap.add_argument("--apercu", type=float, metavar="T", help="écrit une image PNG à l'instant T")
     ap.add_argument("--processus", type=int, default=None, help="nombre de processus de rendu")
+    ap.add_argument("--voix", choices=["kokoro", "mbrola"], default="kokoro",
+                    help="kokoro : voix neuronale qui chante (défaut) ; mbrola : synthèse classique")
+    ap.add_argument("--refaire-3d", action="store_true", help="refaire les rendus 3D Blender")
+    ap.add_argument("--qualite-3d", type=int, default=64, help="échantillons Eevee des rendus 3D")
     args = ap.parse_args()
 
     verifier_programmes()
-    from comptine import mixage, musique, rendu, soustitres, voix
+    from comptine import mixage, musique, rendu, rendu3d, soustitres, voix
 
     C.SORTIE.mkdir(exist_ok=True)
     C.TMP.mkdir(exist_ok=True)
@@ -65,14 +72,22 @@ def main():
     print(f"   {len(lignes)} lignes, {sum(len(L.mots) for L in lignes)} mots, "
           f"{sum(len(L.syllabes) for L in lignes)} syllabes chantées")
 
+    etape("Modèles 3D (Blender) : personnages, décors, accessoires")
+    rendu3d.rendre(args.qualite_3d, forcer=args.refaire_3d)
+
     if args.apercu is not None:
         chemin = C.SORTIE / f"apercu_{args.apercu:.1f}s.png"
         rendu.apercu(lignes, args.apercu, chemin, echelle=1.0)
         print(f"   → {chemin}")
         return
 
-    etape("Voix chantée (espeak-ng + MBROLA)")
-    v = voix.synthetiser(lignes, C.TMP)
+    if args.voix == "kokoro":
+        from comptine import voix_kokoro
+        etape("Voix chantée (Kokoro qui chante + WORLD, timbre enfantin, chœur)")
+        v = voix_kokoro.synthetiser(lignes, C.TMP)
+    else:
+        etape("Voix chantée (espeak-ng + MBROLA)")
+        v = voix.synthetiser(lignes, C.TMP)
 
     etape("Musique (MIDI → FluidSynth)")
     pm = musique.composer(lignes)

@@ -194,53 +194,59 @@ def hz(midi):
     return 440.0 * 2 ** ((midi - 69) / 12)
 
 
+def segments_ligne(L):
+    """Phonèmes cibles d'une ligne : [(debut_s, fin_s, phoneme, points_hauteur, duree_espeak_ms)]."""
+    seg = []
+    syls = L.syllabes
+    for k, s in enumerate(syls):
+        f = hz(s.midi)
+        # attaque : placée AVANT le temps pour que la voyelle tombe pile sur la note
+        att = [(p, min(d, 75) / 1000, d) for p, d in s.attaque]
+        tot = sum(d for _, d, _ in att)
+        dispo = (s.fin - s.debut) * 0.35
+        if k > 0:
+            dispo = min(dispo, (syls[k - 1].fin - syls[k - 1].debut) * 0.45)
+        if tot > dispo:
+            att = [(p, d * dispo / tot, o) for p, d, o in att]
+            tot = dispo
+        s.t_son = s.debut - tot
+        s.att = att
+        s.f = f
+    for k, s in enumerate(syls):
+        legato = k + 1 < len(syls)
+        fin_son = syls[k + 1].t_son if legato else s.fin - 0.06
+        coda = [(p, min(d, 70) / 1000, d) for p, d in s.coda]
+        totc = sum(d for _, d, _ in coda)
+        dispo = max(0.0, (fin_son - s.debut) - 0.05)
+        if totc > dispo * 0.5:
+            coda = [(p, d * dispo * 0.5 / totc, o) for p, d, o in coda]
+            totc = dispo * 0.5
+        t = s.t_son
+        for p, d, o in s.att:
+            seg.append((t, t + d, p, [(50, s.f)], o))
+            t += d
+        fin_v = fin_son - totc
+        dv = fin_v - t
+        f_prec = syls[k - 1].f if k > 0 else s.f * 0.96
+        pts = [(0, f_prec), (15, s.f)]
+        if dv > 0.33:
+            for pc, r in ((40, 1.0), (52, 1.012), (64, 0.988), (76, 1.014), (88, 0.986), (100, 1.0)):
+                pts.append((pc, s.f * r))
+        else:
+            pts.append((100, s.f))
+        seg.append((t, fin_v, s.noyau[0], pts, s.noyau[1]))
+        t = fin_v
+        for p, d, o in coda:
+            seg.append((t, t + d, p, [(50, s.f)], o))
+            t += d
+    return seg
+
+
 def ecrire_pho(lignes, chemin):
     """Écrit le fichier .pho de toute la chanson (temps absolus, sans dérive)."""
     seg = []        # (debut_s, fin_s, phoneme, points_hauteur)
-
     for L in lignes:
-        syls = L.syllabes
-        for k, s in enumerate(syls):
-            f = hz(s.midi)
-            # attaque : placée AVANT le temps pour que la voyelle tombe pile sur la note
-            att = [(p, min(d, 75) / 1000) for p, d in s.attaque]
-            tot = sum(d for _, d in att)
-            dispo = (s.fin - s.debut) * 0.35
-            if k > 0:
-                dispo = min(dispo, (syls[k - 1].fin - syls[k - 1].debut) * 0.45)
-            if tot > dispo:
-                att = [(p, d * dispo / tot) for p, d in att]
-                tot = dispo
-            s.t_son = s.debut - tot
-            s.att = att
-            s.f = f
-        for k, s in enumerate(syls):
-            legato = k + 1 < len(syls)
-            fin_son = syls[k + 1].t_son if legato else s.fin - 0.06
-            coda = [(p, min(d, 70) / 1000) for p, d in s.coda]
-            totc = sum(d for _, d in coda)
-            dispo = max(0.0, (fin_son - s.debut) - 0.05)
-            if totc > dispo * 0.5:
-                coda = [(p, d * dispo * 0.5 / totc) for p, d in coda]
-                totc = dispo * 0.5
-            t = s.t_son
-            for p, d in s.att:
-                seg.append((t, t + d, p, [(50, s.f)]))
-                t += d
-            fin_v = fin_son - totc
-            dv = fin_v - t
-            f_prec = syls[k - 1].f if k > 0 else s.f * 0.96
-            pts = [(0, f_prec), (15, s.f)]
-            if dv > 0.33:
-                for pc, r in ((40, 1.0), (52, 1.012), (64, 0.988), (76, 1.014), (88, 0.986), (100, 1.0)):
-                    pts.append((pc, s.f * r))
-            else:
-                pts.append((100, s.f))
-            seg.append((t, fin_v, s.noyau[0], pts))
-            t = fin_v
-            for p, d in coda:
-                seg.append((t, t + d, p, [(50, s.f)]))
-                t += d
+        seg.extend(x[:4] for x in segments_ligne(L))
 
     seg.sort(key=lambda x: x[0])
     lignes_pho = []

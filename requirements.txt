@@ -5,5 +5,8 @@ pretty_midi
 pydub
 audioop-lts; python_version >= "3.13"
 pycairo
-cairosvg
+kokoro-onnx
+onnx
+onnxruntime
+pyworld
 Pillow
