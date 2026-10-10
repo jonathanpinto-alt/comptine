@@ -103,7 +103,7 @@ def arriere_plan(ctx, decor, t, tl, tr):
                vitesse=40 if decor == "fete" else 22)
     elif decor == "nuit":
         etoiles(ctx, t)
-        sprite(ctx, acc["lune"], 1500, 240 + 8 * math.sin(t * 0.9), 270, rot=0.05 * math.sin(t * 0.7))
+        sprite(ctx, acc["lune"], 1480, 150 + 8 * math.sin(t * 0.9), 270, rot=0.05 * math.sin(t * 0.7))
         nuages(ctx, t, 3, graine=8, vitesse=10, alpha=0.35)
     elif decor == "foret":
         p = min(1.0, tl / 4)
