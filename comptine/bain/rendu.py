@@ -398,7 +398,7 @@ def scene4(ctx, t, tl, duree, occ):
     bulles_montantes(ctx, t, (tx - 220, tx + 220, ty - 120), n=10, graine=21, vitesse=60, r=(10, 30))
     # miroir flottant à sa gauche (à droite de l'écran), qui le regarde
     mx, my = tx + 420, ty + 20 + 18 * math.sin(t * 1.7)
-    larg = 330
+    larg = 420
     rot = 0.08 * math.sin(t * 1.3)
     ctx.save()
     ctx.translate(mx, my)
@@ -507,7 +507,7 @@ def scene7(ctx, t, tl, duree, occ):
     rx, ry = (max(xs) - min(xs)) / 2, (max(ys) - min(ys)) / 2
     reflet = "reflet_a" if pose_r == "brosse_a" else "reflet_b"
     mr = G3["meta"][reflet]
-    reflet_miroir(ctx, reflet, "brosse", cx, cy + ry * 0.12, rx, ry, 0.95, (mr["tete"][0], mr["tete"][1] + 60))
+    reflet_miroir(ctx, reflet, "brosse", cx, cy, rx, ry, 0.8, (mr["tete"][0], mr["tete"][1] + 40))
     bulles_montantes(ctx, t, (cx - 300, cx + 300, 1000), n=6, graine=81, vitesse=40, r=(10, 26), alpha=0.7)
 
 
@@ -596,7 +596,7 @@ def dessiner_textes(draw, t):
     debut7 = next(p[0] for p in G3["plans_montage"] if p[2] == 7)
     if t > debut7 + 1.5:
         a = min(1.0, (t - debut7 - 1.5) / 0.5)
-        titre_rebondissant(draw, t, TEXTE_DODO, 190, 112, a, 1.0)
+        titre_rebondissant(draw, t, TEXTE_DODO, 135, 100, a, 1.0)
 
 
 # ======================================================================= image

@@ -300,12 +300,12 @@ def dessiner_karaoke(draw, t):
         return
     app = min(1.0, (t - ligne["aff_debut"]) / 0.15)
     taille = 86 * (0.6 + 0.4 * app)
-    espace = largeur(" ", taille) * 1.1
+    espace = largeur(" ", taille) * 1.1 + taille * 0.14
     mots = ligne["mots"]
     total = sum(largeur(m["texte"], taille) for m in mots) + espace * (len(mots) - 1)
     if total > W - 160:
         taille = taille * (W - 160) / total
-        espace = largeur(" ", taille) * 1.1
+        espace = largeur(" ", taille) * 1.1 + taille * 0.14
         total = sum(largeur(m["texte"], taille) for m in mots) + espace * (len(mots) - 1)
     y = 1010 + 30 * (1 - app)
     x = (W - total) / 2

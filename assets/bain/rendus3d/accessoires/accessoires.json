@@ -1,0 +1,10 @@
+{
+ "canard": {
+  "echelle": 2.0,
+  "centre_z": 0.25
+ },
+ "miroir": {
+  "echelle": 2.0,
+  "centre_z": 0.0
+ }
+}

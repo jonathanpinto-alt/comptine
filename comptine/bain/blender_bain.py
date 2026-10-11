@@ -654,7 +654,7 @@ PLANS = {
     "large":  ((0.0, -5.0, 1.45), (0.05, 0.3, 0.72), 40, dict(lieu=(-0.85, -0.55, 0.0))),
     "bain":   ((0.0, -3.0, 1.55), (0.0, 0.25, 0.78), 38, dict(lieu=(0.0, 0.18, 0.3))),
     "proche": ((0.05, -1.75, 1.22), (0.0, 0.2, 0.98), 40, dict(lieu=(0.0, 0.18, 0.3))),
-    "lavabo": ((-0.3, -3.6, 1.45), (0.0, 0.3, 0.95), 38, dict(lieu=(-0.55, -0.15, 0.24), rot_z=48)),
+    "lavabo": ((-0.2, -3.9, 1.5), (0.05, 0.3, 1.08), 36, dict(lieu=(-0.55, -0.15, 0.24), rot_z=48)),
 }
 
 
@@ -677,7 +677,7 @@ def construire_plan(nom):
     else:
         piece(mur="#ffd6e8", mur_haut="#e9f3ff", sol1="#fff3c8", sol2="#ffffff", fond_y=0.8)
         lavabo(0.55, 0.45)
-        coins = miroir_rigolo(0.55, 0.78, 1.72)
+        coins = miroir_rigolo(0.6, 0.78, 1.6, rx=0.36, rz=0.44)
         tabouret(-0.55, -0.15)
         porte_serviette(-1.6, 0.8, 1.35, "#7fd8ff")
         fenetre_nuit(-1.3, 0.8, 1.95, 0.3)

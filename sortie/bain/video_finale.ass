@@ -1,0 +1,43 @@
+[Script Info]
+Title: C'est l'heure du bain !
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Karaoke,Fredoka,86,&H003B3BFF,&H00FFFFFF,&H005C1C3A,&H80461428,-1,0,0,0,100,100,0,0,1,9,5,2,80,80,60,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:04.30,0:00:09.30,Karaoke,,0,0,0,,{\k70}{\1c&H003B3BFF&\kf31}C’est {\1c&H001E91FF&\kf31}l’heure {\1c&H0000D6FF&\kf31}du {\1c&H0046C83C&\kf94}bain, {\1c&H00FF8C28&\kf188}tralala
+Dialogue: 0,0:00:09.30,0:00:14.38,Karaoke,,0,0,0,,{\k70}{\1c&H00E650A0&\kf31}Viens {\1c&H00B45AFF&\kf62}avec {\1c&H003B3BFF&\kf94}moi, {\1c&H001E91FF&\kf31}on {\1c&H0000D6FF&\kf31}va {\1c&H0046C83C&\kf62}jouer {\1c&H00FF8C28&\kf125}ça
+Dialogue: 0,0:00:14.53,0:00:19.30,Karaoke,,0,0,0,,{\k47}{\1c&H00E650A0&\kf31}C’est {\1c&H00B45AFF&\kf31}l’heure {\1c&H003B3BFF&\kf31}du {\1c&H001E91FF&\kf94}bain, {\1c&H0000D6FF&\kf31}l’heure {\1c&H0046C83C&\kf31}du {\1c&H00FF8C28&\kf125}bain
+Dialogue: 0,0:00:19.30,0:00:24.30,Karaoke,,0,0,0,,{\k70}{\1c&H00E650A0&\kf31}Viens {\1c&H00B45AFF&\kf31}te {\1c&H003B3BFF&\kf125}laver, {\1c&H001E91FF&\kf31}prends {\1c&H0000D6FF&\kf31}ta {\1c&H0046C83C&\kf125}main
+Dialogue: 0,0:00:24.30,0:00:29.30,Karaoke,,0,0,0,,{\k70}{\1c&H00FF8C28&\kf31}De {\1c&H00E650A0&\kf31}l’eau {\1c&H00B45AFF&\kf31}qui {\1c&H003B3BFF&\kf94}coule, {\1c&H001E91FF&\kf31}des {\1c&H0000D6FF&\kf31}bulles {\1c&H0046C83C&\kf31}qui {\1c&H00FF8C28&\kf94}dansent
+Dialogue: 0,0:00:29.30,0:00:34.38,Karaoke,,0,0,0,,{\k70}{\1c&H00E650A0&\kf31}On {\1c&H00B45AFF&\kf31}va {\1c&H003B3BFF&\kf125}jouer, {\1c&H001E91FF&\kf62}quelle {\1c&H0000D6FF&\kf188}chance !
+Dialogue: 0,0:00:34.52,0:00:39.38,Karaoke,,0,0,0,,{\k48}{\1c&H0046C83C&\kf31}Splash {\1c&H00FF8C28&\kf31}splash {\1c&H00E650A0&\kf62}splash, {\1c&H00B45AFF&\kf31}dans {\1c&H003B3BFF&\kf31}la {\1c&H001E91FF&\kf250}baignoire
+Dialogue: 0,0:00:39.52,0:00:44.30,Karaoke,,0,0,0,,{\k48}{\1c&H0000D6FF&\kf31}Splash {\1c&H0046C83C&\kf31}splash {\1c&H00FF8C28&\kf62}splash, {\1c&H00E650A0&\kf31}quelle {\1c&H00B45AFF&\kf219}victoire
+Dialogue: 0,0:00:44.30,0:00:49.30,Karaoke,,0,0,0,,{\k70}{\1c&H003B3BFF&\kf31}Lave {\1c&H001E91FF&\kf31}tes {\1c&H0000D6FF&\kf125}mains, {\1c&H0046C83C&\kf31}lave {\1c&H00FF8C28&\kf31}tes {\1c&H00E650A0&\kf125}pieds
+Dialogue: 0,0:00:49.30,0:00:54.55,Karaoke,,0,0,0,,{\k70}{\1c&H00B45AFF&\kf31}Tout {\1c&H003B3BFF&\kf62}propre, {\1c&H001E91FF&\kf31}tout {\1c&H0000D6FF&\kf62}beau, {\1c&H0046C83C&\kf188}ohé !
+Dialogue: 0,0:00:59.30,0:01:04.30,Karaoke,,0,0,0,,{\k70}{\1c&H00FF8C28&\kf31}Le {\1c&H00E650A0&\kf94}canard {\1c&H00B45AFF&\kf62}jaune {\1c&H003B3BFF&\kf31}nage {\1c&H001E91FF&\kf62}avec {\1c&H0000D6FF&\kf94}toi
+Dialogue: 0,0:01:04.30,0:01:09.38,Karaoke,,0,0,0,,{\k70}{\1c&H0046C83C&\kf16}Le {\1c&H00FF8C28&\kf47}shampoing {\1c&H00E650A0&\kf31}mousse {\1c&H00B45AFF&\kf31}sur {\1c&H003B3BFF&\kf31}tes {\1c&H001E91FF&\kf94}cheveux, {\1c&H0000D6FF&\kf188}regarde-moi
+Dialogue: 0,0:01:09.53,0:01:14.30,Karaoke,,0,0,0,,{\k47}{\1c&H0046C83C&\kf31}On {\1c&H00FF8C28&\kf31}rince {\1c&H00E650A0&\kf125}tout, {\1c&H00B45AFF&\kf31}on {\1c&H003B3BFF&\kf31}frotte {\1c&H001E91FF&\kf31}bien {\1c&H0000D6FF&\kf94}fort
+Dialogue: 0,0:01:14.30,0:01:19.38,Karaoke,,0,0,0,,{\k70}{\1c&H0046C83C&\kf62}Après {\1c&H00FF8C28&\kf31}le {\1c&H00E650A0&\kf62}bain, {\1c&H00B45AFF&\kf31}on {\1c&H003B3BFF&\kf31}est {\1c&H001E91FF&\kf31}en {\1c&H0000D6FF&\kf188}or
+Dialogue: 0,0:01:19.53,0:01:24.38,Karaoke,,0,0,0,,{\k47}{\1c&H0046C83C&\kf31}Splash {\1c&H00FF8C28&\kf31}splash {\1c&H00E650A0&\kf62}splash, {\1c&H00B45AFF&\kf31}dans {\1c&H003B3BFF&\kf31}la {\1c&H001E91FF&\kf250}baignoire
+Dialogue: 0,0:01:24.53,0:01:29.30,Karaoke,,0,0,0,,{\k47}{\1c&H0000D6FF&\kf31}Splash {\1c&H0046C83C&\kf31}splash {\1c&H00FF8C28&\kf62}splash, {\1c&H00E650A0&\kf31}quelle {\1c&H00B45AFF&\kf219}victoire
+Dialogue: 0,0:01:29.30,0:01:34.30,Karaoke,,0,0,0,,{\k70}{\1c&H003B3BFF&\kf31}Lave {\1c&H001E91FF&\kf31}tes {\1c&H0000D6FF&\kf125}mains, {\1c&H0046C83C&\kf31}lave {\1c&H00FF8C28&\kf31}tes {\1c&H00E650A0&\kf125}pieds
+Dialogue: 0,0:01:34.30,0:01:39.55,Karaoke,,0,0,0,,{\k70}{\1c&H00B45AFF&\kf31}Tout {\1c&H003B3BFF&\kf62}propre, {\1c&H001E91FF&\kf31}tout {\1c&H0000D6FF&\kf62}beau, {\1c&H0046C83C&\kf188}ohé !
+Dialogue: 0,0:01:44.30,0:01:49.38,Karaoke,,0,0,0,,{\k70}{\1c&H00FF8C28&\kf31}On {\1c&H00E650A0&\kf31}compte {\1c&H00B45AFF&\kf31}les {\1c&H003B3BFF&\kf94}bulles, {\1c&H001E91FF&\kf62}un, {\1c&H0000D6FF&\kf62}deux, {\1c&H0046C83C&\kf125}trois
+Dialogue: 0,0:01:49.53,0:01:54.30,Karaoke,,0,0,0,,{\k47}{\1c&H00FF8C28&\kf31}On {\1c&H00E650A0&\kf31}chante {\1c&H00B45AFF&\kf125}encore, {\1c&H003B3BFF&\kf31}toi {\1c&H001E91FF&\kf31}et {\1c&H0000D6FF&\kf125}moi
+Dialogue: 0,0:01:54.30,0:01:59.30,Karaoke,,0,0,0,,{\k70}{\1c&H0046C83C&\kf31}L’eau {\1c&H00FF8C28&\kf31}est {\1c&H00E650A0&\kf125}tiède, {\1c&H00B45AFF&\kf31}tout {\1c&H003B3BFF&\kf31}est {\1c&H001E91FF&\kf125}calme
+Dialogue: 0,0:01:59.30,0:02:04.38,Karaoke,,0,0,0,,{\k70}{\1c&H0000D6FF&\kf31}On {\1c&H0046C83C&\kf31}se {\1c&H00FF8C28&\kf125}détend, {\1c&H00E650A0&\kf31}quel {\1c&H00B45AFF&\kf219}programme
+Dialogue: 0,0:02:04.53,0:02:09.38,Karaoke,,0,0,0,,{\k47}{\1c&H003B3BFF&\kf31}Splash {\1c&H001E91FF&\kf31}splash {\1c&H0000D6FF&\kf62}splash, {\1c&H0046C83C&\kf31}dans {\1c&H00FF8C28&\kf31}la {\1c&H00E650A0&\kf250}baignoire
+Dialogue: 0,0:02:09.53,0:02:14.30,Karaoke,,0,0,0,,{\k47}{\1c&H00B45AFF&\kf31}Splash {\1c&H003B3BFF&\kf31}splash {\1c&H001E91FF&\kf62}splash, {\1c&H0000D6FF&\kf31}quelle {\1c&H0046C83C&\kf219}victoire
+Dialogue: 0,0:02:14.30,0:02:19.30,Karaoke,,0,0,0,,{\k70}{\1c&H00FF8C28&\kf31}Lave {\1c&H00E650A0&\kf31}tes {\1c&H00B45AFF&\kf125}mains, {\1c&H003B3BFF&\kf31}lave {\1c&H001E91FF&\kf31}tes {\1c&H0000D6FF&\kf125}pieds
+Dialogue: 0,0:02:19.30,0:02:24.55,Karaoke,,0,0,0,,{\k70}{\1c&H0046C83C&\kf31}Tout {\1c&H00FF8C28&\kf62}propre, {\1c&H00E650A0&\kf31}tout {\1c&H00B45AFF&\kf62}beau, {\1c&H003B3BFF&\kf188}ohé !
+Dialogue: 0,0:02:29.30,0:02:34.38,Karaoke,,0,0,0,,{\k70}{\1c&H001E91FF&\kf62}Maintenant {\1c&H0000D6FF&\kf31}tout {\1c&H0046C83C&\kf94}propre, {\1c&H00FF8C28&\kf31}dans {\1c&H00E650A0&\kf31}ta {\1c&H00B45AFF&\kf188}serviette
+Dialogue: 0,0:02:34.53,0:02:39.30,Karaoke,,0,0,0,,{\k47}{\1c&H003B3BFF&\kf31}Un {\1c&H001E91FF&\kf31}gros {\1c&H0000D6FF&\kf125}câlin, {\1c&H0046C83C&\kf31}une {\1c&H00FF8C28&\kf31}bonne {\1c&H00E650A0&\kf125}fête
+Dialogue: 0,0:02:39.30,0:02:44.30,Karaoke,,0,0,0,,{\k70}{\1c&H00B45AFF&\kf62}Dodo {\1c&H003B3BFF&\kf125}t’attend, {\1c&H001E91FF&\kf31}ferme {\1c&H0000D6FF&\kf31}les {\1c&H0046C83C&\kf125}yeux
+Dialogue: 0,0:02:44.30,0:02:50.18,Karaoke,,0,0,0,,{\k70}{\1c&H00FF8C28&\kf31}C’est {\1c&H00E650A0&\kf31}l’heure {\1c&H00B45AFF&\kf31}du {\1c&H003B3BFF&\kf94}bain, {\1c&H001E91FF&\kf31}le {\1c&H0000D6FF&\kf62}meilleur {\1c&H0046C83C&\kf31}des {\1c&H00FF8C28&\kf125}jeux
