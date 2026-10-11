@@ -1,6 +1,7 @@
 # Comptines vidéo 100 % générées par code
 
-Deux comptines originales en français pour les 2-5 ans, style dessin animé 3D pour enfants :
+Trois comptines originales en français pour les 2-5 ans :
+- **« Toc toc toc, qui est là ? »** (2D, 2 min 17) → `python main.py --chanson toc` → `sortie/toc/` — [voir plus bas](#-toc-toc-toc-qui-est-là---animation-2d)
 - **« C'est l'heure du bain ! »** (3 min) → `python main.py --chanson bain` → `sortie/bain/` — [voir plus bas](#-cest-lheure-du-bain---3-min)
 - **« Bonjour la ferme ! »** (2 min 30) → `python main.py` → `sortie/`
 
@@ -232,3 +233,46 @@ Pour chaque cadrage, Blender rend :
 - le garçon dans chaque pose et expression, avec le décor en *holdout* : le bord de la baignoire, l'eau et la mousse le découpent exactement.
 
 `comptine/bain/rendu.py` anime ensuite le tout image par image : poses calées sur le tempo, clignements, sauts, bulles, gouttes, reflets dans les miroirs, travellings et transitions en bulle.
+
+---
+
+# 🚪 « Toc toc toc, qui est là ? » — animation 2D
+
+Petite histoire en questions/réponses : par une nuit de pluie, on frappe chez Petit Lapin. Arrivent Cochon, Biquette, Hibou, puis… deux gros yeux et des dents pointues : c'est Croco, gentil comme tout, avec un gâteau ! **Objectif éducatif** : accueillir et partager, reconnaître les animaux, dédramatiser la peur.
+
+```bash
+pip install cairosvg                      # en plus des dépendances du projet
+python main.py --chanson toc              # vidéo, miniature, sous-titres → sortie/toc/
+python main.py --chanson toc --apercu 92  # une image PNG à t = 92 s
+python main.py --chanson toc --rapide     # essai 960×540
+```
+
+| Fichier (`sortie/toc/`) | Contenu |
+|---|---|
+| `video_finale.mp4` | la vidéo, 1920×1080, 30 i/s, **2 min 17,6 s** (durée de la chanson fournie) |
+| `miniature.png` | miniature YouTube 1920×1080 : titre multicolore à contour blanc, les 5 personnages, colline |
+| `paroles.json` | chaque ligne et chaque mot : texte, début/fin, couleur, **qui chante** (solo, réponse ou chœur ; voix femme/homme/chœur ; personnage) |
+| `video_finale.srt`, `.ass` | sous-titres classiques et karaoké |
+| `audio_final.wav` | la chanson fournie, sans modification |
+
+## Son et calage
+La chanson est **fournie** (`assets/toc/son/chanson.mp3`, « Toc toc toc 2 »). Elle chante les paroles dans l'ordre prévu : intro, couplet 1, refrain, couplet 2, refrain, pont, couplet 3, refrain final ×2 avec « Encore une fois ! », outro.
+Pour caler le karaoké, `outils/aligner_son.py --chanson toc` isole la voix (Spleeter) et place chaque syllabe sur ses attaques. Il écrit `assets/toc/son/alignement.json`. Les 37 lignes chantées ont été repérées avec Whisper (`BLOCS` dans `comptine/toc/son.py`).
+
+## Dessin et animation
+- **Tout est en SVG**, écrit par code (`comptine/toc/svg.py`, `decors_svg.py`), puis rastérisé une fois avec cairosvg (`assets/toc/svg/` et `assets/toc/png/`).
+- **Personnages** : Petit Lapin (robe rouge à pois, tablier, nœud), Cochon (salopette), Biquette (lunettes roses, foulard), Hibou (nœud papillon), Croco (toque de chef, nœud rouge). Ce sont des rigs de pièces avec pivots : corps, tête, oreilles, bras, queue, yeux ouverts/fermés, bouche fermée/ouverte, accessoires.
+- **Animation** (`comptine/toc/rendu.py`) :
+  - rebond sur le temps (100 % calé sur la chanson), balancement de la tête, des oreilles, des bras et de la queue ;
+  - clignements, danse aux refrains ;
+  - **bouche ouverte sur les syllabes chantées par le personnage** (soliste : Lapin ; réponses : Cochon, Biquette, Hibou, Croco ; chœur : tout le monde).
+- **Un décor par section**, en 4 couches avec parallaxe :
+  - colline sous la pluie (intro) ;
+  - cuisine (couplet 1) ;
+  - salon (refrains) ;
+  - porte d'entrée (couplet 2) ;
+  - fenêtre de nuit (pont) ;
+  - porte dans la nuit (couplet 3) ;
+  - salon de fête (refrains finaux) ;
+  - colline étoilée (outro).
+- **Effets** : pluie, flaques, feu de cheminée, bulles « TOC ! » sur chaque « toc » chanté, étoiles, ballons, confettis, transition en cercle.

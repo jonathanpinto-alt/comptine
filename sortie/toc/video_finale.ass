@@ -1,0 +1,50 @@
+[Script Info]
+Title: Toc toc toc, qui est là ?
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Karaoke,Fredoka,86,&H003B3BFF,&H00FFFFFF,&H005C1C3A,&H80461428,-1,0,0,0,100,100,0,0,1,9,5,2,80,80,60,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:02.71,0:00:06.78,Karaoke,,0,0,0,,{\k70}{\1c&H003B3BFF&\kf44}Toc {\1c&H001E91FF&\kf42}toc {\1c&H0000D6FF&\kf36}toc ! {\1c&H0046C83C&\kf32}Qui {\1c&H00FF8C28&\kf48}est {\1c&H00E650A0&\kf55}là ?
+Dialogue: 0,0:00:12.15,0:00:16.14,Karaoke,,0,0,0,,{\k70}{\1c&H00B45AFF&\kf38}Il {\1c&H003B3BFF&\kf47}pleut, {\1c&H001E91FF&\kf35}il {\1c&H0000D6FF&\kf49}pleut {\1c&H0046C83C&\kf39}sur {\1c&H00FF8C28&\kf36}la {\1c&H00E650A0&\kf85}colline,
+Dialogue: 0,0:00:16.29,0:00:19.45,Karaoke,,0,0,0,,{\1c&H00B45AFF&\kf39}Petit {\1c&H003B3BFF&\kf107}Lapin {\1c&H001E91FF&\kf19}est {\1c&H0000D6FF&\kf44}dans {\1c&H0046C83C&\kf28}sa {\1c&H00FF8C28&\kf94}cuisine.
+Dialogue: 0,0:00:19.60,0:00:22.40,Karaoke,,0,0,0,,{\k2}{\1c&H00E650A0&\kf22}Mais {\1c&H00B45AFF&\kf26}tout {\1c&H003B3BFF&\kf35}à {\1c&H001E91FF&\kf45}coup, {\1c&H0000D6FF&\kf97}qu'est-ce {\1c&H0046C83C&\kf28}que {\1c&H00FF8C28&\kf25}c'est ?
+Dialogue: 0,0:00:22.55,0:00:25.65,Karaoke,,0,0,0,,{\k53}{\1c&H00E650A0&\kf88}Quelqu'un {\1c&H00B45AFF&\kf38}frappe {\1c&H003B3BFF&\kf44}à {\1c&H001E91FF&\kf37}son {\1c&H0000D6FF&\kf50}volet !
+Dialogue: 0,0:00:25.80,0:00:28.88,Karaoke,,0,0,0,,{\k55}{\1c&H0046C83C&\kf41}Toc {\1c&H00FF8C28&\kf40}toc {\1c&H00E650A0&\kf34}toc, {\1c&H00B45AFF&\kf45}qui {\1c&H003B3BFF&\kf67}est {\1c&H001E91FF&\kf26}là ?
+Dialogue: 0,0:00:29.03,0:00:32.27,Karaoke,,0,0,0,,{\k55}{\1c&H0000D6FF&\kf44}Ouvre {\1c&H0046C83C&\kf53}vite, {\1c&H00FF8C28&\kf30}n'aie {\1c&H00E650A0&\kf39}pas {\1c&H00B45AFF&\kf44}peur, {\1c&H003B3BFF&\kf27}ça {\1c&H001E91FF&\kf32}va !
+Dialogue: 0,0:00:32.42,0:00:35.41,Karaoke,,0,0,0,,{\k47}{\1c&H0000D6FF&\kf40}Toc {\1c&H0046C83C&\kf43}toc {\1c&H00FF8C28&\kf81}toc, {\1c&H00E650A0&\kf63}entre {\1c&H00B45AFF&\kf25}donc,
+Dialogue: 0,0:00:35.56,0:00:38.25,Karaoke,,0,0,0,,{\1c&H003B3BFF&\kf32}Il {\1c&H001E91FF&\kf40}fait {\1c&H0000D6FF&\kf37}chaud {\1c&H0046C83C&\kf43}dans {\1c&H00FF8C28&\kf25}ma {\1c&H00E650A0&\kf96}maison !
+Dialogue: 0,0:00:38.34,0:00:41.49,Karaoke,,0,0,0,,{\k61}{\1c&H00B45AFF&\kf11}Qui {\1c&H003B3BFF&\kf34}est {\1c&H001E91FF&\kf44}là ? {\1c&H0000D6FF&\kf42}C'est {\1c&H0046C83C&\kf33}moi, {\1c&H00FF8C28&\kf60}Cochon !
+Dialogue: 0,0:00:41.49,0:00:44.80,Karaoke,,0,0,0,,{\k70}{\1c&H00E650A0&\kf50}J'ai {\1c&H00B45AFF&\kf36}la {\1c&H003B3BFF&\kf31}queue {\1c&H001E91FF&\kf14}en {\1c&H0000D6FF&\kf111}tire-bouchon !
+Dialogue: 0,0:00:44.80,0:00:48.41,Karaoke,,0,0,0,,{\k70}{\1c&H0046C83C&\kf15}Et {\1c&H00FF8C28&\kf88}puis {\1c&H00E650A0&\kf31}là ? {\1c&H00B45AFF&\kf30}C'est {\1c&H003B3BFF&\kf24}moi, {\1c&H001E91FF&\kf62}Biquette !
+Dialogue: 0,0:00:48.41,0:00:51.73,Karaoke,,0,0,0,,{\k70}{\1c&H0000D6FF&\kf27}Plic, {\1c&H0046C83C&\kf16}ploc, {\1c&H00FF8C28&\kf26}plic, {\1c&H00E650A0&\kf16}sur {\1c&H00B45AFF&\kf26}mes {\1c&H003B3BFF&\kf141}lunettes !
+Dialogue: 0,0:00:51.78,0:00:55.02,Karaoke,,0,0,0,,{\k65}{\1c&H001E91FF&\kf41}Toc {\1c&H0000D6FF&\kf40}toc {\1c&H0046C83C&\kf34}toc, {\1c&H00FF8C28&\kf44}qui {\1c&H00E650A0&\kf38}est {\1c&H00B45AFF&\kf62}là ?
+Dialogue: 0,0:00:55.17,0:00:58.38,Karaoke,,0,0,0,,{\k51}{\1c&H003B3BFF&\kf45}Ouvre {\1c&H001E91FF&\kf55}vite, {\1c&H0000D6FF&\kf24}n'aie {\1c&H0046C83C&\kf37}pas {\1c&H00FF8C28&\kf45}peur, {\1c&H00E650A0&\kf26}ça {\1c&H00B45AFF&\kf38}va !
+Dialogue: 0,0:00:58.53,0:01:01.35,Karaoke,,0,0,0,,{\k42}{\1c&H003B3BFF&\kf40}Toc {\1c&H001E91FF&\kf41}toc {\1c&H0000D6FF&\kf79}toc, {\1c&H0046C83C&\kf65}entre {\1c&H00FF8C28&\kf15}donc,
+Dialogue: 0,0:01:01.50,0:01:04.60,Karaoke,,0,0,0,,{\k4}{\1c&H00E650A0&\kf27}Il {\1c&H00B45AFF&\kf41}fait {\1c&H003B3BFF&\kf38}chaud {\1c&H001E91FF&\kf42}dans {\1c&H0000D6FF&\kf27}ma {\1c&H0046C83C&\kf98}maison !
+Dialogue: 0,0:01:04.60,0:01:07.90,Karaoke,,0,0,0,,{\k70}{\1c&H00FF8C28&\kf41}Chut, {\1c&H00E650A0&\kf37}chut, {\1c&H00B45AFF&\kf35}la {\1c&H003B3BFF&\kf63}pluie {\1c&H001E91FF&\kf31}fait {\1c&H0000D6FF&\kf29}plic, {\1c&H0046C83C&\kf24}ploc,
+Dialogue: 0,0:01:08.05,0:01:10.70,Karaoke,,0,0,0,,{\k20}{\1c&H00FF8C28&\kf26}Les {\1c&H00E650A0&\kf50}amis {\1c&H00B45AFF&\kf26}sont {\1c&H003B3BFF&\kf25}au {\1c&H001E91FF&\kf71}chaud, {\1c&H0000D6FF&\kf41}ploc, {\1c&H0046C83C&\kf6}ploc.
+Dialogue: 0,0:01:10.85,0:01:13.59,Karaoke,,0,0,0,,{\k7}{\1c&H00FF8C28&\kf41}Hou {\1c&H00E650A0&\kf26}hou ! {\1c&H00B45AFF&\kf36}Qui {\1c&H003B3BFF&\kf64}toque {\1c&H001E91FF&\kf41}au {\1c&H0000D6FF&\kf59}carreau ?
+Dialogue: 0,0:01:13.74,0:01:17.45,Karaoke,,0,0,0,,{\1c&H0046C83C&\kf36}C'est {\1c&H00FF8C28&\kf85}Hibou, {\1c&H00E650A0&\kf40}tout {\1c&H00B45AFF&\kf84}mouillé, {\1c&H003B3BFF&\kf39}oh {\1c&H001E91FF&\kf22}oh !
+Dialogue: 0,0:01:17.73,0:01:20.92,Karaoke,,0,0,0,,{\k70}{\1c&H0000D6FF&\kf41}Toc… {\1c&H0046C83C&\kf40}toc… {\1c&H00FF8C28&\kf27}toc… {\1c&H00E650A0&\kf58}tout {\1c&H00B45AFF&\kf83}doucement,
+Dialogue: 0,0:01:21.07,0:01:24.20,Karaoke,,0,0,0,,{\1c&H003B3BFF&\kf77}Encore {\1c&H001E91FF&\kf76}quelqu'un ? {\1c&H0000D6FF&\kf74}On {\1c&H0046C83C&\kf58}attend…
+Dialogue: 0,0:01:24.20,0:01:27.59,Karaoke,,0,0,0,,{\k70}{\1c&H00FF8C28&\kf31}Deux {\1c&H00E650A0&\kf51}gros {\1c&H00B45AFF&\kf39}yeux {\1c&H003B3BFF&\kf20}et {\1c&H001E91FF&\kf19}des {\1c&H0000D6FF&\kf34}dents {\1c&H0046C83C&\kf75}pointues…
+Dialogue: 0,0:01:27.74,0:01:30.78,Karaoke,,0,0,0,,{\1c&H00FF8C28&\kf47}Oh {\1c&H00E650A0&\kf35}là {\1c&H00B45AFF&\kf30}là, {\1c&H003B3BFF&\kf38}qui {\1c&H001E91FF&\kf38}est {\1c&H0000D6FF&\kf128}venu ?
+Dialogue: 0,0:01:30.93,0:01:33.93,Karaoke,,0,0,0,,{\k24}{\1c&H0046C83C&\kf47}C'est {\1c&H00FF8C28&\kf82}Croco, {\1c&H00E650A0&\kf73}gentil {\1c&H00B45AFF&\kf42}comme {\1c&H003B3BFF&\kf32}tout,
+Dialogue: 0,0:01:34.08,0:01:37.16,Karaoke,,0,0,0,,{\1c&H001E91FF&\kf80}Avec {\1c&H0000D6FF&\kf31}un {\1c&H0046C83C&\kf62}gâteau {\1c&H00FF8C28&\kf40}pour {\1c&H00E650A0&\kf22}vous !
+Dialogue: 0,0:01:37.16,0:01:40.45,Karaoke,,0,0,0,,{\k70}{\1c&H00B45AFF&\kf40}Toc {\1c&H003B3BFF&\kf41}toc {\1c&H001E91FF&\kf32}toc, {\1c&H0000D6FF&\kf44}qui {\1c&H0046C83C&\kf55}est {\1c&H00FF8C28&\kf47}là ?
+Dialogue: 0,0:01:40.60,0:01:43.71,Karaoke,,0,0,0,,{\k50}{\1c&H00E650A0&\kf40}Ouvre {\1c&H00B45AFF&\kf57}vite, {\1c&H003B3BFF&\kf25}n'aie {\1c&H001E91FF&\kf37}pas {\1c&H0000D6FF&\kf46}peur, {\1c&H0046C83C&\kf24}ça {\1c&H00FF8C28&\kf32}va !
+Dialogue: 0,0:01:43.86,0:01:46.70,Karaoke,,0,0,0,,{\k49}{\1c&H00E650A0&\kf40}Toc {\1c&H00B45AFF&\kf41}toc {\1c&H003B3BFF&\kf80}toc, {\1c&H001E91FF&\kf64}entre {\1c&H0000D6FF&\kf10}donc,
+Dialogue: 0,0:01:46.85,0:01:49.40,Karaoke,,0,0,0,,{\k8}{\1c&H0046C83C&\kf29}Il {\1c&H00FF8C28&\kf39}fait {\1c&H00E650A0&\kf37}chaud {\1c&H00B45AFF&\kf41}dans {\1c&H003B3BFF&\kf30}ma {\1c&H001E91FF&\kf71}maison !
+Dialogue: 0,0:01:49.55,0:01:51.07,Karaoke,,0,0,0,,{\1c&H0000D6FF&\kf75}Encore {\1c&H0046C83C&\kf61}une {\1c&H00FF8C28&\kf25}fois !
+Dialogue: 0,0:01:51.22,0:01:53.44,Karaoke,,0,0,0,,{\k1}{\1c&H00E650A0&\kf40}Toc {\1c&H00B45AFF&\kf33}toc {\1c&H003B3BFF&\kf42}toc, {\1c&H001E91FF&\kf35}qui {\1c&H0000D6FF&\kf34}est {\1c&H0046C83C&\kf37}là ?
+Dialogue: 0,0:01:53.59,0:01:56.69,Karaoke,,0,0,0,,{\k42}{\1c&H00FF8C28&\kf44}Ouvre {\1c&H00E650A0&\kf51}vite, {\1c&H00B45AFF&\kf31}n'aie {\1c&H003B3BFF&\kf37}pas {\1c&H001E91FF&\kf43}peur, {\1c&H0000D6FF&\kf26}ça {\1c&H0046C83C&\kf36}va !
+Dialogue: 0,0:01:56.84,0:02:00.00,Karaoke,,0,0,0,,{\k43}{\1c&H00FF8C28&\kf41}Toc {\1c&H00E650A0&\kf41}toc {\1c&H00B45AFF&\kf143}toc, {\1c&H003B3BFF&\kf34}entre {\1c&H001E91FF&\kf14}donc,
+Dialogue: 0,0:02:00.15,0:02:05.75,Karaoke,,0,0,0,,{\1c&H0000D6FF&\kf43}Il {\1c&H0046C83C&\kf78}fait {\1c&H00FF8C28&\kf84}chaud {\1c&H00E650A0&\kf70}dans {\1c&H00B45AFF&\kf72}ma {\1c&H003B3BFF&\kf137}maison !
+Dialogue: 0,0:02:06.27,0:02:11.44,Karaoke,,0,0,0,,{\k70}{\1c&H001E91FF&\kf25}Toc {\1c&H0000D6FF&\kf16}toc {\1c&H0046C83C&\kf24}toc… {\1c&H00FF8C28&\kf18}Bonne {\1c&H00E650A0&\kf117}nuit, {\1c&H00B45AFF&\kf28}les {\1c&H003B3BFF&\kf139}amis !

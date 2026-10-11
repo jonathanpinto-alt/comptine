@@ -51,8 +51,9 @@ def etape(msg):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--chanson", choices=["ferme", "bain"], default="ferme",
-                    help="ferme : « Bonjour la ferme ! » ; bain : « C'est l'heure du bain » (sortie/bain/)")
+    ap.add_argument("--chanson", choices=["ferme", "bain", "toc"], default="ferme",
+                    help="ferme : « Bonjour la ferme ! » ; bain : « C'est l'heure du bain » (sortie/bain/) ; "
+                         "toc : « Toc toc toc, qui est là ? » en 2D (sortie/toc/)")
     ap.add_argument("--rapide", action="store_true", help="rendu 960x540 (essai)")
     ap.add_argument("--son", choices=["fourni", "synthese"], default="fourni",
                     help="bain : chanson fournie (assets/bain/son/chanson.mp3, défaut) ou voix et musique synthétisées")
@@ -68,6 +69,9 @@ def main():
     verifier_programmes()
     if args.chanson == "bain":
         from comptine.bain import principal
+        return principal.lancer(args)
+    if args.chanson == "toc":
+        from comptine.toc import principal
         return principal.lancer(args)
     from comptine import mixage, musique, rendu, rendu3d, soustitres, voix
 

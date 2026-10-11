@@ -69,6 +69,10 @@ MONTAGE = [
 ]
 
 
+def texte(cle):
+    return PAROLES[cle][0]
+
+
 def lignes_chantees():
     """Liste ordonnée des clés de lignes chantées."""
     return [k for _a, _b, cles in BLOCS for k in cles]

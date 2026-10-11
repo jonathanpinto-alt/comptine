@@ -1,0 +1,672 @@
+{
+ "lapin": {
+  "oreille_g": {
+   "decalage": [
+    209,
+    0
+   ],
+   "pivot": [
+    252.0,
+    170.0
+   ],
+   "parent": "tete",
+   "z": 1
+  },
+  "oreille_d": {
+   "decalage": [
+    305,
+    0
+   ],
+   "pivot": [
+    348.0,
+    170.0
+   ],
+   "parent": "tete",
+   "z": 1
+  },
+  "corps": {
+   "decalage": [
+    171,
+    431
+   ],
+   "pivot": [
+    300.0,
+    690.0
+   ],
+   "parent": null,
+   "z": 3
+  },
+  "bras_g": {
+   "decalage": [
+    127,
+    443
+   ],
+   "pivot": [
+    225.0,
+    470.0
+   ],
+   "parent": "corps",
+   "z": 4
+  },
+  "bras_d": {
+   "decalage": [
+    348,
+    443
+   ],
+   "pivot": [
+    375.0,
+    470.0
+   ],
+   "parent": "corps",
+   "z": 4
+  },
+  "tete": {
+   "decalage": [
+    144,
+    136
+   ],
+   "pivot": [
+    300.0,
+    420.0
+   ],
+   "parent": "corps",
+   "z": 5
+  },
+  "yeux_ouverts": {
+   "decalage": [
+    205,
+    220
+   ],
+   "pivot": [
+    300.0,
+    420.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "yeux_fermes": {
+   "decalage": [
+    212,
+    264
+   ],
+   "pivot": [
+    300.0,
+    420.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "bouche_fermee": {
+   "decalage": [
+    260,
+    340
+   ],
+   "pivot": [
+    300.0,
+    420.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "bouche_ouverte": {
+   "decalage": [
+    260,
+    338
+   ],
+   "pivot": [
+    300.0,
+    420.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "noeud": {
+   "decalage": [
+    184,
+    136
+   ],
+   "pivot": [
+    300.0,
+    420.0
+   ],
+   "parent": "tete",
+   "z": 7
+  }
+ },
+ "cochon": {
+  "queue": {
+   "decalage": [
+    388,
+    532
+   ],
+   "pivot": [
+    395.0,
+    600.0
+   ],
+   "parent": "corps",
+   "z": 0
+  },
+  "oreille_g": {
+   "decalage": [
+    129,
+    101
+   ],
+   "pivot": [
+    175.0,
+    195.0
+   ],
+   "parent": "tete",
+   "z": 1
+  },
+  "oreille_d": {
+   "decalage": [
+    381,
+    101
+   ],
+   "pivot": [
+    425.0,
+    195.0
+   ],
+   "parent": "tete",
+   "z": 1
+  },
+  "corps": {
+   "decalage": [
+    176,
+    411
+   ],
+   "pivot": [
+    300.0,
+    690.0
+   ],
+   "parent": null,
+   "z": 3
+  },
+  "bras_g": {
+   "decalage": [
+    117,
+    453
+   ],
+   "pivot": [
+    205.0,
+    480.0
+   ],
+   "parent": "corps",
+   "z": 4
+  },
+  "bras_d": {
+   "decalage": [
+    368,
+    453
+   ],
+   "pivot": [
+    395.0,
+    480.0
+   ],
+   "parent": "corps",
+   "z": 4
+  },
+  "tete": {
+   "decalage": [
+    138,
+    146
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "corps",
+   "z": 5
+  },
+  "yeux_ouverts": {
+   "decalage": [
+    204,
+    203
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "yeux_fermes": {
+   "decalage": [
+    210,
+    240
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "bouche_fermee": {
+   "decalage": [
+    262,
+    371
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "bouche_ouverte": {
+   "decalage": [
+    262,
+    368
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "tete",
+   "z": 6
+  }
+ },
+ "biquette": {
+  "corps": {
+   "decalage": [
+    176,
+    441
+   ],
+   "pivot": [
+    300.0,
+    690.0
+   ],
+   "parent": null,
+   "z": 3
+  },
+  "bras_g": {
+   "decalage": [
+    127,
+    453
+   ],
+   "pivot": [
+    222.0,
+    480.0
+   ],
+   "parent": "corps",
+   "z": 4
+  },
+  "bras_d": {
+   "decalage": [
+    351,
+    453
+   ],
+   "pivot": [
+    378.0,
+    480.0
+   ],
+   "parent": "corps",
+   "z": 4
+  },
+  "tete": {
+   "decalage": [
+    157,
+    48
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "corps",
+   "z": 5
+  },
+  "oreille_g": {
+   "decalage": [
+    98,
+    218
+   ],
+   "pivot": [
+    205.0,
+    250.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "oreille_d": {
+   "decalage": [
+    378,
+    218
+   ],
+   "pivot": [
+    395.0,
+    250.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "yeux_ouverts": {
+   "decalage": [
+    209,
+    213
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "tete",
+   "z": 7
+  },
+  "yeux_fermes": {
+   "decalage": [
+    215,
+    250
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "tete",
+   "z": 7
+  },
+  "bouche_fermee": {
+   "decalage": [
+    270,
+    368
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "tete",
+   "z": 7
+  },
+  "bouche_ouverte": {
+   "decalage": [
+    268,
+    364
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "tete",
+   "z": 7
+  },
+  "lunettes": {
+   "decalage": [
+    190,
+    200
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "tete",
+   "z": 8
+  }
+ },
+ "hibou": {
+  "oreille_g": {
+   "decalage": [
+    151,
+    76
+   ],
+   "pivot": [
+    195.0,
+    170.0
+   ],
+   "parent": "tete",
+   "z": 1
+  },
+  "oreille_d": {
+   "decalage": [
+    361,
+    76
+   ],
+   "pivot": [
+    405.0,
+    170.0
+   ],
+   "parent": "tete",
+   "z": 1
+  },
+  "corps": {
+   "decalage": [
+    156,
+    386
+   ],
+   "pivot": [
+    300.0,
+    690.0
+   ],
+   "parent": null,
+   "z": 3
+  },
+  "bras_g": {
+   "decalage": [
+    132,
+    446
+   ],
+   "pivot": [
+    185.0,
+    460.0
+   ],
+   "parent": "corps",
+   "z": 4
+  },
+  "bras_d": {
+   "decalage": [
+    401,
+    446
+   ],
+   "pivot": [
+    415.0,
+    460.0
+   ],
+   "parent": "corps",
+   "z": 4
+  },
+  "tete": {
+   "decalage": [
+    131,
+    141
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "corps",
+   "z": 5
+  },
+  "yeux_ouverts": {
+   "decalage": [
+    168,
+    204
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "yeux_fermes": {
+   "decalage": [
+    168,
+    204
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "bouche_fermee": {
+   "decalage": [
+    283,
+    355
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "bouche_ouverte": {
+   "decalage": [
+    279,
+    347
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "noeud": {
+   "decalage": [
+    246,
+    411
+   ],
+   "pivot": [
+    300.0,
+    430.0
+   ],
+   "parent": "corps",
+   "z": 7
+  }
+ },
+ "croco": {
+  "queue": {
+   "decalage": [
+    386,
+    556
+   ],
+   "pivot": [
+    395.0,
+    600.0
+   ],
+   "parent": "corps",
+   "z": 0
+  },
+  "corps": {
+   "decalage": [
+    171,
+    406
+   ],
+   "pivot": [
+    300.0,
+    690.0
+   ],
+   "parent": null,
+   "z": 3
+  },
+  "bras_g": {
+   "decalage": [
+    112,
+    453
+   ],
+   "pivot": [
+    200.0,
+    480.0
+   ],
+   "parent": "corps",
+   "z": 4
+  },
+  "bras_d": {
+   "decalage": [
+    373,
+    453
+   ],
+   "pivot": [
+    400.0,
+    480.0
+   ],
+   "parent": "corps",
+   "z": 4
+  },
+  "tete": {
+   "decalage": [
+    141,
+    123
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "corps",
+   "z": 5
+  },
+  "yeux_ouverts": {
+   "decalage": [
+    206,
+    130
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "yeux_fermes": {
+   "decalage": [
+    212,
+    164
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "bouche_fermee": {
+   "decalage": [
+    201,
+    331
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "bouche_ouverte": {
+   "decalage": [
+    201,
+    331
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "tete",
+   "z": 6
+  },
+  "chapeau": {
+   "decalage": [
+    195,
+    0
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "tete",
+   "z": 7
+  },
+  "noeud": {
+   "decalage": [
+    241,
+    416
+   ],
+   "pivot": [
+    300.0,
+    425.0
+   ],
+   "parent": "corps",
+   "z": 7
+  }
+ }
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Cale les paroles du bain sur une chanson fournie → assets/bain/son/alignement.json.
 
-    python outils/aligner_son.py [--modeles DOSSIER]
+    python outils/aligner_son.py [--chanson bain|toc] [--modeles DOSSIER]
 
 1. Isole la voix avec Spleeter (sherpa-onnx, modèle « sherpa-onnx-spleeter-2stems-fp16 »
    téléchargé depuis les releases GitHub de k2-fsa/sherpa-onnx).
@@ -21,7 +21,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from comptine.bain import son as S  # noqa: E402
+import importlib  # noqa: E402
 
 URL = "https://github.com/k2-fsa/sherpa-onnx/releases/download/source-separation-models/"
 PAS = 0.01
@@ -121,13 +121,15 @@ def fins_syllabes(temps, fin_bloc, db, coupures):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--modeles", default="/tmp/modeles_sherpa")
+    ap.add_argument("--chanson", choices=["bain", "toc"], default="bain")
     args = ap.parse_args()
+    S = importlib.import_module(f"comptine.{args.chanson}.son")
     print("▶ voix isolée (Spleeter)…", flush=True)
     v, sr = voix_isolee(S.AUDIO, args.modeles)
     force, db = attaques(v, sr)
     sortie = []
     for debut, fin, cles in S.BLOCS:
-        syls_par_ligne = [len(S.syllabes_ligne(S.PAROLES[c][0])[1]) for c in cles]
+        syls_par_ligne = [len(S.syllabes_ligne(S.texte(c))[1]) for c in cles]
         n = sum(syls_par_ligne)
         temps = aligner(force, debut, fin, n)
         coupures, acc = set(), 0
@@ -137,9 +139,9 @@ def main():
         fins = fins_syllabes(temps, fin, db, coupures)
         k = 0
         for c, m in zip(cles, syls_par_ligne):
-            sortie.append(dict(cle=c, texte=S.PAROLES[c][0],
+            sortie.append(dict(cle=c, texte=S.texte(c),
                                syllabes=[[round(temps[k + j], 3), round(fins[k + j], 3)] for j in range(m)]))
-            print(f"{temps[k]:7.2f}  {S.PAROLES[c][0]}")
+            print(f"{temps[k]:7.2f}  {S.texte(c)}")
             k += m
     S.ALIGNEMENT.write_text(json.dumps(dict(audio=S.AUDIO.name, lignes=sortie), ensure_ascii=False, indent=1),
                             encoding="utf-8")
