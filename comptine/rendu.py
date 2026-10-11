@@ -367,7 +367,8 @@ def rendre_image(t):
 
 
 def rendre_morceau(args):
-    i0, i1, chemin = args
+    i0, i1, chemin, image = args
+    image = image or rendre_image
     e = G["echelle"]
     w, h = int(W * e), int(H * e)
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
@@ -376,37 +377,41 @@ def rendre_morceau(args):
            "-pix_fmt", "yuv420p", "-threads", "2", str(chemin)]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     for i in range(i0, i1):
-        p.stdin.write(rendre_image(i / C.FPS).tobytes())
+        p.stdin.write(image(i / C.FPS).tobytes())
     p.stdin.close()
     if p.wait() != 0:
         raise RuntimeError(f"ffmpeg a échoué pour {chemin}")
     return i1 - i0
 
 
-def rendre_video(lignes, audio, sortie, dossier_tmp, echelle=1.0, processus=None, debut=0.0, fin=None):
-    """Rend toutes les images en parallèle puis assemble la vidéo finale avec l'audio."""
+def rendre_video(lignes, audio, sortie, dossier_tmp, echelle=1.0, processus=None, debut=0.0, fin=None,
+                 init=None, image=None):
+    """Rend toutes les images en parallèle puis assemble la vidéo finale avec l'audio.
+
+    `init` / `image` : initialisation des processus et rendu d'une image (par défaut ceux
+    de « Bonjour la ferme ! ») — fonctions de module, transmises aux processus."""
     donnees = preparer_donnees(lignes)
     fin = C.DUREE_TOTALE if fin is None else fin
     i_deb, i_fin = int(round(debut * C.FPS)), int(math.ceil(fin * C.FPS))
     processus = processus or max(1, (os.cpu_count() or 2))
     n_morceaux = processus * 3
     bornes = np.linspace(i_deb, i_fin, n_morceaux + 1).astype(int)
-    taches = [(int(a), int(b), dossier_tmp / f"morceau_{k:03d}.mp4")
+    taches = [(int(a), int(b), dossier_tmp / f"morceau_{k:03d}.mp4", image)
               for k, (a, b) in enumerate(zip(bornes[:-1], bornes[1:])) if b > a]
     total = i_fin - i_deb
     fait = 0
-    with Pool(processus, initializer=init_worker, initargs=(donnees, echelle)) as pool:
+    with Pool(processus, initializer=init or init_worker, initargs=(donnees, echelle)) as pool:
         for n in pool.imap_unordered(rendre_morceau, taches):
             fait += n
             print(f"\r   images : {fait}/{total} ({100 * fait / total:.0f} %)", end="", flush=True)
     print()
     liste = dossier_tmp / "morceaux.txt"
-    liste.write_text("".join(f"file '{c.resolve()}'\n" for _, _, c in taches))
+    liste.write_text("".join(f"file '{c.resolve()}'\n" for _, _, c, _ in taches))
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(liste),
                     "-ss", f"{debut:.3f}", "-t", f"{fin - debut:.3f}", "-i", str(audio),
                     "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
                     "-movflags", "+faststart", "-shortest", str(sortie)], check=True)
-    for _, _, c in taches:
+    for _, _, c, _ in taches:
         c.unlink(missing_ok=True)
     liste.unlink(missing_ok=True)
 

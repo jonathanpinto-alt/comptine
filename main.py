@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""« Bonjour la ferme ! » : génère la comptine vidéo complète.
+"""Génère une comptine vidéo complète : « Bonjour la ferme ! » ou « C'est l'heure du bain ».
 
-    python main.py                 # tout : audio, sous-titres, vidéo 1920x1080 30 fps
+    python main.py                 # tout : audio, sous-titres, vidéo 1920x1080 30 fps (la ferme)
+    python main.py --chanson bain  # « C'est l'heure du bain » (3 min) → sortie/bain/
     python main.py --rapide        # vidéo d'essai en 960x540
     python main.py --audio-seulement
     python main.py --apercu 30     # une image PNG à t = 30 s
@@ -50,6 +51,8 @@ def etape(msg):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--chanson", choices=["ferme", "bain"], default="ferme",
+                    help="ferme : « Bonjour la ferme ! » ; bain : « C'est l'heure du bain » (sortie/bain/)")
     ap.add_argument("--rapide", action="store_true", help="rendu 960x540 (essai)")
     ap.add_argument("--audio-seulement", action="store_true")
     ap.add_argument("--apercu", type=float, metavar="T", help="écrit une image PNG à l'instant T")
@@ -61,6 +64,9 @@ def main():
     args = ap.parse_args()
 
     verifier_programmes()
+    if args.chanson == "bain":
+        from comptine.bain import principal
+        return principal.lancer(args)
     from comptine import mixage, musique, rendu, rendu3d, soustitres, voix
 
     C.SORTIE.mkdir(exist_ok=True)

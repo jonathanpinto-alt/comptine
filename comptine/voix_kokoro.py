@@ -271,8 +271,16 @@ def eclaircir(x):
     return x + 0.4 * signal.lfilter(b, a, x)
 
 
-def synthetiser(lignes, dossier):
-    """Voix principale + chœur d'enfants (refrains) -> voix.wav stéréo 44,1 kHz."""
+CHOEUR_FERME = ("refrain", "final", "intro", "outro")
+# (alpha formants, désaccord en cents, retard en s, gain, position gauche/droite)
+VOIX_CHOEUR = [(1.22, +8, 0.017, 0.5, "g"), (1.05, -7, 0.029, 0.5, "d")]
+
+
+def synthetiser(lignes, dossier, choeur=CHOEUR_FERME, alpha_lead=1.12, voix_choeur=VOIX_CHOEUR):
+    """Voix principale + chœur d'enfants (refrains) -> voix.wav stéréo 44,1 kHz.
+
+    `choeur` : types de sections doublées par le chœur ; `alpha_lead` : décalage
+    des formants de la voix principale (1,0 = voix adulte chaleureuse)."""
     ch = Chanteuse()
     n = int(round(C.DUREE_TOTALE * C.SR))
     lead = np.zeros(n)
@@ -280,13 +288,12 @@ def synthetiser(lignes, dossier):
     choeur_d = np.zeros(n)
     for i, L in enumerate(lignes):
         print(f"\r   ligne {i + 1}/{len(lignes)}", end="", flush=True)
-        t, y = ch.voix_ligne(L)
+        t, y = ch.voix_ligne(L, alpha=alpha_lead)
         placer(lead, t, y)
-        if L.type_section in ("refrain", "final", "intro", "outro"):
-            t, y = ch.voix_ligne(L, alpha=1.22, desaccord=+8, retard=0.017)
-            placer(choeur_g, t, y, 0.5)
-            t, y = ch.voix_ligne(L, alpha=1.05, desaccord=-7, retard=0.029)
-            placer(choeur_d, t, y, 0.5)
+        if L.type_section in choeur:
+            for alpha, cents, retard, gain, cote in voix_choeur:
+                t, y = ch.voix_ligne(L, alpha=alpha, desaccord=cents, retard=retard)
+                placer(choeur_g if cote == "g" else choeur_d, t, y, gain)
     print()
     lead = eclaircir(lead)
     choeur_g, choeur_d = eclaircir(choeur_g), eclaircir(choeur_d)

@@ -71,7 +71,7 @@ def base_mbrola():
 @functools.lru_cache(maxsize=None)
 def phonemiser(mot):
     """Phonèmes MBROLA d'un mot isolé : [(phonème, durée_ms)]."""
-    propre = re.sub(r"[-]", " ", mot)
+    propre = re.sub(r"[-]", " ", mot).replace("’", "'")
     out = subprocess.run(["espeak-ng", "-v", VOIX_ESPEAK, "-q", "--pho", propre],
                          capture_output=True, text=True, check=True).stdout
     res = []
@@ -157,9 +157,13 @@ def rythme(syls, slots):
     return d
 
 
-def preparer_lignes():
-    """Construit les lignes avec mots, syllabes, notes et timings (grille)."""
-    lignes = construire_lignes()
+def preparer_lignes(construire=construire_lignes):
+    """Construit les lignes avec mots, syllabes, notes et timings (grille).
+
+    Une ligne peut imposer ses durées (`durees`, en doubles croches) et ses notes
+    (`notes`, une par syllabe) ; sinon le rythme est réparti automatiquement et
+    les notes sont piochées dans le gabarit."""
+    lignes = construire()
     for L in lignes:
         mots_txt = decouper_mots(L.texte)
         cles = [nettoyer(m) for m in mots_txt]
@@ -167,19 +171,27 @@ def preparer_lignes():
         syls = []
         for i, (m, cle) in enumerate(zip(mots_txt, cles)):
             ph = list(phonemiser(cle))
-            if i > 0 and cles[i - 1] in LIAISONS and ph and ph[0][0] in VOYELLES:
+            if i > 0 and cles[i - 1] in LIAISONS and ph and ph[0][0] in VOYELLES \
+                    and not mots_txt[i - 1].rstrip().endswith((",", "!", "?", ".", "…")):
                 ph.insert(0, (LIAISONS[cles[i - 1]], 60))
             s = syllaber(ph, i)
             mots.append(Mot(m, syllabes=s))
             syls.extend(s)
-        durees = rythme(syls, L.slots)
+        for attendu, nom in ((L.durees, "durées"), (L.notes, "notes")):
+            if attendu is not None and len(attendu) != len(syls):
+                raise ValueError(f"« {L.texte} » : {len(syls)} syllabes, mais {len(attendu)} {nom} "
+                                 f"({' '.join(s.noyau[0] for s in syls)})")
+        durees = L.durees or rythme(syls, L.slots)
         t0 = (L.mesure * 16 + L.decalage) * C.DOUBLE
         pos = 0
-        for s, d in zip(syls, durees):
+        for k, (s, d) in enumerate(zip(syls, durees)):
             s.debut = t0 + pos * C.DOUBLE
             s.fin = s.debut + d * C.DOUBLE
-            idx = min(pos // 2, len(L.gabarit) - 1)
-            s.midi = L.gabarit[idx] + L.transpo
+            if L.notes:
+                s.midi = L.notes[k] + L.transpo
+            else:
+                idx = min(pos // 2, len(L.gabarit) - 1)
+                s.midi = L.gabarit[idx] + L.transpo
             pos += d
         for m in mots:
             m.debut = m.syllabes[0].debut

@@ -20,15 +20,16 @@ def _ass_t(t):
     return f"{int(h)}:{int(m):02d}:{s:05.2f}"
 
 
-def ecrire_json(donnees, chemin, duree_audio, ratio):
-    sections = [dict(nom=n, type=ty, debut=round(m0 * C.MESURE, 3), fin=round((m0 + nb) * C.MESURE, 3),
-                     mesures=nb, decor=d) for n, ty, m0, nb, d, _ in SECTIONS]
+def ecrire_json(donnees, chemin, duree_audio, ratio, titre=TITRE, sections=SECTIONS, cle_decor="decor",
+                extra=None):
+    sections = [{"nom": n, "type": ty, "debut": round(m0 * C.MESURE, 3), "fin": round((m0 + nb) * C.MESURE, 3),
+                 "mesures": nb, cle_decor: d} for n, ty, m0, nb, d, _ in sections]
     lignes = [dict(section=l["section"], texte=l["texte"], debut=round(l["debut"], 3), fin=round(l["fin"], 3),
                    mots=[dict(mot=m["texte"].replace(" ", " "), debut=round(m["debut"], 3),
                               fin=round(m["fin"], 3), couleur="#%02x%02x%02x" % m["couleur"]) for m in l["mots"]])
               for l in donnees["lignes"]]
-    doc = dict(titre=TITRE, bpm=C.BPM, mesures=C.NB_MESURES, duree_audio=round(duree_audio, 3),
-               ratio_recalage=round(ratio, 6), sections=sections, lignes=lignes)
+    doc = dict(titre=titre, bpm=C.BPM, mesures=C.NB_MESURES, duree_audio=round(duree_audio, 3),
+               ratio_recalage=round(ratio, 6), sections=sections, **(extra or {}), lignes=lignes)
     chemin.write_text(json.dumps(doc, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
@@ -39,11 +40,11 @@ def ecrire_srt(donnees, chemin):
     chemin.write_text("\n".join(blocs), encoding="utf-8")
 
 
-def ecrire_ass(donnees, chemin):
+def ecrire_ass(donnees, chemin, titre=TITRE):
     def bgr(c):
         return "&H00%02X%02X%02X&" % (c[2], c[1], c[0])
     entete = f"""[Script Info]
-Title: {TITRE}
+Title: {titre}
 ScriptType: v4.00+
 PlayResX: {C.LARGEUR}
 PlayResY: {C.HAUTEUR}

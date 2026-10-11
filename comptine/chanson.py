@@ -114,6 +114,8 @@ class Ligne:
     transpo: int = 0
     style: str = "chant"     # "chant" ou "cri" (interjection courte)
     syllabes: list = field(default_factory=list)
+    notes: list = None       # facultatif : une hauteur MIDI par syllabe (remplace le gabarit)
+    durees: list = None      # facultatif : durée de chaque syllabe en doubles croches
 
 
 def construire_lignes():
