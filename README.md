@@ -181,7 +181,17 @@ python main.py --chanson bain --refaire-3d       # refaire les rendus Blender (e
 | Vidéo | 1920×1080, 30 i/s, H.264 + AAC, karaoké mot par mot incrusté |
 | Fichiers | `sortie/bain/` : `video_finale.mp4`, `audio_final.wav`, `paroles.json` (mots, temps, couleurs, plans), `.srt`, `.ass`, `musique.mid` |
 
-## Structure et montage
+## Bande son fournie (par défaut)
+
+La vidéo utilise maintenant **la chanson fournie** (`assets/bain/son/chanson.mp3`, 2 min 57,7 s, 144 BPM), reprise telle quelle. L'ancienne voix et l'ancienne musique synthétisées restent disponibles avec `--son synthese`.
+
+- `outils/aligner_son.py` isole la voix (Spleeter via sherpa-onnx), puis place chaque syllabe des paroles sur les attaques de la voix. Il écrit `assets/bain/son/alignement.json` : 46 lignes chantées, mot par mot. Les passages chantés et leurs lignes sont décrits dans `comptine/bain/son.py` (`BLOCS`), repérés avec Whisper.
+- La chanson reprend l'intro, le couplet 1, le refrain, le couplet 2 et le couplet 3 en milieu de morceau. L'ordre demandé (1, 2, 3, 4, 5, 3, 4, 3, 4, 5, 6, 6, 3, 4, 5, 7) est suivi section par section, et la reprise réutilise les scènes de ces mêmes paroles. Montage complet : 1, 2, 3, 4, 5, 3, 4, 3, 4, 5, 6, 6, **1, 2, 3, 5, 3, 4, 3, 6, 6**, 3, 4, 5, 7 (`MONTAGE` dans `son.py`).
+- Les gestes du garçon (éclaboussures, sauts, brossage) suivent la grille de battements de la chanson.
+
+Si la chanson change : remplacer `chanson.mp3`, ajuster `BLOCS`, puis lancer `python outils/aligner_son.py`.
+
+## Structure et montage (bande son synthétisée, `--son synthese`)
 
 Deux scènes par section, dans l'ordre demandé **1, 2, 3, 4, 5, 3, 4, 3, 4, 5, 6, 6, 3, 4, 5, 7** :
 

@@ -21,6 +21,11 @@ def etape(msg):
 
 
 def lancer(args):
+    from . import son as S
+    if args.son == "fourni":
+        if not (S.AUDIO.exists() and S.ALIGNEMENT.exists()):
+            sys.exit(f"Chanson fournie absente ({S.AUDIO}) ou non calée (python outils/aligner_son.py)")
+        return lancer_son_fourni(args)
     C.configurer(B.BPM, B.NB_MESURES, B.DUREE_MIN, B.DUREE_MAX, sortie=C.RACINE / "sortie" / "bain")
     from .. import mixage, soustitres, voix
     from . import musique, rendu, rendu3d
@@ -94,4 +99,69 @@ def lancer(args):
     print(f"\n✓ Vidéo : {video}")
     print(f"  durée : {dv:.2f} s ({int(dv // 60)} min {dv % 60:04.1f} s) — "
           + ("OK" if C.DUREE_MIN <= dv <= C.DUREE_MAX else "HORS CIBLE"))
+    print(f"  temps total : {(time.time() - t0) / 60:.1f} min")
+
+
+def lancer_son_fourni(args):
+    """Vidéo sur la chanson fournie : l'audio est repris tel quel, le karaoké et le montage
+    sont calés sur l'alignement des paroles (assets/bain/son/alignement.json)."""
+    import subprocess
+
+    from . import son as S
+    from main import duree_media
+    duree = duree_media(S.AUDIO)
+    mesure = 4 * 60.0 / S.BPM
+    C.configurer(S.BPM, duree / mesure, duree - 1.0, duree + 1.0, sortie=C.RACINE / "sortie" / "bain")
+    from .. import soustitres
+    from . import rendu, rendu3d
+
+    C.SORTIE.mkdir(parents=True, exist_ok=True)
+    C.TMP.mkdir(exist_ok=True)
+    t0 = time.time()
+
+    etape(f"Chanson fournie : {S.AUDIO.name} ({duree:.2f} s, {S.BPM:g} BPM)")
+    lignes = S.construire_lignes()
+    print(f"   {len(lignes)} lignes chantées calées, {sum(len(L.mots) for L in lignes)} mots")
+
+    if not args.audio_seulement:
+        etape("Modèles 3D (Blender) : petit garçon, salle de bain, accessoires")
+        rendu3d.rendre(args.qualite_3d, forcer=args.refaire_3d)
+
+    def donnees_rendu():
+        d = rendu.preparer_donnees(lignes)
+        d["plans"] = S.plan_de_montage(lignes, duree)
+        d["phase"] = S.PHASE
+        return d
+
+    if args.apercu is not None:
+        chemin = C.SORTIE / f"apercu_{args.apercu:.1f}s.png"
+        rendu.init_worker(donnees_rendu(), 1.0)
+        rendu.rendre_image(args.apercu).save(chemin)
+        print(f"   → {chemin}")
+        return
+
+    etape("Audio : la chanson fournie, sans modification (WAV 44,1 kHz stéréo)")
+    audio = C.SORTIE / "audio_final.wav"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(S.AUDIO), "-map", "0:a", "-ar", str(C.SR), "-ac", "2",
+                    str(audio)], check=True)
+    (C.SORTIE / "musique.mid").unlink(missing_ok=True)     # MIDI de l'ancienne musique synthétisée
+
+    etape("Sous-titres (paroles.json, .srt, .ass)")
+    donnees = donnees_rendu()
+    plans = [dict(debut=round(a, 3), fin=round(b, 3), scene=s_) for a, b, s_, _k, _o in donnees["plans"]]
+    soustitres.ecrire_json(donnees, C.SORTIE / "paroles.json", duree, 1.0, titre=B.TITRE, sections=[],
+                           extra=dict(audio=S.AUDIO.name, plans=plans))
+    soustitres.ecrire_srt(donnees, C.SORTIE / "video_finale.srt")
+    soustitres.ecrire_ass(donnees, C.SORTIE / "video_finale.ass", titre=B.TITRE)
+    print("   montage : " + ", ".join(str(p["scene"]) for p in plans))
+    if args.audio_seulement:
+        return
+
+    etape("Rendu vidéo" + (" (rapide 960x540)" if args.rapide else " 1920x1080 30 fps"))
+    video = C.SORTIE / ("video_essai.mp4" if args.rapide else "video_finale.mp4")
+    rendu.rendre_video(lignes, audio, video, C.TMP, echelle=0.5 if args.rapide else 1.0,
+                       processus=args.processus, donnees=donnees)
+    dv = duree_media(video)
+    print(f"\n✓ Vidéo : {video}")
+    print(f"  durée : {dv:.2f} s ({int(dv // 60)} min {dv % 60:04.1f} s) — audio {duree:.2f} s")
     print(f"  temps total : {(time.time() - t0) / 60:.1f} min")

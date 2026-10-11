@@ -54,6 +54,8 @@ def main():
     ap.add_argument("--chanson", choices=["ferme", "bain"], default="ferme",
                     help="ferme : « Bonjour la ferme ! » ; bain : « C'est l'heure du bain » (sortie/bain/)")
     ap.add_argument("--rapide", action="store_true", help="rendu 960x540 (essai)")
+    ap.add_argument("--son", choices=["fourni", "synthese"], default="fourni",
+                    help="bain : chanson fournie (assets/bain/son/chanson.mp3, défaut) ou voix et musique synthétisées")
     ap.add_argument("--audio-seulement", action="store_true")
     ap.add_argument("--apercu", type=float, metavar="T", help="écrit une image PNG à l'instant T")
     ap.add_argument("--processus", type=int, default=None, help="nombre de processus de rendu")

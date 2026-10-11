@@ -1,189 +1,135 @@
 {
   "titre": "C'est l'heure du bain !",
-  "bpm": 96,
-  "mesures": 72,
-  "duree_audio": 180.0,
+  "bpm": 144.0,
+  "mesures": 106.63199999999999,
+  "duree_audio": 177.72,
   "ratio_recalage": 1.0,
-  "sections": [
-    {
-      "nom": "intro",
-      "type": "intro",
-      "debut": 0.0,
-      "fin": 15.0,
-      "mesures": 6,
-      "scenes": [
-        1,
-        2
-      ]
-    },
-    {
-      "nom": "couplet 1",
-      "type": "couplet",
-      "debut": 15.0,
-      "fin": 35.0,
-      "mesures": 8,
-      "scenes": [
-        3,
-        4
-      ]
-    },
-    {
-      "nom": "refrain",
-      "type": "refrain",
-      "debut": 35.0,
-      "fin": 60.0,
-      "mesures": 10,
-      "scenes": [
-        5,
-        3
-      ]
-    },
-    {
-      "nom": "couplet 2",
-      "type": "couplet",
-      "debut": 60.0,
-      "fin": 80.0,
-      "mesures": 8,
-      "scenes": [
-        4,
-        3
-      ]
-    },
-    {
-      "nom": "refrain",
-      "type": "refrain",
-      "debut": 80.0,
-      "fin": 105.0,
-      "mesures": 10,
-      "scenes": [
-        4,
-        5
-      ]
-    },
-    {
-      "nom": "couplet 3",
-      "type": "couplet",
-      "debut": 105.0,
-      "fin": 125.0,
-      "mesures": 8,
-      "scenes": [
-        6,
-        6
-      ]
-    },
-    {
-      "nom": "refrain",
-      "type": "refrain",
-      "debut": 125.0,
-      "fin": 150.0,
-      "mesures": 10,
-      "scenes": [
-        3,
-        4
-      ]
-    },
-    {
-      "nom": "fin",
-      "type": "fin",
-      "debut": 150.0,
-      "fin": 170.0,
-      "mesures": 8,
-      "scenes": [
-        5,
-        7
-      ]
-    },
-    {
-      "nom": "outro",
-      "type": "outro",
-      "debut": 170.0,
-      "fin": 180.0,
-      "mesures": 4,
-      "scenes": [
-        7,
-        7
-      ]
-    }
-  ],
+  "sections": [],
+  "audio": "chanson.mp3",
   "plans": [
     {
       "debut": 0.0,
-      "fin": 10.0,
+      "fin": 7.35,
       "scene": 1
     },
     {
-      "debut": 10.0,
-      "fin": 15.0,
+      "debut": 7.35,
+      "fin": 14.22,
       "scene": 2
     },
     {
-      "debut": 15.0,
-      "fin": 25.0,
+      "debut": 14.22,
+      "fin": 20.61,
       "scene": 3
     },
     {
-      "debut": 25.0,
-      "fin": 35.0,
+      "debut": 20.61,
+      "fin": 27.29,
       "scene": 4
     },
     {
-      "debut": 35.0,
-      "fin": 45.0,
+      "debut": 27.29,
+      "fin": 33.81,
       "scene": 5
     },
     {
-      "debut": 45.0,
-      "fin": 60.0,
+      "debut": 33.81,
+      "fin": 40.86,
       "scene": 3
     },
     {
-      "debut": 60.0,
-      "fin": 70.0,
+      "debut": 40.86,
+      "fin": 47.35,
       "scene": 4
     },
     {
-      "debut": 70.0,
-      "fin": 80.0,
+      "debut": 47.35,
+      "fin": 53.9,
       "scene": 3
     },
     {
-      "debut": 80.0,
-      "fin": 90.0,
+      "debut": 53.9,
+      "fin": 60.53,
       "scene": 4
     },
     {
-      "debut": 90.0,
-      "fin": 105.0,
+      "debut": 60.53,
+      "fin": 66.31,
       "scene": 5
     },
     {
-      "debut": 105.0,
-      "fin": 115.0,
+      "debut": 66.31,
+      "fin": 73.82,
       "scene": 6
     },
     {
-      "debut": 115.0,
-      "fin": 125.0,
+      "debut": 73.82,
+      "fin": 84.05,
       "scene": 6
     },
     {
-      "debut": 125.0,
-      "fin": 135.0,
+      "debut": 84.05,
+      "fin": 87.53,
+      "scene": 1
+    },
+    {
+      "debut": 87.53,
+      "fin": 90.88,
+      "scene": 2
+    },
+    {
+      "debut": 90.88,
+      "fin": 97.3,
       "scene": 3
     },
     {
-      "debut": 135.0,
-      "fin": 150.0,
-      "scene": 4
-    },
-    {
-      "debut": 150.0,
-      "fin": 160.0,
+      "debut": 97.3,
+      "fin": 103.78,
       "scene": 5
     },
     {
-      "debut": 160.0,
-      "fin": 180.0,
+      "debut": 103.78,
+      "fin": 110.26,
+      "scene": 3
+    },
+    {
+      "debut": 110.26,
+      "fin": 117.29,
+      "scene": 4
+    },
+    {
+      "debut": 117.29,
+      "fin": 127.1,
+      "scene": 3
+    },
+    {
+      "debut": 127.1,
+      "fin": 133.81,
+      "scene": 6
+    },
+    {
+      "debut": 133.81,
+      "fin": 143.75,
+      "scene": 6
+    },
+    {
+      "debut": 143.75,
+      "fin": 150.52,
+      "scene": 3
+    },
+    {
+      "debut": 150.52,
+      "fin": 156.93,
+      "scene": 4
+    },
+    {
+      "debut": 156.93,
+      "fin": 163.78,
+      "scene": 5
+    },
+    {
+      "debut": 163.78,
+      "fin": 177.72,
       "scene": 7
     }
   ],
@@ -191,37 +137,37 @@
     {
       "section": "intro",
       "texte": "C’est l’heure du bain, tralala",
-      "debut": 5.0,
-      "fin": 8.75,
+      "debut": 2.64,
+      "fin": 6.48,
       "mots": [
         {
           "mot": "C’est",
-          "debut": 5.0,
-          "fin": 5.312,
+          "debut": 2.64,
+          "fin": 3.18,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "l’heure",
-          "debut": 5.312,
-          "fin": 5.625,
+          "debut": 3.18,
+          "fin": 3.52,
           "couleur": "#ff911e"
         },
         {
           "mot": "du",
-          "debut": 5.625,
-          "fin": 5.938,
+          "debut": 3.52,
+          "fin": 3.9,
           "couleur": "#ffd600"
         },
         {
           "mot": "bain,",
-          "debut": 5.938,
-          "fin": 6.875,
+          "debut": 3.9,
+          "fin": 4.54,
           "couleur": "#3cc846"
         },
         {
           "mot": "tralala",
-          "debut": 6.875,
-          "fin": 8.75,
+          "debut": 4.54,
+          "fin": 6.48,
           "couleur": "#288cff"
         }
       ]
@@ -229,49 +175,49 @@
     {
       "section": "intro",
       "texte": "Viens avec moi, on va jouer ça",
-      "debut": 10.0,
-      "fin": 14.375,
+      "debut": 7.7,
+      "fin": 11.26,
       "mots": [
         {
           "mot": "Viens",
-          "debut": 10.0,
-          "fin": 10.312,
+          "debut": 7.7,
+          "fin": 8.29,
           "couleur": "#a050e6"
         },
         {
           "mot": "avec",
-          "debut": 10.312,
-          "fin": 10.938,
+          "debut": 8.29,
+          "fin": 9.22,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "moi,",
-          "debut": 10.938,
-          "fin": 11.875,
+          "debut": 9.22,
+          "fin": 9.57,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "on",
-          "debut": 11.875,
-          "fin": 12.188,
+          "debut": 9.57,
+          "fin": 10.19,
           "couleur": "#ff911e"
         },
         {
           "mot": "va",
-          "debut": 12.188,
-          "fin": 12.5,
+          "debut": 10.19,
+          "fin": 10.62,
           "couleur": "#ffd600"
         },
         {
           "mot": "jouer",
-          "debut": 12.5,
-          "fin": 13.125,
+          "debut": 10.62,
+          "fin": 10.85,
           "couleur": "#3cc846"
         },
         {
           "mot": "ça",
-          "debut": 13.125,
-          "fin": 14.375,
+          "debut": 10.85,
+          "fin": 11.26,
           "couleur": "#288cff"
         }
       ]
@@ -279,49 +225,49 @@
     {
       "section": "couplet 1",
       "texte": "C’est l’heure du bain, l’heure du bain",
-      "debut": 15.0,
-      "fin": 18.75,
+      "debut": 14.57,
+      "fin": 16.89,
       "mots": [
         {
           "mot": "C’est",
-          "debut": 15.0,
-          "fin": 15.312,
+          "debut": 14.57,
+          "fin": 14.78,
           "couleur": "#a050e6"
         },
         {
           "mot": "l’heure",
-          "debut": 15.312,
-          "fin": 15.625,
+          "debut": 14.78,
+          "fin": 14.99,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "du",
-          "debut": 15.625,
-          "fin": 15.938,
+          "debut": 14.99,
+          "fin": 15.19,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "bain,",
-          "debut": 15.938,
-          "fin": 16.875,
+          "debut": 15.19,
+          "fin": 15.83,
           "couleur": "#ff911e"
         },
         {
           "mot": "l’heure",
-          "debut": 16.875,
-          "fin": 17.188,
+          "debut": 15.83,
+          "fin": 16.4,
           "couleur": "#ffd600"
         },
         {
           "mot": "du",
-          "debut": 17.188,
-          "fin": 17.5,
+          "debut": 16.4,
+          "fin": 16.61,
           "couleur": "#3cc846"
         },
         {
           "mot": "bain",
-          "debut": 17.5,
-          "fin": 18.75,
+          "debut": 16.61,
+          "fin": 16.89,
           "couleur": "#288cff"
         }
       ]
@@ -329,43 +275,43 @@
     {
       "section": "couplet 1",
       "texte": "Viens te laver, prends ta main",
-      "debut": 20.0,
-      "fin": 23.75,
+      "debut": 17.77,
+      "fin": 20.37,
       "mots": [
         {
           "mot": "Viens",
-          "debut": 20.0,
-          "fin": 20.312,
+          "debut": 17.77,
+          "fin": 18.08,
           "couleur": "#a050e6"
         },
         {
           "mot": "te",
-          "debut": 20.312,
-          "fin": 20.625,
+          "debut": 18.08,
+          "fin": 18.52,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "laver,",
-          "debut": 20.625,
-          "fin": 21.875,
+          "debut": 18.52,
+          "fin": 19.26,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "prends",
-          "debut": 21.875,
-          "fin": 22.188,
+          "debut": 19.26,
+          "fin": 19.74,
           "couleur": "#ff911e"
         },
         {
           "mot": "ta",
-          "debut": 22.188,
-          "fin": 22.5,
+          "debut": 19.74,
+          "fin": 19.99,
           "couleur": "#ffd600"
         },
         {
           "mot": "main",
-          "debut": 22.5,
-          "fin": 23.75,
+          "debut": 19.99,
+          "fin": 20.37,
           "couleur": "#3cc846"
         }
       ]
@@ -373,55 +319,55 @@
     {
       "section": "couplet 1",
       "texte": "De l’eau qui coule, des bulles qui dansent",
-      "debut": 25.0,
-      "fin": 28.75,
+      "debut": 20.96,
+      "fin": 23.96,
       "mots": [
         {
           "mot": "De",
-          "debut": 25.0,
-          "fin": 25.312,
+          "debut": 20.96,
+          "fin": 21.23,
           "couleur": "#288cff"
         },
         {
           "mot": "l’eau",
-          "debut": 25.312,
-          "fin": 25.625,
+          "debut": 21.23,
+          "fin": 21.59,
           "couleur": "#a050e6"
         },
         {
           "mot": "qui",
-          "debut": 25.625,
-          "fin": 25.938,
+          "debut": 21.59,
+          "fin": 21.86,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "coule,",
-          "debut": 25.938,
-          "fin": 26.875,
+          "debut": 21.86,
+          "fin": 22.46,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "des",
-          "debut": 26.875,
-          "fin": 27.188,
+          "debut": 22.46,
+          "fin": 22.8,
           "couleur": "#ff911e"
         },
         {
           "mot": "bulles",
-          "debut": 27.188,
-          "fin": 27.5,
+          "debut": 22.8,
+          "fin": 23.08,
           "couleur": "#ffd600"
         },
         {
           "mot": "qui",
-          "debut": 27.5,
-          "fin": 27.812,
+          "debut": 23.08,
+          "fin": 23.29,
           "couleur": "#3cc846"
         },
         {
           "mot": "dansent",
-          "debut": 27.812,
-          "fin": 28.75,
+          "debut": 23.29,
+          "fin": 23.96,
           "couleur": "#288cff"
         }
       ]
@@ -429,37 +375,37 @@
     {
       "section": "couplet 1",
       "texte": "On va jouer, quelle chance !",
-      "debut": 30.0,
-      "fin": 34.375,
+      "debut": 24.53,
+      "fin": 27.35,
       "mots": [
         {
           "mot": "On",
-          "debut": 30.0,
-          "fin": 30.312,
+          "debut": 24.53,
+          "fin": 25.2,
           "couleur": "#a050e6"
         },
         {
           "mot": "va",
-          "debut": 30.312,
-          "fin": 30.625,
+          "debut": 25.2,
+          "fin": 25.9,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "jouer,",
-          "debut": 30.625,
-          "fin": 31.875,
+          "debut": 25.9,
+          "fin": 26.44,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "quelle",
-          "debut": 31.875,
-          "fin": 32.5,
+          "debut": 26.44,
+          "fin": 26.96,
           "couleur": "#ff911e"
         },
         {
           "mot": "chance !",
-          "debut": 32.5,
-          "fin": 34.375,
+          "debut": 26.96,
+          "fin": 27.35,
           "couleur": "#ffd600"
         }
       ]
@@ -467,43 +413,43 @@
     {
       "section": "refrain",
       "texte": "Splash splash splash, dans la baignoire",
-      "debut": 35.0,
-      "fin": 39.375,
+      "debut": 27.64,
+      "fin": 30.42,
       "mots": [
         {
           "mot": "Splash",
-          "debut": 35.0,
-          "fin": 35.312,
+          "debut": 27.64,
+          "fin": 28.06,
           "couleur": "#3cc846"
         },
         {
           "mot": "splash",
-          "debut": 35.312,
-          "fin": 35.625,
+          "debut": 28.06,
+          "fin": 28.49,
           "couleur": "#288cff"
         },
         {
           "mot": "splash,",
-          "debut": 35.625,
-          "fin": 36.25,
+          "debut": 28.49,
+          "fin": 29.15,
           "couleur": "#a050e6"
         },
         {
           "mot": "dans",
-          "debut": 36.25,
-          "fin": 36.562,
+          "debut": 29.15,
+          "fin": 29.45,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "la",
-          "debut": 36.562,
-          "fin": 36.875,
+          "debut": 29.45,
+          "fin": 29.78,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "baignoire",
-          "debut": 36.875,
-          "fin": 39.375,
+          "debut": 29.78,
+          "fin": 30.42,
           "couleur": "#ff911e"
         }
       ]
@@ -511,37 +457,37 @@
     {
       "section": "refrain",
       "texte": "Splash splash splash, quelle victoire",
-      "debut": 40.0,
-      "fin": 43.75,
+      "debut": 30.98,
+      "fin": 33.8,
       "mots": [
         {
           "mot": "Splash",
-          "debut": 40.0,
-          "fin": 40.312,
+          "debut": 30.98,
+          "fin": 31.45,
           "couleur": "#ffd600"
         },
         {
           "mot": "splash",
-          "debut": 40.312,
-          "fin": 40.625,
+          "debut": 31.45,
+          "fin": 31.86,
           "couleur": "#3cc846"
         },
         {
           "mot": "splash,",
-          "debut": 40.625,
-          "fin": 41.25,
+          "debut": 31.86,
+          "fin": 32.67,
           "couleur": "#288cff"
         },
         {
           "mot": "quelle",
-          "debut": 41.25,
-          "fin": 41.562,
+          "debut": 32.67,
+          "fin": 33.3,
           "couleur": "#a050e6"
         },
         {
           "mot": "victoire",
-          "debut": 41.562,
-          "fin": 43.75,
+          "debut": 33.3,
+          "fin": 33.8,
           "couleur": "#ff5ab4"
         }
       ]
@@ -549,43 +495,43 @@
     {
       "section": "refrain",
       "texte": "Lave tes mains, lave tes pieds",
-      "debut": 45.0,
-      "fin": 48.75,
+      "debut": 34.16,
+      "fin": 37.18,
       "mots": [
         {
           "mot": "Lave",
-          "debut": 45.0,
-          "fin": 45.312,
+          "debut": 34.16,
+          "fin": 34.99,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "tes",
-          "debut": 45.312,
-          "fin": 45.625,
+          "debut": 34.99,
+          "fin": 35.71,
           "couleur": "#ff911e"
         },
         {
           "mot": "mains,",
-          "debut": 45.625,
-          "fin": 46.875,
+          "debut": 35.71,
+          "fin": 35.88,
           "couleur": "#ffd600"
         },
         {
           "mot": "lave",
-          "debut": 46.875,
-          "fin": 47.188,
+          "debut": 35.88,
+          "fin": 36.4,
           "couleur": "#3cc846"
         },
         {
           "mot": "tes",
-          "debut": 47.188,
-          "fin": 47.5,
+          "debut": 36.4,
+          "fin": 36.66,
           "couleur": "#288cff"
         },
         {
           "mot": "pieds",
-          "debut": 47.5,
-          "fin": 48.75,
+          "debut": 36.66,
+          "fin": 37.18,
           "couleur": "#a050e6"
         }
       ]
@@ -593,37 +539,37 @@
     {
       "section": "refrain",
       "texte": "Tout propre, tout beau, ohé !",
-      "debut": 50.0,
-      "fin": 53.75,
+      "debut": 37.66,
+      "fin": 40.84,
       "mots": [
         {
           "mot": "Tout",
-          "debut": 50.0,
-          "fin": 50.312,
+          "debut": 37.66,
+          "fin": 37.85,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "propre,",
-          "debut": 50.312,
-          "fin": 50.938,
+          "debut": 37.85,
+          "fin": 38.29,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "tout",
-          "debut": 50.938,
-          "fin": 51.25,
+          "debut": 38.29,
+          "fin": 38.54,
           "couleur": "#ff911e"
         },
         {
           "mot": "beau,",
-          "debut": 51.25,
-          "fin": 51.875,
+          "debut": 38.54,
+          "fin": 38.95,
           "couleur": "#ffd600"
         },
         {
           "mot": "ohé !",
-          "debut": 51.875,
-          "fin": 53.75,
+          "debut": 38.95,
+          "fin": 40.84,
           "couleur": "#3cc846"
         }
       ]
@@ -631,43 +577,43 @@
     {
       "section": "couplet 2",
       "texte": "Le canard jaune nage avec toi",
-      "debut": 60.0,
-      "fin": 63.75,
+      "debut": 41.21,
+      "fin": 43.63,
       "mots": [
         {
           "mot": "Le",
-          "debut": 60.0,
-          "fin": 60.312,
+          "debut": 41.21,
+          "fin": 41.43,
           "couleur": "#288cff"
         },
         {
           "mot": "canard",
-          "debut": 60.312,
-          "fin": 61.25,
+          "debut": 41.43,
+          "fin": 41.86,
           "couleur": "#a050e6"
         },
         {
           "mot": "jaune",
-          "debut": 61.25,
-          "fin": 61.875,
+          "debut": 41.86,
+          "fin": 42.29,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "nage",
-          "debut": 61.875,
-          "fin": 62.188,
+          "debut": 42.29,
+          "fin": 42.69,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "avec",
-          "debut": 62.188,
-          "fin": 62.812,
+          "debut": 42.69,
+          "fin": 43.24,
           "couleur": "#ff911e"
         },
         {
           "mot": "toi",
-          "debut": 62.812,
-          "fin": 63.75,
+          "debut": 43.24,
+          "fin": 43.63,
           "couleur": "#ffd600"
         }
       ]
@@ -675,49 +621,49 @@
     {
       "section": "couplet 2",
       "texte": "Le shampoing mousse sur tes cheveux, regarde-moi",
-      "debut": 65.0,
-      "fin": 69.375,
+      "debut": 44.43,
+      "fin": 47.5,
       "mots": [
         {
           "mot": "Le",
-          "debut": 65.0,
-          "fin": 65.156,
+          "debut": 44.43,
+          "fin": 44.57,
           "couleur": "#3cc846"
         },
         {
           "mot": "shampoing",
-          "debut": 65.156,
-          "fin": 65.625,
+          "debut": 44.57,
+          "fin": 44.99,
           "couleur": "#288cff"
         },
         {
           "mot": "mousse",
-          "debut": 65.625,
-          "fin": 65.938,
+          "debut": 44.99,
+          "fin": 45.35,
           "couleur": "#a050e6"
         },
         {
           "mot": "sur",
-          "debut": 65.938,
-          "fin": 66.25,
+          "debut": 45.35,
+          "fin": 45.62,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "tes",
-          "debut": 66.25,
-          "fin": 66.562,
+          "debut": 45.62,
+          "fin": 45.82,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "cheveux,",
-          "debut": 66.562,
-          "fin": 67.5,
+          "debut": 45.82,
+          "fin": 46.42,
           "couleur": "#ff911e"
         },
         {
           "mot": "regarde-moi",
-          "debut": 67.5,
-          "fin": 69.375,
+          "debut": 46.42,
+          "fin": 47.5,
           "couleur": "#ffd600"
         }
       ]
@@ -725,49 +671,49 @@
     {
       "section": "couplet 2",
       "texte": "On rince tout, on frotte bien fort",
-      "debut": 70.0,
-      "fin": 73.75,
+      "debut": 47.7,
+      "fin": 50.39,
       "mots": [
         {
           "mot": "On",
-          "debut": 70.0,
-          "fin": 70.312,
+          "debut": 47.7,
+          "fin": 48.04,
           "couleur": "#3cc846"
         },
         {
           "mot": "rince",
-          "debut": 70.312,
-          "fin": 70.625,
+          "debut": 48.04,
+          "fin": 48.48,
           "couleur": "#288cff"
         },
         {
           "mot": "tout,",
-          "debut": 70.625,
-          "fin": 71.875,
+          "debut": 48.48,
+          "fin": 49.06,
           "couleur": "#a050e6"
         },
         {
           "mot": "on",
-          "debut": 71.875,
-          "fin": 72.188,
+          "debut": 49.06,
+          "fin": 49.46,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "frotte",
-          "debut": 72.188,
-          "fin": 72.5,
+          "debut": 49.46,
+          "fin": 49.62,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "bien",
-          "debut": 72.5,
-          "fin": 72.812,
+          "debut": 49.62,
+          "fin": 49.99,
           "couleur": "#ff911e"
         },
         {
           "mot": "fort",
-          "debut": 72.812,
-          "fin": 73.75,
+          "debut": 49.99,
+          "fin": 50.39,
           "couleur": "#ffd600"
         }
       ]
@@ -775,49 +721,49 @@
     {
       "section": "couplet 2",
       "texte": "Après le bain, on est en or",
-      "debut": 75.0,
-      "fin": 79.375,
+      "debut": 50.95,
+      "fin": 53.75,
       "mots": [
         {
           "mot": "Après",
-          "debut": 75.0,
-          "fin": 75.625,
+          "debut": 50.95,
+          "fin": 51.37,
           "couleur": "#3cc846"
         },
         {
           "mot": "le",
-          "debut": 75.625,
-          "fin": 75.938,
+          "debut": 51.37,
+          "fin": 51.83,
           "couleur": "#288cff"
         },
         {
           "mot": "bain,",
-          "debut": 75.938,
-          "fin": 76.562,
+          "debut": 51.83,
+          "fin": 52.41,
           "couleur": "#a050e6"
         },
         {
           "mot": "on",
-          "debut": 76.562,
-          "fin": 76.875,
+          "debut": 52.41,
+          "fin": 52.69,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "est",
-          "debut": 76.875,
-          "fin": 77.188,
+          "debut": 52.69,
+          "fin": 52.91,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "en",
-          "debut": 77.188,
-          "fin": 77.5,
+          "debut": 52.91,
+          "fin": 53.29,
           "couleur": "#ff911e"
         },
         {
           "mot": "or",
-          "debut": 77.5,
-          "fin": 79.375,
+          "debut": 53.29,
+          "fin": 53.75,
           "couleur": "#ffd600"
         }
       ]
@@ -825,43 +771,43 @@
     {
       "section": "refrain",
       "texte": "Splash splash splash, dans la baignoire",
-      "debut": 80.0,
-      "fin": 84.375,
+      "debut": 54.25,
+      "fin": 57.07,
       "mots": [
         {
           "mot": "Splash",
-          "debut": 80.0,
-          "fin": 80.312,
+          "debut": 54.25,
+          "fin": 54.74,
           "couleur": "#3cc846"
         },
         {
           "mot": "splash",
-          "debut": 80.312,
-          "fin": 80.625,
+          "debut": 54.74,
+          "fin": 55.15,
           "couleur": "#288cff"
         },
         {
           "mot": "splash,",
-          "debut": 80.625,
-          "fin": 81.25,
+          "debut": 55.15,
+          "fin": 55.46,
           "couleur": "#a050e6"
         },
         {
           "mot": "dans",
-          "debut": 81.25,
-          "fin": 81.562,
+          "debut": 55.46,
+          "fin": 55.82,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "la",
-          "debut": 81.562,
-          "fin": 81.875,
+          "debut": 55.82,
+          "fin": 56.45,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "baignoire",
-          "debut": 81.875,
-          "fin": 84.375,
+          "debut": 56.45,
+          "fin": 57.07,
           "couleur": "#ff911e"
         }
       ]
@@ -869,37 +815,37 @@
     {
       "section": "refrain",
       "texte": "Splash splash splash, quelle victoire",
-      "debut": 85.0,
-      "fin": 88.75,
+      "debut": 57.45,
+      "fin": 60.43,
       "mots": [
         {
           "mot": "Splash",
-          "debut": 85.0,
-          "fin": 85.312,
+          "debut": 57.45,
+          "fin": 57.67,
           "couleur": "#ffd600"
         },
         {
           "mot": "splash",
-          "debut": 85.312,
-          "fin": 85.625,
+          "debut": 57.67,
+          "fin": 58.11,
           "couleur": "#3cc846"
         },
         {
           "mot": "splash,",
-          "debut": 85.625,
-          "fin": 86.25,
+          "debut": 58.11,
+          "fin": 58.53,
           "couleur": "#288cff"
         },
         {
           "mot": "quelle",
-          "debut": 86.25,
-          "fin": 86.562,
+          "debut": 58.53,
+          "fin": 59.35,
           "couleur": "#a050e6"
         },
         {
           "mot": "victoire",
-          "debut": 86.562,
-          "fin": 88.75,
+          "debut": 59.35,
+          "fin": 60.43,
           "couleur": "#ff5ab4"
         }
       ]
@@ -907,43 +853,43 @@
     {
       "section": "refrain",
       "texte": "Lave tes mains, lave tes pieds",
-      "debut": 90.0,
-      "fin": 93.75,
+      "debut": 60.88,
+      "fin": 63.78,
       "mots": [
         {
           "mot": "Lave",
-          "debut": 90.0,
-          "fin": 90.312,
+          "debut": 60.88,
+          "fin": 61.44,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "tes",
-          "debut": 90.312,
-          "fin": 90.625,
+          "debut": 61.44,
+          "fin": 61.66,
           "couleur": "#ff911e"
         },
         {
           "mot": "mains,",
-          "debut": 90.625,
-          "fin": 91.875,
+          "debut": 61.66,
+          "fin": 62.08,
           "couleur": "#ffd600"
         },
         {
           "mot": "lave",
-          "debut": 91.875,
-          "fin": 92.188,
+          "debut": 62.08,
+          "fin": 62.57,
           "couleur": "#3cc846"
         },
         {
           "mot": "tes",
-          "debut": 92.188,
-          "fin": 92.5,
+          "debut": 62.57,
+          "fin": 63.08,
           "couleur": "#288cff"
         },
         {
           "mot": "pieds",
-          "debut": 92.5,
-          "fin": 93.75,
+          "debut": 63.08,
+          "fin": 63.78,
           "couleur": "#a050e6"
         }
       ]
@@ -951,37 +897,37 @@
     {
       "section": "refrain",
       "texte": "Tout propre, tout beau, ohé !",
-      "debut": 95.0,
-      "fin": 98.75,
+      "debut": 64.34,
+      "fin": 66.66,
       "mots": [
         {
           "mot": "Tout",
-          "debut": 95.0,
-          "fin": 95.312,
+          "debut": 64.34,
+          "fin": 64.58,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "propre,",
-          "debut": 95.312,
-          "fin": 95.938,
+          "debut": 64.58,
+          "fin": 64.98,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "tout",
-          "debut": 95.938,
-          "fin": 96.25,
+          "debut": 64.98,
+          "fin": 65.2,
           "couleur": "#ff911e"
         },
         {
           "mot": "beau,",
-          "debut": 96.25,
-          "fin": 96.875,
+          "debut": 65.2,
+          "fin": 65.61,
           "couleur": "#ffd600"
         },
         {
           "mot": "ohé !",
-          "debut": 96.875,
-          "fin": 98.75,
+          "debut": 65.61,
+          "fin": 66.66,
           "couleur": "#3cc846"
         }
       ]
@@ -989,49 +935,49 @@
     {
       "section": "couplet 3",
       "texte": "On compte les bulles, un, deux, trois",
-      "debut": 105.0,
-      "fin": 109.375,
+      "debut": 66.66,
+      "fin": 70.43,
       "mots": [
         {
           "mot": "On",
-          "debut": 105.0,
-          "fin": 105.312,
+          "debut": 66.66,
+          "fin": 67.42,
           "couleur": "#288cff"
         },
         {
           "mot": "compte",
-          "debut": 105.312,
-          "fin": 105.625,
+          "debut": 67.42,
+          "fin": 67.68,
           "couleur": "#a050e6"
         },
         {
           "mot": "les",
-          "debut": 105.625,
-          "fin": 105.938,
+          "debut": 67.68,
+          "fin": 68.48,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "bulles,",
-          "debut": 105.938,
-          "fin": 106.875,
+          "debut": 68.48,
+          "fin": 69.14,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "un,",
-          "debut": 106.875,
-          "fin": 107.5,
+          "debut": 69.14,
+          "fin": 69.54,
           "couleur": "#ff911e"
         },
         {
           "mot": "deux,",
-          "debut": 107.5,
-          "fin": 108.125,
+          "debut": 69.54,
+          "fin": 70.0,
           "couleur": "#ffd600"
         },
         {
           "mot": "trois",
-          "debut": 108.125,
-          "fin": 109.375,
+          "debut": 70.0,
+          "fin": 70.43,
           "couleur": "#3cc846"
         }
       ]
@@ -1039,43 +985,43 @@
     {
       "section": "couplet 3",
       "texte": "On chante encore, toi et moi",
-      "debut": 110.0,
-      "fin": 113.75,
+      "debut": 70.81,
+      "fin": 73.64,
       "mots": [
         {
           "mot": "On",
-          "debut": 110.0,
-          "fin": 110.312,
+          "debut": 70.81,
+          "fin": 71.03,
           "couleur": "#288cff"
         },
         {
           "mot": "chante",
-          "debut": 110.312,
-          "fin": 110.625,
+          "debut": 71.03,
+          "fin": 71.44,
           "couleur": "#a050e6"
         },
         {
           "mot": "encore,",
-          "debut": 110.625,
-          "fin": 111.875,
+          "debut": 71.44,
+          "fin": 72.43,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "toi",
-          "debut": 111.875,
-          "fin": 112.188,
+          "debut": 72.43,
+          "fin": 72.85,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "et",
-          "debut": 112.188,
-          "fin": 112.5,
+          "debut": 72.85,
+          "fin": 73.32,
           "couleur": "#ff911e"
         },
         {
           "mot": "moi",
-          "debut": 112.5,
-          "fin": 113.75,
+          "debut": 73.32,
+          "fin": 73.64,
           "couleur": "#ffd600"
         }
       ]
@@ -1083,43 +1029,43 @@
     {
       "section": "couplet 3",
       "texte": "L’eau est tiède, tout est calme",
-      "debut": 115.0,
-      "fin": 118.75,
+      "debut": 74.17,
+      "fin": 77.17,
       "mots": [
         {
           "mot": "L’eau",
-          "debut": 115.0,
-          "fin": 115.312,
+          "debut": 74.17,
+          "fin": 74.99,
           "couleur": "#3cc846"
         },
         {
           "mot": "est",
-          "debut": 115.312,
-          "fin": 115.625,
+          "debut": 74.99,
+          "fin": 75.45,
           "couleur": "#288cff"
         },
         {
           "mot": "tiède,",
-          "debut": 115.625,
-          "fin": 116.875,
+          "debut": 75.45,
+          "fin": 75.78,
           "couleur": "#a050e6"
         },
         {
           "mot": "tout",
-          "debut": 116.875,
-          "fin": 117.188,
+          "debut": 75.78,
+          "fin": 76.17,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "est",
-          "debut": 117.188,
-          "fin": 117.5,
+          "debut": 76.17,
+          "fin": 76.59,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "calme",
-          "debut": 117.5,
-          "fin": 118.75,
+          "debut": 76.59,
+          "fin": 77.17,
           "couleur": "#ff911e"
         }
       ]
@@ -1127,37 +1073,753 @@
     {
       "section": "couplet 3",
       "texte": "On se détend, quel programme",
-      "debut": 120.0,
-      "fin": 124.375,
+      "debut": 77.46,
+      "fin": 81.33,
       "mots": [
         {
           "mot": "On",
-          "debut": 120.0,
-          "fin": 120.312,
+          "debut": 77.46,
+          "fin": 77.7,
           "couleur": "#ffd600"
         },
         {
           "mot": "se",
-          "debut": 120.312,
-          "fin": 120.625,
+          "debut": 77.7,
+          "fin": 78.31,
           "couleur": "#3cc846"
         },
         {
           "mot": "détend,",
-          "debut": 120.625,
-          "fin": 121.875,
+          "debut": 78.31,
+          "fin": 79.78,
           "couleur": "#288cff"
         },
         {
           "mot": "quel",
-          "debut": 121.875,
-          "fin": 122.188,
+          "debut": 79.78,
+          "fin": 80.15,
           "couleur": "#a050e6"
         },
         {
           "mot": "programme",
-          "debut": 122.188,
-          "fin": 124.375,
+          "debut": 80.15,
+          "fin": 81.33,
+          "couleur": "#ff5ab4"
+        }
+      ]
+    },
+    {
+      "section": "intro",
+      "texte": "C’est l’heure du bain, tralala",
+      "debut": 84.4,
+      "fin": 86.86,
+      "mots": [
+        {
+          "mot": "C’est",
+          "debut": 84.4,
+          "fin": 84.58,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "l’heure",
+          "debut": 84.58,
+          "fin": 84.97,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "du",
+          "debut": 84.97,
+          "fin": 85.2,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "bain,",
+          "debut": 85.2,
+          "fin": 85.54,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "tralala",
+          "debut": 85.54,
+          "fin": 86.86,
+          "couleur": "#288cff"
+        }
+      ]
+    },
+    {
+      "section": "intro",
+      "texte": "Viens avec moi, on va jouer ça",
+      "debut": 87.88,
+      "fin": 90.24,
+      "mots": [
+        {
+          "mot": "Viens",
+          "debut": 87.88,
+          "fin": 88.31,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "avec",
+          "debut": 88.31,
+          "fin": 88.91,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "moi,",
+          "debut": 88.91,
+          "fin": 89.16,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "on",
+          "debut": 89.16,
+          "fin": 89.36,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "va",
+          "debut": 89.36,
+          "fin": 89.63,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "jouer",
+          "debut": 89.63,
+          "fin": 89.99,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "ça",
+          "debut": 89.99,
+          "fin": 90.24,
+          "couleur": "#288cff"
+        }
+      ]
+    },
+    {
+      "section": "couplet 1",
+      "texte": "C’est l’heure du bain, l’heure du bain",
+      "debut": 91.23,
+      "fin": 93.74,
+      "mots": [
+        {
+          "mot": "C’est",
+          "debut": 91.23,
+          "fin": 91.65,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "l’heure",
+          "debut": 91.65,
+          "fin": 91.84,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "du",
+          "debut": 91.84,
+          "fin": 92.49,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "bain,",
+          "debut": 92.49,
+          "fin": 92.74,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "l’heure",
+          "debut": 92.74,
+          "fin": 93.11,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "du",
+          "debut": 93.11,
+          "fin": 93.32,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "bain",
+          "debut": 93.32,
+          "fin": 93.74,
+          "couleur": "#288cff"
+        }
+      ]
+    },
+    {
+      "section": "couplet 1",
+      "texte": "Viens te laver, prends ta main",
+      "debut": 94.42,
+      "fin": 97.65,
+      "mots": [
+        {
+          "mot": "Viens",
+          "debut": 94.42,
+          "fin": 94.75,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "te",
+          "debut": 94.75,
+          "fin": 95.19,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "laver,",
+          "debut": 95.19,
+          "fin": 96.42,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "prends",
+          "debut": 96.42,
+          "fin": 96.66,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "ta",
+          "debut": 96.66,
+          "fin": 97.15,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "main",
+          "debut": 97.15,
+          "fin": 97.65,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "Splash splash splash, dans la baignoire",
+      "debut": 97.65,
+      "fin": 100.5,
+      "mots": [
+        {
+          "mot": "Splash",
+          "debut": 97.65,
+          "fin": 98.11,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "splash",
+          "debut": 98.11,
+          "fin": 98.48,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "splash,",
+          "debut": 98.48,
+          "fin": 98.79,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "dans",
+          "debut": 98.79,
+          "fin": 99.15,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "la",
+          "debut": 99.15,
+          "fin": 99.57,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "baignoire",
+          "debut": 99.57,
+          "fin": 100.5,
+          "couleur": "#ffd600"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "Splash splash splash, quelle victoire",
+      "debut": 100.97,
+      "fin": 103.76,
+      "mots": [
+        {
+          "mot": "Splash",
+          "debut": 100.97,
+          "fin": 101.44,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "splash",
+          "debut": 101.44,
+          "fin": 101.86,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "splash,",
+          "debut": 101.86,
+          "fin": 102.28,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "quelle",
+          "debut": 102.28,
+          "fin": 102.67,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "victoire",
+          "debut": 102.67,
+          "fin": 103.76,
+          "couleur": "#ff3b3b"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "Lave tes mains, lave tes pieds",
+      "debut": 104.13,
+      "fin": 107.02,
+      "mots": [
+        {
+          "mot": "Lave",
+          "debut": 104.13,
+          "fin": 104.37,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "tes",
+          "debut": 104.37,
+          "fin": 104.75,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "mains,",
+          "debut": 104.75,
+          "fin": 104.99,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "lave",
+          "debut": 104.99,
+          "fin": 105.82,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "tes",
+          "debut": 105.82,
+          "fin": 106.4,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "pieds",
+          "debut": 106.4,
+          "fin": 107.02,
+          "couleur": "#ff5ab4"
+        }
+      ]
+    },
+    {
+      "section": "refrain",
+      "texte": "Tout propre, tout beau, ohé !",
+      "debut": 107.65,
+      "fin": 110.61,
+      "mots": [
+        {
+          "mot": "Tout",
+          "debut": 107.65,
+          "fin": 107.85,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "propre,",
+          "debut": 107.85,
+          "fin": 108.3,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "tout",
+          "debut": 108.3,
+          "fin": 108.94,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "beau,",
+          "debut": 108.94,
+          "fin": 109.36,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "ohé !",
+          "debut": 109.36,
+          "fin": 110.61,
+          "couleur": "#288cff"
+        }
+      ]
+    },
+    {
+      "section": "couplet 2",
+      "texte": "Le canard jaune nage avec toi",
+      "debut": 110.61,
+      "fin": 113.68,
+      "mots": [
+        {
+          "mot": "Le",
+          "debut": 110.61,
+          "fin": 111.0,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "canard",
+          "debut": 111.0,
+          "fin": 111.84,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "jaune",
+          "debut": 111.84,
+          "fin": 112.28,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "nage",
+          "debut": 112.28,
+          "fin": 112.69,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "avec",
+          "debut": 112.69,
+          "fin": 113.27,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "toi",
+          "debut": 113.27,
+          "fin": 113.68,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "couplet 2",
+      "texte": "Le shampoing mousse sur tes cheveux, regarde-moi",
+      "debut": 114.06,
+      "fin": 117.53,
+      "mots": [
+        {
+          "mot": "Le",
+          "debut": 114.06,
+          "fin": 114.37,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "shampoing",
+          "debut": 114.37,
+          "fin": 115.24,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "mousse",
+          "debut": 115.24,
+          "fin": 115.61,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "sur",
+          "debut": 115.61,
+          "fin": 115.8,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "tes",
+          "debut": 115.8,
+          "fin": 116.24,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "cheveux,",
+          "debut": 116.24,
+          "fin": 116.83,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "regarde-moi",
+          "debut": 116.83,
+          "fin": 117.53,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "couplet 2",
+      "texte": "On rince tout, on frotte bien fort",
+      "debut": 117.64,
+      "fin": 120.46,
+      "mots": [
+        {
+          "mot": "On",
+          "debut": 117.64,
+          "fin": 118.07,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "rince",
+          "debut": 118.07,
+          "fin": 118.53,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "tout,",
+          "debut": 118.53,
+          "fin": 118.94,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "on",
+          "debut": 118.94,
+          "fin": 119.16,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "frotte",
+          "debut": 119.16,
+          "fin": 119.56,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "bien",
+          "debut": 119.56,
+          "fin": 119.95,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "fort",
+          "debut": 119.95,
+          "fin": 120.46,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "couplet 2",
+      "texte": "Après le bain, on est en or",
+      "debut": 120.78,
+      "fin": 124.73,
+      "mots": [
+        {
+          "mot": "Après",
+          "debut": 120.78,
+          "fin": 121.64,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "le",
+          "debut": 121.64,
+          "fin": 122.3,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "bain,",
+          "debut": 122.3,
+          "fin": 123.11,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "on",
+          "debut": 123.11,
+          "fin": 123.53,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "est",
+          "debut": 123.53,
+          "fin": 123.94,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "en",
+          "debut": 123.94,
+          "fin": 124.16,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "or",
+          "debut": 124.16,
+          "fin": 124.73,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "couplet 3",
+      "texte": "On compte les bulles, un, deux, trois",
+      "debut": 127.45,
+      "fin": 130.34,
+      "mots": [
+        {
+          "mot": "On",
+          "debut": 127.45,
+          "fin": 127.7,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "compte",
+          "debut": 127.7,
+          "fin": 128.0,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "les",
+          "debut": 128.0,
+          "fin": 128.32,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "bulles,",
+          "debut": 128.32,
+          "fin": 128.84,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "un,",
+          "debut": 128.84,
+          "fin": 129.32,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "deux,",
+          "debut": 129.32,
+          "fin": 129.77,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "trois",
+          "debut": 129.77,
+          "fin": 130.34,
+          "couleur": "#3cc846"
+        }
+      ]
+    },
+    {
+      "section": "couplet 3",
+      "texte": "On chante encore, toi et moi",
+      "debut": 130.82,
+      "fin": 133.68,
+      "mots": [
+        {
+          "mot": "On",
+          "debut": 130.82,
+          "fin": 131.29,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "chante",
+          "debut": 131.29,
+          "fin": 131.64,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "encore,",
+          "debut": 131.64,
+          "fin": 132.46,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "toi",
+          "debut": 132.46,
+          "fin": 132.71,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "et",
+          "debut": 132.71,
+          "fin": 133.33,
+          "couleur": "#ff911e"
+        },
+        {
+          "mot": "moi",
+          "debut": 133.33,
+          "fin": 133.68,
+          "couleur": "#ffd600"
+        }
+      ]
+    },
+    {
+      "section": "couplet 3",
+      "texte": "L’eau est tiède, tout est calme",
+      "debut": 134.16,
+      "fin": 137.2,
+      "mots": [
+        {
+          "mot": "L’eau",
+          "debut": 134.16,
+          "fin": 134.85,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "est",
+          "debut": 134.85,
+          "fin": 135.38,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "tiède,",
+          "debut": 135.38,
+          "fin": 135.95,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "tout",
+          "debut": 135.95,
+          "fin": 136.23,
+          "couleur": "#ff5ab4"
+        },
+        {
+          "mot": "est",
+          "debut": 136.23,
+          "fin": 136.6,
+          "couleur": "#ff3b3b"
+        },
+        {
+          "mot": "calme",
+          "debut": 136.6,
+          "fin": 137.2,
+          "couleur": "#ff911e"
+        }
+      ]
+    },
+    {
+      "section": "couplet 3",
+      "texte": "On se détend, quel programme",
+      "debut": 137.62,
+      "fin": 141.36,
+      "mots": [
+        {
+          "mot": "On",
+          "debut": 137.62,
+          "fin": 138.27,
+          "couleur": "#ffd600"
+        },
+        {
+          "mot": "se",
+          "debut": 138.27,
+          "fin": 138.5,
+          "couleur": "#3cc846"
+        },
+        {
+          "mot": "détend,",
+          "debut": 138.5,
+          "fin": 140.12,
+          "couleur": "#288cff"
+        },
+        {
+          "mot": "quel",
+          "debut": 140.12,
+          "fin": 140.53,
+          "couleur": "#a050e6"
+        },
+        {
+          "mot": "programme",
+          "debut": 140.53,
+          "fin": 141.36,
           "couleur": "#ff5ab4"
         }
       ]
@@ -1165,43 +1827,43 @@
     {
       "section": "refrain",
       "texte": "Splash splash splash, dans la baignoire",
-      "debut": 125.0,
-      "fin": 129.375,
+      "debut": 144.1,
+      "fin": 147.1,
       "mots": [
         {
           "mot": "Splash",
-          "debut": 125.0,
-          "fin": 125.312,
+          "debut": 144.1,
+          "fin": 144.32,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "splash",
-          "debut": 125.312,
-          "fin": 125.625,
+          "debut": 144.32,
+          "fin": 144.75,
           "couleur": "#ff911e"
         },
         {
           "mot": "splash,",
-          "debut": 125.625,
-          "fin": 126.25,
+          "debut": 144.75,
+          "fin": 145.2,
           "couleur": "#ffd600"
         },
         {
           "mot": "dans",
-          "debut": 126.25,
-          "fin": 126.562,
+          "debut": 145.2,
+          "fin": 145.82,
           "couleur": "#3cc846"
         },
         {
           "mot": "la",
-          "debut": 126.562,
-          "fin": 126.875,
+          "debut": 145.82,
+          "fin": 146.45,
           "couleur": "#288cff"
         },
         {
           "mot": "baignoire",
-          "debut": 126.875,
-          "fin": 129.375,
+          "debut": 146.45,
+          "fin": 147.1,
           "couleur": "#a050e6"
         }
       ]
@@ -1209,37 +1871,37 @@
     {
       "section": "refrain",
       "texte": "Splash splash splash, quelle victoire",
-      "debut": 130.0,
-      "fin": 133.75,
+      "debut": 147.45,
+      "fin": 150.49,
       "mots": [
         {
           "mot": "Splash",
-          "debut": 130.0,
-          "fin": 130.312,
+          "debut": 147.45,
+          "fin": 147.7,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "splash",
-          "debut": 130.312,
-          "fin": 130.625,
+          "debut": 147.7,
+          "fin": 148.11,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "splash,",
-          "debut": 130.625,
-          "fin": 131.25,
+          "debut": 148.11,
+          "fin": 148.53,
           "couleur": "#ff911e"
         },
         {
           "mot": "quelle",
-          "debut": 131.25,
-          "fin": 131.562,
+          "debut": 148.53,
+          "fin": 149.35,
           "couleur": "#ffd600"
         },
         {
           "mot": "victoire",
-          "debut": 131.562,
-          "fin": 133.75,
+          "debut": 149.35,
+          "fin": 150.49,
           "couleur": "#3cc846"
         }
       ]
@@ -1247,43 +1909,43 @@
     {
       "section": "refrain",
       "texte": "Lave tes mains, lave tes pieds",
-      "debut": 135.0,
-      "fin": 138.75,
+      "debut": 150.87,
+      "fin": 153.78,
       "mots": [
         {
           "mot": "Lave",
-          "debut": 135.0,
-          "fin": 135.312,
+          "debut": 150.87,
+          "fin": 151.44,
           "couleur": "#288cff"
         },
         {
           "mot": "tes",
-          "debut": 135.312,
-          "fin": 135.625,
+          "debut": 151.44,
+          "fin": 151.66,
           "couleur": "#a050e6"
         },
         {
           "mot": "mains,",
-          "debut": 135.625,
-          "fin": 136.875,
+          "debut": 151.66,
+          "fin": 152.12,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "lave",
-          "debut": 136.875,
-          "fin": 137.188,
+          "debut": 152.12,
+          "fin": 152.55,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "tes",
-          "debut": 137.188,
-          "fin": 137.5,
+          "debut": 152.55,
+          "fin": 153.08,
           "couleur": "#ff911e"
         },
         {
           "mot": "pieds",
-          "debut": 137.5,
-          "fin": 138.75,
+          "debut": 153.08,
+          "fin": 153.78,
           "couleur": "#ffd600"
         }
       ]
@@ -1291,37 +1953,37 @@
     {
       "section": "refrain",
       "texte": "Tout propre, tout beau, ohé !",
-      "debut": 140.0,
-      "fin": 143.75,
+      "debut": 154.33,
+      "fin": 157.28,
       "mots": [
         {
           "mot": "Tout",
-          "debut": 140.0,
-          "fin": 140.312,
+          "debut": 154.33,
+          "fin": 154.61,
           "couleur": "#3cc846"
         },
         {
           "mot": "propre,",
-          "debut": 140.312,
-          "fin": 140.938,
+          "debut": 154.61,
+          "fin": 154.96,
           "couleur": "#288cff"
         },
         {
           "mot": "tout",
-          "debut": 140.938,
-          "fin": 141.25,
+          "debut": 154.96,
+          "fin": 155.2,
           "couleur": "#a050e6"
         },
         {
           "mot": "beau,",
-          "debut": 141.25,
-          "fin": 141.875,
+          "debut": 155.2,
+          "fin": 155.56,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "ohé !",
-          "debut": 141.875,
-          "fin": 143.75,
+          "debut": 155.56,
+          "fin": 157.28,
           "couleur": "#ff3b3b"
         }
       ]
@@ -1329,43 +1991,43 @@
     {
       "section": "fin",
       "texte": "Maintenant tout propre, dans ta serviette",
-      "debut": 150.0,
-      "fin": 154.375,
+      "debut": 157.28,
+      "fin": 160.27,
       "mots": [
         {
           "mot": "Maintenant",
-          "debut": 150.0,
-          "fin": 150.625,
+          "debut": 157.28,
+          "fin": 158.05,
           "couleur": "#ff911e"
         },
         {
           "mot": "tout",
-          "debut": 150.625,
-          "fin": 150.938,
+          "debut": 158.05,
+          "fin": 158.43,
           "couleur": "#ffd600"
         },
         {
           "mot": "propre,",
-          "debut": 150.938,
-          "fin": 151.875,
+          "debut": 158.43,
+          "fin": 158.94,
           "couleur": "#3cc846"
         },
         {
           "mot": "dans",
-          "debut": 151.875,
-          "fin": 152.188,
+          "debut": 158.94,
+          "fin": 159.16,
           "couleur": "#288cff"
         },
         {
           "mot": "ta",
-          "debut": 152.188,
-          "fin": 152.5,
+          "debut": 159.16,
+          "fin": 159.57,
           "couleur": "#a050e6"
         },
         {
           "mot": "serviette",
-          "debut": 152.5,
-          "fin": 154.375,
+          "debut": 159.57,
+          "fin": 160.27,
           "couleur": "#ff5ab4"
         }
       ]
@@ -1373,43 +2035,43 @@
     {
       "section": "fin",
       "texte": "Un gros câlin, une bonne fête",
-      "debut": 155.0,
-      "fin": 158.75,
+      "debut": 160.62,
+      "fin": 163.81,
       "mots": [
         {
           "mot": "Un",
-          "debut": 155.0,
-          "fin": 155.312,
+          "debut": 160.62,
+          "fin": 160.79,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "gros",
-          "debut": 155.312,
-          "fin": 155.625,
+          "debut": 160.79,
+          "fin": 161.39,
           "couleur": "#ff911e"
         },
         {
           "mot": "câlin,",
-          "debut": 155.625,
-          "fin": 156.875,
+          "debut": 161.39,
+          "fin": 162.5,
           "couleur": "#ffd600"
         },
         {
           "mot": "une",
-          "debut": 156.875,
-          "fin": 157.188,
+          "debut": 162.5,
+          "fin": 162.92,
           "couleur": "#3cc846"
         },
         {
           "mot": "bonne",
-          "debut": 157.188,
-          "fin": 157.5,
+          "debut": 162.92,
+          "fin": 163.33,
           "couleur": "#288cff"
         },
         {
           "mot": "fête",
-          "debut": 157.5,
-          "fin": 158.75,
+          "debut": 163.33,
+          "fin": 163.81,
           "couleur": "#a050e6"
         }
       ]
@@ -1417,37 +2079,37 @@
     {
       "section": "fin",
       "texte": "Dodo t’attend, ferme les yeux",
-      "debut": 160.0,
-      "fin": 163.75,
+      "debut": 164.13,
+      "fin": 167.01,
       "mots": [
         {
           "mot": "Dodo",
-          "debut": 160.0,
-          "fin": 160.625,
+          "debut": 164.13,
+          "fin": 164.75,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "t’attend,",
-          "debut": 160.625,
-          "fin": 161.875,
+          "debut": 164.75,
+          "fin": 165.55,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "ferme",
-          "debut": 161.875,
-          "fin": 162.188,
+          "debut": 165.55,
+          "fin": 165.83,
           "couleur": "#ff911e"
         },
         {
           "mot": "les",
-          "debut": 162.188,
-          "fin": 162.5,
+          "debut": 165.83,
+          "fin": 166.49,
           "couleur": "#ffd600"
         },
         {
           "mot": "yeux",
-          "debut": 162.5,
-          "fin": 163.75,
+          "debut": 166.49,
+          "fin": 167.01,
           "couleur": "#3cc846"
         }
       ]
@@ -1455,55 +2117,55 @@
     {
       "section": "fin",
       "texte": "C’est l’heure du bain, le meilleur des jeux",
-      "debut": 165.0,
-      "fin": 169.375,
+      "debut": 167.48,
+      "fin": 171.55,
       "mots": [
         {
           "mot": "C’est",
-          "debut": 165.0,
-          "fin": 165.312,
+          "debut": 167.48,
+          "fin": 167.91,
           "couleur": "#288cff"
         },
         {
           "mot": "l’heure",
-          "debut": 165.312,
-          "fin": 165.625,
+          "debut": 167.91,
+          "fin": 168.3,
           "couleur": "#a050e6"
         },
         {
           "mot": "du",
-          "debut": 165.625,
-          "fin": 165.938,
+          "debut": 168.3,
+          "fin": 168.78,
           "couleur": "#ff5ab4"
         },
         {
           "mot": "bain,",
-          "debut": 165.938,
-          "fin": 166.875,
+          "debut": 168.78,
+          "fin": 169.16,
           "couleur": "#ff3b3b"
         },
         {
           "mot": "le",
-          "debut": 166.875,
-          "fin": 167.188,
+          "debut": 169.16,
+          "fin": 169.46,
           "couleur": "#ff911e"
         },
         {
           "mot": "meilleur",
-          "debut": 167.188,
-          "fin": 167.812,
+          "debut": 169.46,
+          "fin": 170.17,
           "couleur": "#ffd600"
         },
         {
           "mot": "des",
-          "debut": 167.812,
-          "fin": 168.125,
+          "debut": 170.17,
+          "fin": 170.78,
           "couleur": "#3cc846"
         },
         {
           "mot": "jeux",
-          "debut": 168.125,
-          "fin": 169.375,
+          "debut": 170.78,
+          "fin": 171.55,
           "couleur": "#288cff"
         }
       ]

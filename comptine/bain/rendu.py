@@ -50,7 +50,8 @@ def init_worker(donnees, echelle):
     R.G["d"] = donnees
     R.G["echelle"] = echelle
     charger()
-    G3["plans_montage"] = B.plan_de_montage(C.MESURE)
+    G3["plans_montage"] = donnees.get("plans") or B.plan_de_montage(C.MESURE)
+    G3["phase"] = donnees.get("phase", 0.0)
     G3["mots"] = donnees["mots"]
 
 
@@ -234,8 +235,13 @@ def canard(ctx, t, x, y, largeur, flip=False, graine=0):
 
 
 # ======================================================================= temps musicaux
+def tm(t):
+    """Temps musical : t décalé pour que les battements tombent sur les entiers de NOIRE."""
+    return t - G3.get("phase", 0.0)
+
+
 def battue(t):
-    return (t / C.NOIRE) % 1.0
+    return (tm(t) / C.NOIRE) % 1.0
 
 
 @lru_cache(maxsize=None)
@@ -312,11 +318,11 @@ def scene2(ctx, t, tl, duree, occ):
     canard(ctx, t, 600 + 40 * math.sin(t * 0.5), 735, 230)
     b = battue(t)
     pose = "eclabousse_a" if b < 0.4 else ("eclabousse_b" if b < 0.8 else "eclabousse_c")
-    expr = "rit" if int(t / (2 * C.NOIRE)) % 2 == 0 else "rit_ferme"
+    expr = "rit" if int(tm(t) / (2 * C.NOIRE)) % 2 == 0 else "rit_ferme"
     garcon(ctx, pose, expr, dy=2 * math.sin(t * 3))
     # éclaboussure à chaque battement (mains qui tapent l'eau)
     u = (b - 0.4) * C.NOIRE
-    k = int(t / C.NOIRE)
+    k = int(tm(t) / C.NOIRE)
     mb = G3["meta"]["eclabousse_b"]
     for cote, cle in ((-1, "main_g"), (1, "main_d")):
         x, y = mb[cle]
@@ -330,7 +336,7 @@ def scene3(ctx, t, tl, duree, occ):
     plan(ctx, "proche")
     montre = tl > duree * 0.62
     if not montre:
-        pose = "frotte_a" if (t / (C.NOIRE / 2)) % 2 < 1 else "frotte_b"
+        pose = "frotte_a" if (tm(t) / (C.NOIRE / 2)) % 2 < 1 else "frotte_b"
         expr = "cligne" if clignement(t, 3) else "sourire"
         garcon(ctx, pose, expr)
         mx, my = G3["meta"][pose]["main_d"]
@@ -392,7 +398,7 @@ def scene4(ctx, t, tl, duree, occ):
     plan(ctx, "bain")
     canard(ctx, t, 470 + 30 * math.sin(t * 0.6), 742, 210)
     pose = "cheveux_a" if battue(t) < 0.5 else "cheveux_b"
-    expr = "rit" if int(t / (2 * C.NOIRE)) % 2 == 0 else "rit_ferme"
+    expr = "rit" if int(tm(t) / (2 * C.NOIRE)) % 2 == 0 else "rit_ferme"
     garcon(ctx, pose, expr, dy=2 * math.sin(t * 3))
     tx, ty = G3["meta"][pose]["tete"]
     bulles_montantes(ctx, t, (tx - 220, tx + 220, ty - 120), n=10, graine=21, vitesse=60, r=(10, 30))
@@ -418,7 +424,7 @@ def scene5(ctx, t, tl, duree, occ):
     bulles_montantes(ctx, t, (1180, 1560, 460), n=8, graine=5, vitesse=45, r=(10, 28))
     canard(ctx, t, 1470, 455, 190, flip=True)
     # un saut toutes les 2 noires : accroupi, envol (bras en l'air), atterrissage
-    ph = (t / (2 * C.NOIRE)) % 1.0
+    ph = (tm(t) / (2 * C.NOIRE)) % 1.0
     if ph < 0.18:
         pose, h, sq = "serviette_a", 0.0, 1 - 0.07 * math.sin(math.pi * ph / 0.18)
     elif ph < 0.78:
@@ -454,12 +460,15 @@ def scene6(ctx, t, tl, duree, occ):
     canard(ctx, t, 520, 745, 220)
     bulles_montantes(ctx, t, (300, 1600, 800), n=8, graine=61, vitesse=35, r=(12, 30), alpha=0.7)
     pos = positions_bulles_compte()
-    if occ == 0:
+    debut_plan = t - tl
+    chantes = [[x for x in instants(w, "couplet 3") if debut_plan - 0.5 <= x < debut_plan + duree]
+               for w in ("un", "deux", "trois")]
+    if all(chantes):
         # sur les paroles : « un, deux, trois » → la bulle correspondante s'allume
-        moments = [instants(w, "couplet 3")[0] for w in ("un", "deux", "trois")]
+        moments = [c[0] for c in chantes]
     else:
-        # deuxième plan : on recompte doucement, une bulle par noire, toutes les 2 mesures
-        base = math.floor(t / (2 * C.MESURE)) * 2 * C.MESURE
+        # plan suivant : on recompte doucement, une bulle par blanche, toutes les 2 mesures
+        base = math.floor(tm(t) / (2 * C.MESURE)) * 2 * C.MESURE + G3.get("phase", 0.0)
         moments = [base + k * 2 * C.NOIRE for k in range(3)]
     actif = 0
     for k, mt in enumerate(moments):
@@ -470,7 +479,7 @@ def scene6(ctx, t, tl, duree, occ):
     else:
         pose = f"compte_{actif}"
         expr = "concentre" if t - moments[actif - 1] < 0.9 * C.NOIRE else "rit"
-    if occ == 1 and actif == 0:
+    if not all(chantes) and actif == 0:
         pose, expr = "compte_3", "rit"
     garcon(ctx, pose, expr, dy=2 * math.sin(t * 2.5))
     for k, (x, y) in enumerate(pos):
@@ -493,7 +502,7 @@ def scene7(ctx, t, tl, duree, occ):
     m = G3["meta"]["brosse_a"]
     camera_2d(ctx, tl, duree, (m["tete"][0] + 250, m["tete"][1] + 80), occ, 1.0, 1.07)
     plan(ctx, "lavabo")
-    pose_r = "brosse_a" if (t / (C.NOIRE / 2)) % 2 < 1 else "brosse_b"
+    pose_r = "brosse_a" if (tm(t) / (C.NOIRE / 2)) % 2 < 1 else "brosse_b"
     fin_dents = tl > duree * 0.55          # après le brossage : sourire au miroir
     if fin_dents:
         pose_r = "brosse_a"
@@ -626,9 +635,10 @@ def rendre_image(t):
     return img
 
 
-def rendre_video(lignes, audio, sortie, dossier_tmp, echelle=1.0, processus=None, debut=0.0, fin=None):
+def rendre_video(lignes, audio, sortie, dossier_tmp, echelle=1.0, processus=None, debut=0.0, fin=None,
+                 donnees=None):
     R.rendre_video(lignes, audio, sortie, dossier_tmp, echelle, processus, debut, fin,
-                   init=init_worker, image=rendre_image)
+                   init=init_worker, image=rendre_image, donnees=donnees)
 
 
 def apercu(lignes, temps, chemin, echelle=0.5):

@@ -385,12 +385,12 @@ def rendre_morceau(args):
 
 
 def rendre_video(lignes, audio, sortie, dossier_tmp, echelle=1.0, processus=None, debut=0.0, fin=None,
-                 init=None, image=None):
+                 init=None, image=None, donnees=None):
     """Rend toutes les images en parallèle puis assemble la vidéo finale avec l'audio.
 
     `init` / `image` : initialisation des processus et rendu d'une image (par défaut ceux
     de « Bonjour la ferme ! ») — fonctions de module, transmises aux processus."""
-    donnees = preparer_donnees(lignes)
+    donnees = donnees or preparer_donnees(lignes)
     fin = C.DUREE_TOTALE if fin is None else fin
     i_deb, i_fin = int(round(debut * C.FPS)), int(math.ceil(fin * C.FPS))
     processus = processus or max(1, (os.cpu_count() or 2))

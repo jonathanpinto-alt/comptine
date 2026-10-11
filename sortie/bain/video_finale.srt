@@ -1,119 +1,183 @@
 1
-00:00:04,300 --> 00:00:09,300
+00:00:01,940 --> 00:00:07,000
 C’est l’heure du bain, tralala
 
 2
-00:00:09,300 --> 00:00:14,375
+00:00:07,000 --> 00:00:12,060
 Viens avec moi, on va jouer ça
 
 3
-00:00:14,525 --> 00:00:19,300
+00:00:13,870 --> 00:00:17,070
 C’est l’heure du bain, l’heure du bain
 
 4
-00:00:19,300 --> 00:00:24,300
+00:00:17,070 --> 00:00:20,370
 Viens te laver, prends ta main
 
 5
-00:00:24,300 --> 00:00:29,300
+00:00:20,520 --> 00:00:23,960
 De l’eau qui coule, des bulles qui dansent
 
 6
-00:00:29,300 --> 00:00:34,375
+00:00:24,110 --> 00:00:27,350
 On va jouer, quelle chance !
 
 7
-00:00:34,525 --> 00:00:39,375
+00:00:27,500 --> 00:00:30,420
 Splash splash splash, dans la baignoire
 
 8
-00:00:39,525 --> 00:00:44,300
+00:00:30,570 --> 00:00:33,800
 Splash splash splash, quelle victoire
 
 9
-00:00:44,300 --> 00:00:49,300
+00:00:33,950 --> 00:00:37,180
 Lave tes mains, lave tes pieds
 
 10
-00:00:49,300 --> 00:00:54,550
+00:00:37,330 --> 00:00:40,840
 Tout propre, tout beau, ohé !
 
 11
-00:00:59,300 --> 00:01:04,300
+00:00:40,990 --> 00:00:43,730
 Le canard jaune nage avec toi
 
 12
-00:01:04,300 --> 00:01:09,375
+00:00:43,780 --> 00:00:47,500
 Le shampoing mousse sur tes cheveux, regarde-moi
 
 13
-00:01:09,525 --> 00:01:14,300
+00:00:47,650 --> 00:00:50,390
 On rince tout, on frotte bien fort
 
 14
-00:01:14,300 --> 00:01:19,375
+00:00:50,540 --> 00:00:53,750
 Après le bain, on est en or
 
 15
-00:01:19,525 --> 00:01:24,375
+00:00:53,900 --> 00:00:57,070
 Splash splash splash, dans la baignoire
 
 16
-00:01:24,525 --> 00:01:29,300
+00:00:57,220 --> 00:01:00,430
 Splash splash splash, quelle victoire
 
 17
-00:01:29,300 --> 00:01:34,300
+00:01:00,580 --> 00:01:03,780
 Lave tes mains, lave tes pieds
 
 18
-00:01:34,300 --> 00:01:39,550
+00:01:03,930 --> 00:01:06,660
 Tout propre, tout beau, ohé !
 
 19
-00:01:44,300 --> 00:01:49,375
+00:01:06,810 --> 00:01:10,430
 On compte les bulles, un, deux, trois
 
 20
-00:01:49,525 --> 00:01:54,300
+00:01:10,580 --> 00:01:13,640
 On chante encore, toi et moi
 
 21
-00:01:54,300 --> 00:01:59,300
+00:01:13,790 --> 00:01:17,170
 L’eau est tiède, tout est calme
 
 22
-00:01:59,300 --> 00:02:04,375
+00:01:17,320 --> 00:01:22,130
 On se détend, quel programme
 
 23
-00:02:04,525 --> 00:02:09,375
-Splash splash splash, dans la baignoire
+00:01:23,700 --> 00:01:27,180
+C’est l’heure du bain, tralala
 
 24
-00:02:09,525 --> 00:02:14,300
-Splash splash splash, quelle victoire
+00:01:27,180 --> 00:01:30,530
+Viens avec moi, on va jouer ça
 
 25
-00:02:14,300 --> 00:02:19,300
-Lave tes mains, lave tes pieds
+00:01:30,530 --> 00:01:33,740
+C’est l’heure du bain, l’heure du bain
 
 26
-00:02:19,300 --> 00:02:24,550
-Tout propre, tout beau, ohé !
+00:01:33,890 --> 00:01:37,650
+Viens te laver, prends ta main
 
 27
-00:02:29,300 --> 00:02:34,375
-Maintenant tout propre, dans ta serviette
+00:01:37,800 --> 00:01:40,500
+Splash splash splash, dans la baignoire
 
 28
-00:02:34,525 --> 00:02:39,300
-Un gros câlin, une bonne fête
+00:01:40,650 --> 00:01:43,760
+Splash splash splash, quelle victoire
 
 29
-00:02:39,300 --> 00:02:44,300
-Dodo t’attend, ferme les yeux
+00:01:43,910 --> 00:01:47,020
+Lave tes mains, lave tes pieds
 
 30
-00:02:44,300 --> 00:02:50,175
+00:01:47,170 --> 00:01:50,610
+Tout propre, tout beau, ohé !
+
+31
+00:01:50,760 --> 00:01:53,680
+Le canard jaune nage avec toi
+
+32
+00:01:53,830 --> 00:01:57,530
+Le shampoing mousse sur tes cheveux, regarde-moi
+
+33
+00:01:57,680 --> 00:02:00,460
+On rince tout, on frotte bien fort
+
+34
+00:02:00,610 --> 00:02:05,530
+Après le bain, on est en or
+
+35
+00:02:06,750 --> 00:02:10,340
+On compte les bulles, un, deux, trois
+
+36
+00:02:10,490 --> 00:02:13,680
+On chante encore, toi et moi
+
+37
+00:02:13,830 --> 00:02:17,200
+L’eau est tiède, tout est calme
+
+38
+00:02:17,350 --> 00:02:22,160
+On se détend, quel programme
+
+39
+00:02:23,400 --> 00:02:27,100
+Splash splash splash, dans la baignoire
+
+40
+00:02:27,250 --> 00:02:30,490
+Splash splash splash, quelle victoire
+
+41
+00:02:30,640 --> 00:02:33,780
+Lave tes mains, lave tes pieds
+
+42
+00:02:33,930 --> 00:02:37,280
+Tout propre, tout beau, ohé !
+
+43
+00:02:37,430 --> 00:02:40,270
+Maintenant tout propre, dans ta serviette
+
+44
+00:02:40,420 --> 00:02:43,810
+Un gros câlin, une bonne fête
+
+45
+00:02:43,960 --> 00:02:47,010
+Dodo t’attend, ferme les yeux
+
+46
+00:02:47,160 --> 00:02:52,350
 C’est l’heure du bain, le meilleur des jeux
